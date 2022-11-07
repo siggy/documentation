@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+
+
+<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+
+
+  <title>Proxying object storage through nginx - Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://documentation.sig.gy/admin/optional/object-storage-proxy/">
+
+  
+    <meta name="description" content="Serving user-uploaded files in Mastodon from your own domain">
+    <meta property="og:description" content="Serving user-uploaded files in Mastodon from your own domain">
+    <meta name="twitter:description" content="Serving user-uploaded files in Mastodon from your own domain">
+  
+
+  <meta name="twitter:title" content="Proxying object storage through nginx">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://documentation.sig.gy/admin/optional/object-storage-proxy/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/" class="">What is Mastodon?</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Using Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/user/signup/" class="">Signing up for an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/profile/" class="">Setting up your profile</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/posting/" class="">Posting toots</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/network/" class="">Using the network features</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moderating/" class="">Dealing with unwanted content</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/discoverability/" class="">Promoting yourself and others</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/preferences/" class="">Set your preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/contacts/" class="">More settings</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/external/" class="">Using Mastodon externally</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moving/" class="">Moving or leaving accounts</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/run-your-own/" class="">Running your own server</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Running Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/admin/prerequisites/" class="">Preparing your machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/install/" class="">Installing from source</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/config/" class="">Configuring your environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/optional/" class="">Installing optional features</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/optional/elasticsearch/" class="">Full-text search</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/tor/" class="">Hidden services</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/sso/" class="">Single Sign On</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/admin/setup/" class="">Setting up your new instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/tootctl/" class="">Using the admin CLI</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/upgrading/" class="">Upgrading to a new release</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/backups/" class="">Backing up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/migrating/" class="">Migrating to a new machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/scaling/" class="">Scaling up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/moderation/" class="">Moderation actions</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/troubleshooting/" class="">Troubleshooting errors</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/troubleshooting/index-corruption/" class="">Database index corruption</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Developing Mastodon apps</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/client/intro/" class="">Getting started with the API</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/public/" class="">Playing with public data</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/token/" class="">Obtaining client app access</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/authorized/" class="">Logging in with an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/guidelines/" class="">Guidelines and best practices</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/libraries/" class="">Libraries and implementations</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Contributing to Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/dev/overview/" class="">Technical overview</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/setup/" class="">Setting up a dev environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/code/" class="">Code structure</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/routes/" class="">Routes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/disclosure/" class="">Bug bounties and responsible disclosure</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Spec compliance</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/spec/activitypub/" class="">ActivityPub</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/webfinger/" class="">WebFinger</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/security/" class="">Security</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/microformats/" class="">Microformats</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/oauth/" class="">OAuth</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/bearcaps/" class="">Bearcaps</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/api/oauth-scopes/" class="">OAuth Scopes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/api/rate-limits/" class="">Rate limits</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Methods</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/methods/apps/" class="">apps</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/apps/oauth/" class="">oauth</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/accounts/" class="">accounts</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/accounts/bookmarks/" class="">bookmarks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/favourites/" class="">favourites</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/mutes/" class="">mutes</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/blocks/" class="">blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/domain_blocks/" class="">domain_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/filters/" class="">filters</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/reports/" class="">reports</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/follow_requests/" class="">follow_requests</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/endorsements/" class="">endorsements</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/featured_tags/" class="">featured_tags</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/preferences/" class="">preferences</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/suggestions/" class="">suggestions</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/statuses/" class="">statuses</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/statuses/media/" class="">media</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/statuses/polls/" class="">polls</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/statuses/scheduled_statuses/" class="">scheduled_statuses</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/timelines/" class="">timelines</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/timelines/conversations/" class="">conversations</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/timelines/lists/" class="">lists</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/timelines/markers/" class="">markers</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/timelines/streaming/" class="">streaming</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/notifications/" class="">notifications</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/notifications/push/" class="">push</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/search/" class="">search</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/instance/" class="">instance</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/instance/trends/" class="">trends</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/instance/directory/" class="">directory</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/instance/custom_emojis/" class="">custom_emojis</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/admin/" class="">admin</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/announcements/" class="">announcements</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/proofs/" class="">proofs</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/oembed/" class="">oembed</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Entities</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/entities/account/" class="">Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/activity/" class="">Activity</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/admin-account/" class="">Admin::Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/admin-report/" class="">Admin::Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/announcement/" class="">Announcement</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/announcementreaction/" class="">AnnouncementReaction</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/application/" class="">Application</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/attachment/" class="">Attachment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/card/" class="">Card</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/context/" class="">Context</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/conversation/" class="">Conversation</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/emoji/" class="">Emoji</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/error/" class="">Error</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/featuredtag/" class="">FeaturedTag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/field/" class="">Field</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/filter/" class="">Filter</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/history/" class="">History</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/identityproof/" class="">IdentityProof</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/instance/" class="">Instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/list/" class="">List</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/marker/" class="">Marker</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/mention/" class="">Mention</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/notification/" class="">Notification</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/poll/" class="">Poll</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/preferences/" class="">Preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/pushsubscription/" class="">PushSubscription</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/relationship/" class="">Relationship</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/report/" class="">Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/results/" class="">Results</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/scheduledstatus/" class="">ScheduledStatus</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/source/" class="">Source</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/status/" class="">Status</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/tag/" class="">Tag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/token/" class="">Token</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>Proxying object storage through nginx</h1>
+
+  
+    <p>Serving user-uploaded files in Mastodon from your own domain</p>
+  
+  <aside>
+    <nav id="TableOfContents"></nav>
+  </aside>
+  <div class="e-content">
+    <p>When you are using Mastodon with an object storage provider like Amazon S3, Wasabi, Google Cloud or other, by default the URLs of the files go through the storage providers themselves. This has the following downsides:</p>
+<ul>
+<li>Bandwidth is usually metered and very expensive</li>
+<li>URLs will be broken if you decide to switch providers later</li>
+</ul>
+<p>You can instead serve the files from your own domain, caching them in the process. Access patterns on Mastodon are such that <strong>new files are usually accessed simultaneously by a lot of clients</strong> as new posts stream in through the streaming API or as they get distributed through federation; older content is accessed comparatively rarely. For that reason, caching alone would not reduce bandwidth consumed by your proxy from the actual object storage. To mitigate this, we can use a <strong>cache lock</strong> mechanism that ensures that only one proxy request is made at the same time.</p>
+<p>Here is an example nginx configuration that accomplishes this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#ff79c6">server</span> {
+  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
+  <span style="color:#ff79c6">listen</span> <span style="color:#f1fa8c">[::]:443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
+  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">files.example.com</span>;
+  <span style="color:#ff79c6">root</span> <span style="color:#f1fa8c">/var/www/html</span>;
+
+  <span style="color:#ff79c6">keepalive_timeout</span> <span style="color:#bd93f9">30</span>;
+
+  <span style="color:#ff79c6">location</span> = <span style="color:#f1fa8c">/</span> {
+    <span style="color:#ff79c6">index</span> <span style="color:#f1fa8c">index.html</span>;
+  }
+
+  <span style="color:#ff79c6">location</span> <span style="color:#f1fa8c">/</span> {
+    <span style="color:#ff79c6">try_files</span> <span style="color:#8be9fd;font-style:italic">$uri</span> <span style="color:#f1fa8c">@s3</span>;
+  }
+
+  <span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">$s3_backend</span> <span style="color:#f1fa8c">&#39;https://YOUR_BUCKET_NAME.YOUR_S3_HOSTNAME&#39;</span>;
+
+  <span style="color:#ff79c6">location</span> <span style="color:#f1fa8c">@s3</span> {
+    <span style="color:#ff79c6">limit_except</span> <span style="color:#f1fa8c">GET</span> {
+      <span style="color:#ff79c6">deny</span> <span style="color:#f1fa8c">all</span>;
+    }
+
+    <span style="color:#ff79c6">resolver</span> <span style="color:#bd93f9">8</span><span style="color:#f1fa8c">.8.8.8</span>;
+    <span style="color:#ff79c6">proxy_set_header</span> <span style="color:#f1fa8c">Host</span> <span style="color:#f1fa8c">YOUR_S3_HOSTNAME</span>;
+    <span style="color:#ff79c6">proxy_set_header</span> <span style="color:#f1fa8c">Connection</span> <span style="color:#f1fa8c">&#39;&#39;</span>;
+    <span style="color:#ff79c6">proxy_set_header</span> <span style="color:#f1fa8c">Authorization</span> <span style="color:#f1fa8c">&#39;&#39;</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">Set-Cookie</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">&#39;Access-Control-Allow-Origin&#39;</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">&#39;Access-Control-Allow-Methods&#39;</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">&#39;Access-Control-Allow-Headers&#39;</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">x-amz-id-2</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">x-amz-request-id</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">x-amz-meta-server-side-encryption</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">x-amz-server-side-encryption</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">x-amz-bucket-region</span>;
+    <span style="color:#ff79c6">proxy_hide_header</span> <span style="color:#f1fa8c">x-amzn-requestid</span>;
+    <span style="color:#ff79c6">proxy_ignore_headers</span> <span style="color:#f1fa8c">Set-Cookie</span>;
+    <span style="color:#ff79c6">proxy_pass</span> <span style="color:#8be9fd;font-style:italic">$s3_backend$uri</span>;
+    <span style="color:#ff79c6">proxy_intercept_errors</span> off;
+
+    <span style="color:#ff79c6">proxy_cache</span> <span style="color:#f1fa8c">CACHE</span>;
+    <span style="color:#ff79c6">proxy_cache_valid</span> <span style="color:#bd93f9">200</span> <span style="color:#f1fa8c">48h</span>;
+    <span style="color:#ff79c6">proxy_cache_use_stale</span> <span style="color:#f1fa8c">error</span> <span style="color:#f1fa8c">timeout</span> <span style="color:#f1fa8c">updating</span> <span style="color:#f1fa8c">http_500</span> <span style="color:#f1fa8c">http_502</span> <span style="color:#f1fa8c">http_503</span> <span style="color:#f1fa8c">http_504</span>;
+    <span style="color:#ff79c6">proxy_cache_lock</span> on;
+
+    <span style="color:#ff79c6">expires</span> <span style="color:#f1fa8c">1y</span>;
+    <span style="color:#ff79c6">add_header</span> <span style="color:#f1fa8c">Cache-Control</span> <span style="color:#f1fa8c">public</span>;
+    <span style="color:#ff79c6">add_header</span> <span style="color:#f1fa8c">&#39;Access-Control-Allow-Origin&#39;</span> <span style="color:#f1fa8c">&#39;*&#39;</span>;
+    <span style="color:#ff79c6">add_header</span> <span style="color:#f1fa8c">X-Cache-Status</span> <span style="color:#8be9fd;font-style:italic">$upstream_cache_status</span>;
+  }
+}
+</code></pre></div><div class="hint hint-info">
+  <div class="hint-icon"><i class="fa fa-info-circle"></i></div>
+
+  We are using <code>$s3_backend</code> as a variable to force nginx to perform a DNS resolution on its value, as the IP of the object storage provider may not always remain the same.
+</div>
+
+<p>This configuration does a few different things:</p>
+<ul>
+<li>Blocks all but GET requests to the object storage provider</li>
+<li>Prevents any authenticated requests to the object storage provider</li>
+<li>Prevents the object storage provider from setting cookies</li>
+<li>Removes unnecessary headers returned by the object storage provider</li>
+<li>Caches valid files for at most 48 hours</li>
+<li>Allows older cache to be used if the object storage is unavailable</li>
+<li>Uses a cache lock to prevent simultaneous requests to the object storage</li>
+<li>Makes all returned files cacheable by browsers for up to a year</li>
+<li>Adds CORS headers necessary for Mastodon's web UI</li>
+<li>Adds a special header that tells you if your request was a cache hit or miss</li>
+</ul>
+<p>Make sure to replace:</p>
+<ul>
+<li><code>files.example.com</code></li>
+<li><code>YOUR_BUCKET_NAME</code></li>
+<li><code>YOUR_S3_HOSTNAME</code></li>
+</ul>
+<p>With your actual values. Save your configuration to <code>/etc/nginx/sites-available/files.example.com</code> and then enable it with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ln -s /etc/nginx/sites-available/files.example.com /etc/nginx/sites-enabled/
+systemctl reload nginx
+</code></pre></div><p>You'll also want to get a SSL certificate for it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">certbot --nginx -d files.example.com
+systemctl reload nginx
+</code></pre></div><p>At last, you'll want to make sure Mastodon is using your new proxy to generate file URLs. Edit your Mastodon's <code>.env.production</code> to add:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">S3_ALIAS_HOST</span><span style="color:#ff79c6">=</span>files.example.com
+</code></pre></div><p>And restart Mastodon:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart mastodon-sidekiq
+systemctl reload mastodon-web
+</code></pre></div><div class="hint hint-success">
+  <div class="hint-icon"><i class="fa fa-check-circle"></i></div>
+
+  <strong>You can now visit your Mastodon in the browser to confirm everything loads correctly</strong>
+</div>
+
+
+
+    <p style="color: #687590;">
+      Last updated September 28, 2020 · <a href='https://github.com/tootsuite/documentation/tree/master/content/en/admin/optional/object-storage-proxy.md' style="color: #687590;">Improve this page</a>
+
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsored by
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>Join Mastodon</a> · <a href='https://blog.joinmastodon.org'>Blog</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><i class='fab fa-mastodon'></i></a> · <a href='https://twitter.com/joinmastodon' rel='nofollow' target='_blank'><i class='fab fa-twitter'></i></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/tootsuite/documentation/tree/master/content/en/admin/optional/object-storage-proxy.md'>View source</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>Imprint</a></p>
+</footer>
+
+</body>
+
+</html>

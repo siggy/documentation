@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+
+
+<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+
+
+  <title>Full-text search - Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://documentation.sig.gy/admin/optional/elasticsearch/">
+
+  
+    <meta name="description" content="Setting up ElasticSearch to search for statuses authored, favourited, or mentioned in.">
+    <meta property="og:description" content="Setting up ElasticSearch to search for statuses authored, favourited, or mentioned in.">
+    <meta name="twitter:description" content="Setting up ElasticSearch to search for statuses authored, favourited, or mentioned in.">
+  
+
+  <meta name="twitter:title" content="Full-text search">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://documentation.sig.gy/admin/optional/elasticsearch/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/" class="">What is Mastodon?</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Using Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/user/signup/" class="">Signing up for an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/profile/" class="">Setting up your profile</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/posting/" class="">Posting toots</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/network/" class="">Using the network features</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moderating/" class="">Dealing with unwanted content</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/discoverability/" class="">Promoting yourself and others</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/preferences/" class="">Set your preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/contacts/" class="">More settings</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/external/" class="">Using Mastodon externally</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moving/" class="">Moving or leaving accounts</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/run-your-own/" class="">Running your own server</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Running Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/admin/prerequisites/" class="">Preparing your machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/install/" class="">Installing from source</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/config/" class="">Configuring your environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/optional/" class="">Installing optional features</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/optional/elasticsearch/" class="active">Full-text search</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/tor/" class="">Hidden services</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/sso/" class="">Single Sign On</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/admin/setup/" class="">Setting up your new instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/tootctl/" class="">Using the admin CLI</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/upgrading/" class="">Upgrading to a new release</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/backups/" class="">Backing up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/migrating/" class="">Migrating to a new machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/scaling/" class="">Scaling up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/moderation/" class="">Moderation actions</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/troubleshooting/" class="">Troubleshooting errors</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/troubleshooting/index-corruption/" class="">Database index corruption</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Developing Mastodon apps</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/client/intro/" class="">Getting started with the API</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/public/" class="">Playing with public data</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/token/" class="">Obtaining client app access</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/authorized/" class="">Logging in with an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/guidelines/" class="">Guidelines and best practices</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/libraries/" class="">Libraries and implementations</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Contributing to Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/dev/overview/" class="">Technical overview</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/setup/" class="">Setting up a dev environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/code/" class="">Code structure</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/routes/" class="">Routes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/disclosure/" class="">Bug bounties and responsible disclosure</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Spec compliance</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/spec/activitypub/" class="">ActivityPub</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/webfinger/" class="">WebFinger</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/security/" class="">Security</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/microformats/" class="">Microformats</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/oauth/" class="">OAuth</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/bearcaps/" class="">Bearcaps</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/api/oauth-scopes/" class="">OAuth Scopes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/api/rate-limits/" class="">Rate limits</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Methods</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/methods/apps/" class="">apps</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/apps/oauth/" class="">oauth</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/accounts/" class="">accounts</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/accounts/bookmarks/" class="">bookmarks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/favourites/" class="">favourites</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/mutes/" class="">mutes</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/blocks/" class="">blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/domain_blocks/" class="">domain_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/filters/" class="">filters</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/reports/" class="">reports</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/follow_requests/" class="">follow_requests</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/endorsements/" class="">endorsements</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/featured_tags/" class="">featured_tags</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/preferences/" class="">preferences</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/suggestions/" class="">suggestions</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/statuses/" class="">statuses</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/statuses/media/" class="">media</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/statuses/polls/" class="">polls</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/statuses/scheduled_statuses/" class="">scheduled_statuses</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/timelines/" class="">timelines</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/timelines/conversations/" class="">conversations</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/timelines/lists/" class="">lists</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/timelines/markers/" class="">markers</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/timelines/streaming/" class="">streaming</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/notifications/" class="">notifications</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/notifications/push/" class="">push</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/search/" class="">search</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/instance/" class="">instance</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/instance/trends/" class="">trends</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/instance/directory/" class="">directory</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/instance/custom_emojis/" class="">custom_emojis</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/admin/" class="">admin</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/announcements/" class="">announcements</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/proofs/" class="">proofs</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/oembed/" class="">oembed</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Entities</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/entities/account/" class="">Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/activity/" class="">Activity</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/admin-account/" class="">Admin::Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/admin-report/" class="">Admin::Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/announcement/" class="">Announcement</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/announcementreaction/" class="">AnnouncementReaction</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/application/" class="">Application</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/attachment/" class="">Attachment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/card/" class="">Card</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/context/" class="">Context</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/conversation/" class="">Conversation</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/emoji/" class="">Emoji</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/error/" class="">Error</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/featuredtag/" class="">FeaturedTag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/field/" class="">Field</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/filter/" class="">Filter</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/history/" class="">History</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/identityproof/" class="">IdentityProof</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/instance/" class="">Instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/list/" class="">List</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/marker/" class="">Marker</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/mention/" class="">Mention</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/notification/" class="">Notification</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/poll/" class="">Poll</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/preferences/" class="">Preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/pushsubscription/" class="">PushSubscription</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/relationship/" class="">Relationship</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/report/" class="">Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/results/" class="">Results</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/scheduledstatus/" class="">ScheduledStatus</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/source/" class="">Source</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/status/" class="">Status</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/tag/" class="">Tag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/token/" class="">Token</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>Full-text search</h1>
+
+  
+    <p>Setting up ElasticSearch to search for statuses authored, favourited, or mentioned in.</p>
+  
+  <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#install">Installing ElasticSearch</a></li>
+        <li><a href="#config">Configuring Mastodon</a></li>
+        <li><a href="#search-optimization-for-other-languages">Search optimization for other languages</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  <div class="e-content">
+    <p>Mastodon supports full-text search when ElasticSearch is available. Mastodon’s full-text search allows logged in users to find results from their own toots, their favourites, and their mentions. It deliberately does not allow searching for arbitrary strings in the entire database.</p>
+<h2 id="install">Installing ElasticSearch</h2>
+<p>ElasticSearch requires a Java runtime. If you don’t have Java already installed, do it now. Assuming you are logged in as <code>root</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install openjdk-17-jre-headless
+</code></pre></div><p>Add the official ElasticSearch repository to apt:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget -O /usr/share/keyrings/elasticsearch.asc https://artifacts.elastic.co/GPG-KEY-elasticsearch
+<span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;deb [signed-by=/usr/share/keyrings/elasticsearch.asc] https://artifacts.elastic.co/packages/7.x/apt stable main&#34;</span> &gt; /etc/apt/sources.list.d/elastic-7.x.list
+</code></pre></div><p>Now you can install ElasticSearch:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt update
+apt install elasticsearch
+</code></pre></div><div class="hint hint-warning">
+  <div class="hint-icon"><i class="fa fa-exclamation-circle"></i></div>
+
+  <strong>Security warning:</strong> By default, ElasticSearch is supposed to bind to localhost only, i.e. be inaccessible from the outside network. You can check which address ElasticSearch binds to by looking at <code>network.host</code> within <code>/etc/elasticsearch/elasticsearch.yml</code>. Consider that anyone who can access ElasticSearch can access and modify any data within it, as there is no authentication layer. So it’s really important that the access is secured. Having a firewall that only exposes the 22, 80 and 443 ports is advisable, as outlined in the <a href="../../prerequisites/#install-a-firewall-and-only-whitelist-ssh-http-and-https-ports">main installation instructions</a>. If you have a multi-host setup, you must know how to secure internal traffic.
+</div>
+
+<div class="hint hint-danger">
+  <div class="hint-icon"><i class="fa fa-exclamation-triangle"></i></div>
+
+  <strong>Security warning:</strong> ElasticSearch versions between <code>2.0</code> and <code>2.14.1</code> are affected by an <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228">exploit</a> in the <code>log4j</code> library. If affected, please refer to the <a href="https://github.com/elastic/elasticsearch/issues/81618#issuecomment-991000240">temporary mitigation</a> from the ElasticSearch issue tracker.
+</div>
+
+<p>To start ElasticSearch:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl daemon-reload
+systemctl <span style="color:#8be9fd;font-style:italic">enable</span> --now elasticsearch
+</code></pre></div><h2 id="config">Configuring Mastodon</h2>
+<p>Edit <code>.env.production</code> to add the following variables:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">ES_ENABLED</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">true</span>
+<span style="color:#8be9fd;font-style:italic">ES_HOST</span><span style="color:#ff79c6">=</span>localhost
+<span style="color:#8be9fd;font-style:italic">ES_PORT</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">9200</span>
+</code></pre></div><p>If you have multiple Mastodon servers on the same machine, and you are planning to use the same ElasticSearch installation for all of them, make sure that all of them have unique <code>REDIS_NAMESPACE</code> in their configurations, to differentiate the indices. If you need to override the prefix of the ElasticSearch indices, you can set <code>ES_PREFIX</code> directly.</p>
+<p>After saving the new configuration, restart Mastodon processes for it to take effect:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart mastodon-sidekiq
+systemctl reload mastodon-web
+</code></pre></div><p>Now it's time to create the ElasticSearch indices and fill them with data:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">su - mastodon
+<span style="color:#8be9fd;font-style:italic">cd</span> live
+<span style="color:#8be9fd;font-style:italic">RAILS_ENV</span><span style="color:#ff79c6">=</span>production bin/tootctl search deploy
+</code></pre></div><h2 id="search-optimization-for-other-languages">Search optimization for other languages</h2>
+<h3 id="chinese-search-optimization">Chinese search optimization</h3>
+<p>The default analyzer of the ElasticSearch is the standard analyzer, which may not be the best especially for Chinese. To improve search experience, you can install a language specific analyzer. Before creating the indices in ElasticSearch, install the following ElasticSearch extensions:</p>
+<ul>
+<li><a href="https://github.com/medcl/elasticsearch-analysis-ik">elasticsearch-analysis-ik</a></li>
+<li><a href="https://github.com/medcl/elasticsearch-analysis-stconvert">elasticsearch-analysis-stconvert</a></li>
+</ul>
+<p>And then modify Mastodon's index definition as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="font-weight:bold">diff --git a/app/chewy/accounts_index.rb b/app/chewy/accounts_index.rb
+</span><span style="font-weight:bold"></span><span style="color:#8b080b">--- a/app/chewy/accounts_index.rb
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+++ b/app/chewy/accounts_index.rb
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">@@ -4,7 +4,7 @@ class AccountsIndex &lt; Chewy::Index
+</span><span style="font-weight:bold"></span>   settings index: { refresh_interval: &#39;5m&#39; }, analysis: {
+     analyzer: {
+       content: {
+<span style="color:#8b080b">-        tokenizer: &#39;whitespace&#39;,
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+        tokenizer: &#39;ik_max_word&#39;,
+</span><span style="font-weight:bold"></span>         filter: %w(lowercase asciifolding cjk_width),
+       },
+
+<span style="font-weight:bold">diff --git a/app/chewy/statuses_index.rb b/app/chewy/statuses_index.rb
+</span><span style="font-weight:bold"></span><span style="color:#8b080b">--- a/app/chewy/statuses_index.rb
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+++ b/app/chewy/statuses_index.rb
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">@@ -16,9 +16,17 @@ class StatusesIndex &lt; Chewy::Index
+</span><span style="font-weight:bold"></span>         language: &#39;possessive_english&#39;,
+       },
+     },
+<span style="font-weight:bold">+    char_filter: {
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+      tsconvert: {
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        type: &#39;stconvert&#39;,
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        keep_both: false,
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        delimiter: &#39;#&#39;,
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        convert_type: &#39;t2s&#39;,
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+      },
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+    },
+</span><span style="font-weight:bold"></span>     analyzer: {
+       content: {
+<span style="color:#8b080b">-        tokenizer: &#39;uax_url_email&#39;,
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+        tokenizer: &#39;ik_max_word&#39;,
+</span><span style="font-weight:bold"></span>         filter: %w(
+           english_possessive_stemmer
+           lowercase
+<span style="font-weight:bold">@@ -27,6 +35,7 @@ class StatusesIndex &lt; Chewy::Index
+</span><span style="font-weight:bold"></span>           english_stop
+           english_stemmer
+         ),
+<span style="font-weight:bold">+        char_filter: %w(tsconvert),
+</span><span style="font-weight:bold"></span>       },
+     },
+   }
+<span style="font-weight:bold">diff --git a/app/chewy/tags_index.rb b/app/chewy/tags_index.rb
+</span><span style="font-weight:bold"></span><span style="color:#8b080b">--- a/app/chewy/tags_index.rb
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+++ b/app/chewy/tags_index.rb
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">@@ -2,10 +2,19 @@
+</span><span style="font-weight:bold"></span>
+ class TagsIndex &lt; Chewy::Index
+   settings index: { refresh_interval: &#39;15m&#39; }, analysis: {
+<span style="font-weight:bold">+    char_filter: {
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+      tsconvert: {
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        type: &#39;stconvert&#39;,
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        keep_both: false,
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        delimiter: &#39;#&#39;,
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        convert_type: &#39;t2s&#39;,
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+      },
+</span><span style="font-weight:bold"></span><span style="font-weight:bold">+    },
+</span><span style="font-weight:bold"></span>     analyzer: {
+       content: {
+<span style="color:#8b080b">-        tokenizer: &#39;keyword&#39;,
+</span><span style="color:#8b080b"></span><span style="font-weight:bold">+        tokenizer: &#39;ik_max_word&#39;,
+</span><span style="font-weight:bold"></span>         filter: %w(lowercase asciifolding cjk_width),
+<span style="font-weight:bold">+        char_filter: %w(tsconvert),
+</span><span style="font-weight:bold"></span>       },
+
+       edge_ngram: {
+</code></pre></div>
+
+    <p style="color: #687590;">
+      Last updated October 30, 2022 · <a href='https://github.com/tootsuite/documentation/tree/master/content/en/admin/optional/elasticsearch.md' style="color: #687590;">Improve this page</a>
+
+      
+        <br />
+
+        Also available in:
+
+        
+          <a href="https://documentation.sig.gy/zh-cn/admin/optional/elasticsearch/" style="color: #687590;" hreflang="zh-cn">简体中文</a>
+        
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsored by
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>Join Mastodon</a> · <a href='https://blog.joinmastodon.org'>Blog</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><i class='fab fa-mastodon'></i></a> · <a href='https://twitter.com/joinmastodon' rel='nofollow' target='_blank'><i class='fab fa-twitter'></i></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/tootsuite/documentation/tree/master/content/en/admin/optional/elasticsearch.md'>View source</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>Imprint</a></p>
+</footer>
+
+</body>
+
+</html>

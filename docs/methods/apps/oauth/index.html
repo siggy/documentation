@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  
+
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
+
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+
+
+<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+
+
+  <title>oauth - Mastodon documentation</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://documentation.sig.gy/methods/apps/oauth/">
+
+  
+    <meta name="description" content="Generate and manage OAuth tokens.">
+    <meta property="og:description" content="Generate and manage OAuth tokens.">
+    <meta name="twitter:description" content="Generate and manage OAuth tokens.">
+  
+
+  <meta name="twitter:title" content="oauth">
+  <meta name="twitter:site" content="@joinmastodon">
+
+  <link rel="canonical" href="https://documentation.sig.gy/methods/apps/oauth/">
+</head>
+
+<body>
+  <div class="container sidebar-layout">
+    <nav class="sidebar"><a class="brand" href="/">
+  <img class="link-logo" src="/brand.svg" alt="Mastodon" />
+</a>
+
+<ul>
+  
+  
+    <li>
+      
+        <a href="/" class="">What is Mastodon?</a>
+      
+
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Using Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/user/signup/" class="">Signing up for an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/profile/" class="">Setting up your profile</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/posting/" class="">Posting toots</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/network/" class="">Using the network features</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moderating/" class="">Dealing with unwanted content</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/discoverability/" class="">Promoting yourself and others</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/preferences/" class="">Set your preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/contacts/" class="">More settings</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/external/" class="">Using Mastodon externally</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/moving/" class="">Moving or leaving accounts</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/user/run-your-own/" class="">Running your own server</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Running Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/admin/prerequisites/" class="">Preparing your machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/install/" class="">Installing from source</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/config/" class="">Configuring your environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/optional/" class="">Installing optional features</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/optional/elasticsearch/" class="">Full-text search</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/tor/" class="">Hidden services</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/admin/optional/sso/" class="">Single Sign On</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/admin/setup/" class="">Setting up your new instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/tootctl/" class="">Using the admin CLI</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/upgrading/" class="">Upgrading to a new release</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/backups/" class="">Backing up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/migrating/" class="">Migrating to a new machine</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/scaling/" class="">Scaling up your server</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/moderation/" class="">Moderation actions</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/admin/troubleshooting/" class="">Troubleshooting errors</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/admin/troubleshooting/index-corruption/" class="">Database index corruption</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Developing Mastodon apps</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/client/intro/" class="">Getting started with the API</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/public/" class="">Playing with public data</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/token/" class="">Obtaining client app access</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/authorized/" class="">Logging in with an account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/guidelines/" class="">Guidelines and best practices</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/client/libraries/" class="">Libraries and implementations</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Contributing to Mastodon</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/dev/overview/" class="">Technical overview</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/setup/" class="">Setting up a dev environment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/code/" class="">Code structure</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/routes/" class="">Routes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/dev/disclosure/" class="">Bug bounties and responsible disclosure</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">Spec compliance</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/spec/activitypub/" class="">ActivityPub</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/webfinger/" class="">WebFinger</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/security/" class="">Security</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/microformats/" class="">Microformats</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/oauth/" class="">OAuth</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/spec/bearcaps/" class="">Bearcaps</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">REST API</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/api/oauth-scopes/" class="">OAuth Scopes</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/api/rate-limits/" class="">Rate limits</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Methods</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/methods/apps/" class="">apps</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/apps/oauth/" class="active">oauth</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/accounts/" class="">accounts</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/accounts/bookmarks/" class="">bookmarks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/favourites/" class="">favourites</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/mutes/" class="">mutes</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/blocks/" class="">blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/domain_blocks/" class="">domain_blocks</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/filters/" class="">filters</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/reports/" class="">reports</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/follow_requests/" class="">follow_requests</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/endorsements/" class="">endorsements</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/featured_tags/" class="">featured_tags</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/preferences/" class="">preferences</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/accounts/suggestions/" class="">suggestions</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/statuses/" class="">statuses</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/statuses/media/" class="">media</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/statuses/polls/" class="">polls</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/statuses/scheduled_statuses/" class="">scheduled_statuses</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/timelines/" class="">timelines</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/timelines/conversations/" class="">conversations</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/timelines/lists/" class="">lists</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/timelines/markers/" class="">markers</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/timelines/streaming/" class="">streaming</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/notifications/" class="">notifications</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/notifications/push/" class="">push</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/search/" class="">search</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/instance/" class="">instance</a>
+
+              
+                <ul class="sub-menu">
+                  
+                    <li>
+                      <a href="/methods/instance/trends/" class="">trends</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/instance/directory/" class="">directory</a>
+                    </li>
+                  
+                    <li>
+                      <a href="/methods/instance/custom_emojis/" class="">custom_emojis</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li>
+              <a href="/methods/admin/" class="">admin</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/announcements/" class="">announcements</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/proofs/" class="">proofs</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/methods/oembed/" class="">oembed</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+    <li>
+      
+        <span class="sub-title">API Entities</span>
+      
+
+      
+        <ul class="sub-menu">
+          
+            <li>
+              <a href="/entities/account/" class="">Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/activity/" class="">Activity</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/admin-account/" class="">Admin::Account</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/admin-report/" class="">Admin::Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/announcement/" class="">Announcement</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/announcementreaction/" class="">AnnouncementReaction</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/application/" class="">Application</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/attachment/" class="">Attachment</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/card/" class="">Card</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/context/" class="">Context</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/conversation/" class="">Conversation</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/emoji/" class="">Emoji</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/error/" class="">Error</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/featuredtag/" class="">FeaturedTag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/field/" class="">Field</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/filter/" class="">Filter</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/history/" class="">History</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/identityproof/" class="">IdentityProof</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/instance/" class="">Instance</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/list/" class="">List</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/marker/" class="">Marker</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/mention/" class="">Mention</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/notification/" class="">Notification</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/poll/" class="">Poll</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/preferences/" class="">Preferences</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/pushsubscription/" class="">PushSubscription</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/relationship/" class="">Relationship</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/report/" class="">Report</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/results/" class="">Results</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/scheduledstatus/" class="">ScheduledStatus</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/source/" class="">Source</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/status/" class="">Status</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/tag/" class="">Tag</a>
+
+              
+            </li>
+          
+            <li>
+              <a href="/entities/token/" class="">Token</a>
+
+              
+            </li>
+          
+        </ul>
+      
+    </li>
+  
+</ul>
+</nav>
+    <main>
+  <h1>oauth</h1>
+
+  
+    <p>Generate and manage OAuth tokens.</p>
+  
+  <aside>
+    <nav id="TableOfContents"></nav>
+  </aside>
+  <div class="e-content">
+    <p><div>
+  <h2 class="api-method">
+    <div class="api-method-method">
+      <span>get</span>
+    </div>
+
+    <span class="api-method-title">Authorize a user</span>
+  </h2>
+
+  <div class="api-method-url">
+    <span class="api-method-host">https://mastodon.example</span><span class="api-method-path">/oauth/authorize</span>
+  </div>
+
+<div>
+</p>
+<p>Displays an authorization form to the user. If approved, it will create and return an authorization code, then redirect to the desired <code>redirect_uri</code>, or show the authorization code if <code>urn:ietf:wg:oauth:2.0:oob</code> was requested. The authorization code can be used while requesting a token to obtain access to user-level methods.</p>
+<p></div>
+
+<div class="tabs">
+
+<div class="tab-pane">
+  <h4 class="tab-pane-title">Request</h4>
+
+<h5 class="api-method-parameters-type">Form Data Parameters</h5>
+<div class="api-method-parameters-list">
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>response_type</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Should be set equal to <code>code</code>.
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>client_id</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Client ID, obtained during app registration.
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>redirect_uri</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Set a URI to redirect the user to. If this parameter is set to <code>urn:ietf:wg:oauth:2.0:oob</code> then the authorization code will be shown instead. Must match one of the redirect URIs declared during app registration.
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>scope</div>
+    <div class="api-method-parameter-optional">optional</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+List of requested OAuth scopes, separated by spaces (or by pluses, if using query parameters). Must be a subset of scopes declared during app registration. If not provided, defaults to <code>read</code>.
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>force_login</div>
+    <div class="api-method-parameter-optional">optional</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>bool</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Added in 2.6.0. Forces the user to re-login, which is necessary for authorizing with multiple accounts from the same instance.
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="tab-pane">
+  <h4 class="tab-pane-title">Response</h4>
+
+<div class="api-method-response-example">
+  <h5>
+    <span class="api-method-response-example-indicator"></span>
+    200: Success
+  </h5>
+
+<div>
+</p>
+<p>The authorization code will be returned as a query parameter named <code>code</code>.
+</div>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">redirect_uri?code=qDFUEaYrRK5c-HNmTCJbAzazwLRInJ7VHFat0wcMgCU
+</code></pre></div><p></div>
+
+<div class="api-method-response-example">
+  <h5>
+    <span class="api-method-response-example-indicator api-method-response-example-indicator-error"></span>
+    400: 
+  </h5>
+
+<div>
+</p>
+<p>If the authorization code is incorrect or has been used already, the request will fail.
+</div>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;invalid_grant&#34;</span>,
+  <span style="color:#f1fa8c">&#34;error_description&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.&#34;</span>
+}
+</code></pre></div><p></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+  <h2 class="api-method">
+    <div class="api-method-method">
+      <span>post</span>
+    </div>
+
+    <span class="api-method-title">Obtain a token</span>
+  </h2>
+
+  <div class="api-method-url">
+    <span class="api-method-host">https://mastodon.example</span><span class="api-method-path">/oauth/token</span>
+  </div>
+
+<div>
+</p>
+<p>Returns an access token, to be used during API calls that are not public.</p>
+<p></div>
+
+<div class="tabs">
+
+<div class="tab-pane">
+  <h4 class="tab-pane-title">Request</h4>
+
+<h5 class="api-method-parameters-type">Form Data Parameters</h5>
+<div class="api-method-parameters-list">
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>grant_type</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Set equal to <code>authorization_code</code> if <code>code</code> is provided in order to gain user-level access. Otherwise, set equal to <code>client_credentials</code> to obtain app-level access only.
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>client_id</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Client ID, obtained during app registration
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>client_secret</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Client secret, obtained during app registration
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>redirect_uri</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Set a URI to redirect the user to. If this parameter is set to urn:ietf:wg:oauth:2.0:oob then the token will be shown instead. Must match one of the redirect URIs declared during app registration.
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>scope</div>
+    <div class="api-method-parameter-optional">optional</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+List of requested OAuth scopes, separated by spaces. Must be a subset of scopes declared during app registration. If not provided, defaults to <code>read</code>.
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>code</div>
+    <div class="api-method-parameter-optional">optional</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+A user authorization code, obtained via /oauth/authorize
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="tab-pane">
+  <h4 class="tab-pane-title">Response</h4>
+
+<div class="api-method-response-example">
+  <h5>
+    <span class="api-method-response-example-indicator"></span>
+    200: Success
+  </h5>
+
+<div>
+</p>
+<p>Store this access_token for later use with auth-required methods. The token should be passed as an HTTP <code>Authorization</code> header when making API calls, with the value <code>Bearer access_token</code>
+</div>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#f1fa8c">&#34;access_token&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;ZA-Yj3aBD8U8Cm7lKUp-lm9O9BmDgdhHzDeqsY8tlL0&#34;</span>,
+  <span style="color:#f1fa8c">&#34;token_type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Bearer&#34;</span>,
+  <span style="color:#f1fa8c">&#34;scope&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;read write follow push&#34;</span>,
+  <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1573979017</span>
+}
+</code></pre></div><p></div>
+
+<div class="api-method-response-example">
+  <h5>
+    <span class="api-method-response-example-indicator api-method-response-example-indicator-error"></span>
+    400: 
+  </h5>
+
+<div>
+</p>
+<p>If you try to request a scope that was not included when registering the app, the request will fail.
+</div>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;invalid_scope&#34;</span>,
+  <span style="color:#f1fa8c">&#34;error_description&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The requested scope is invalid, unknown, or malformed.&#34;</span>
+}
+</code></pre></div><p></div>
+
+<div class="api-method-response-example">
+  <h5>
+    <span class="api-method-response-example-indicator api-method-response-example-indicator-error"></span>
+    401: Unauthorized
+  </h5>
+
+<div>
+</p>
+<p>If client_id and client_secret do not match or are invalid, the request will fail.
+</div>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;invalid_client&#34;</span>,
+  <span style="color:#f1fa8c">&#34;error_description&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Client authentication failed due to unknown client, no client authentication included, or unsupported authentication method.&#34;</span>
+}
+</code></pre></div><p></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+  <h2 class="api-method">
+    <div class="api-method-method">
+      <span>post</span>
+    </div>
+
+    <span class="api-method-title">Revoke token</span>
+  </h2>
+
+  <div class="api-method-url">
+    <span class="api-method-host">https://mastodon.example</span><span class="api-method-path">/oauth/revoke</span>
+  </div>
+
+<div>
+</p>
+<p>Revoke an access token to make it no longer valid for use.</p>
+<p></div>
+
+<div class="tabs">
+
+<div class="tab-pane">
+  <h4 class="tab-pane-title">Request</h4>
+
+<h5 class="api-method-parameters-type">Form Data Parameters</h5>
+<div class="api-method-parameters-list">
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>client_id</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Client ID, obtained during app registration
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>client_secret</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+Client secret, obtained during app registration
+  </div>
+</div>
+
+<div class="api-method-parameter">
+  <div class="api-method-parameter-cell api-method-parameter-name">
+    <div>token</div>
+    <div class="api-method-parameter-required">required</div>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-type">
+    <code>string</code>
+  </div>
+
+  <div class="api-method-parameter-cell api-method-parameter-description">
+
+The previously obtained token, to be invalidated
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="tab-pane">
+  <h4 class="tab-pane-title">Response</h4>
+
+<div class="api-method-response-example">
+  <h5>
+    <span class="api-method-response-example-indicator"></span>
+    200: Success
+  </h5>
+
+<div>
+</p>
+<p>If you own the provided token, the API call will provide an empty response. This operation is idempotent, so calling this API multiple times will still return OK.
+</div>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{}
+</code></pre></div><p></div>
+
+<div class="api-method-response-example">
+  <h5>
+    <span class="api-method-response-example-indicator api-method-response-example-indicator-error"></span>
+    403: Forbidden
+  </h5>
+
+<div>
+</p>
+<p>If you provide a token you do not own, or no token at all, the API call will return a 403 error.
+</div>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;unauthorized_client&#34;</span>,
+  <span style="color:#f1fa8c">&#34;error_description&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;You are not authorized to revoke this token&#34;</span>
+}
+</code></pre></div><p></div>
+
+</div>
+
+</div>
+
+</div>
+</p>
+
+
+    <p style="color: #687590;">
+      Last updated September 13, 2021 · <a href='https://github.com/tootsuite/documentation/tree/master/content/en/methods/apps/oauth.md' style="color: #687590;">Improve this page</a>
+
+      
+    </p>
+
+  </div>
+</main>
+  </div>
+
+  <footer class="footer container">
+  <div class="sponsorship">
+    <div class="container">
+      <h2>
+        Sponsored by
+      </h2>
+
+      <div class="logo-grid">
+        <div>
+          <a href="https://www.dotcom-monitor.com/es/">
+            <img src="/assets/sponsors/dotcom-monitor-logo.png" alt="Dotcom-Monitor" />
+          </a>
+
+          <a href="https://www.loadview-testing.com/products/jmeter-load-testing/">
+            <img src="/assets/sponsors/LoadView-logo.png" alt="LoadView" />
+          </a>
+
+          <a href="http://www.stevetures.com/">
+            <img src="/assets/sponsors/stephen-tures.jpg" alt="Stephen Tures" />
+          </a>
+
+          <a href="https://swayable.com">
+            <img src="/assets/sponsors/swayable.jpeg" alt="Swayable" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="legal legal--right">
+    <a href='https://joinmastodon.org'>Join Mastodon</a> · <a href='https://blog.joinmastodon.org'>Blog</a> · <a href='https://mastodon.social/@Mastodon' target='_blank'><i class='fab fa-mastodon'></i></a> · <a href='https://twitter.com/joinmastodon' rel='nofollow' target='_blank'><i class='fab fa-twitter'></i></a>
+  </p>
+
+  <p class="legal"><a href='https://github.com/tootsuite/documentation/tree/master/content/en/methods/apps/oauth.md'>View source</a> · <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a> · <a href='https://joinmastodon.org/imprint'>Imprint</a></p>
+</footer>
+
+</body>
+
+</html>
