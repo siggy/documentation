@@ -18,14 +18,7 @@ jobs:
         extended: true
 
     - name: Build
-      run: hugo --minify
-
-    - name: Deploy
-      uses: easingthemes/ssh-deploy@v2.0.7
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        ARGS: "-rltgoDzvO"
-        SOURCE: ./public/
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: ${{ secrets.REMOTE_TARGET }}
+      run: |
+        hugo --minify --cleanDestinationDir
+        rm -rf ./docs/
+        cp -a ./public/ ./docs/
