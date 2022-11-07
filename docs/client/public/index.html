@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Playing with public data - Mastodon documentation</title>
@@ -835,44 +835,44 @@
 </nav>
   </aside>
   <div class="e-content">
-    <p>Now that you know how to construct HTTP requests using cURL or your favorite programming language's HTTP utility or library, it is time to learn about endpoints and responses.</p>
+    <p>Now that you know how to construct HTTP requests using cURL or your favorite programming language&rsquo;s HTTP utility or library, it is time to learn about endpoints and responses.</p>
 <h2 id="endpoints">Endpoints explained</h2>
 <p>All HTTP requests are made against a target URL. When you request data to or from a website, you do so by using a specific URL. Depending on the URL, your request will be interpreted by the HTTP server and the appropriate response will be returned to you.</p>
-<p>Examples will be written using the fictional Mastodon website, mastodon.example, which is hosted at <code>https://mastodon.example</code>. The root of this website is <code>/</code>, and specific subdirectories and paths are known as endpoints. Mastodon's API endpoints are nested under the <code>/api</code> namespace, and most methods currently have their endpoints under <code>/api/v1</code>. Requests will be listed by their HTTP method and their endpoint; for example, GET /api/v1/endpoint should be interpreted as a GET request made to that endpoint on your domain, or in other words, <code>https://mastodon.example/api/v1/endpoint</code>.</p>
+<p>Examples will be written using the fictional Mastodon website, mastodon.example, which is hosted at <code>https://mastodon.example</code>. The root of this website is <code>/</code>, and specific subdirectories and paths are known as endpoints. Mastodon&rsquo;s API endpoints are nested under the <code>/api</code> namespace, and most methods currently have their endpoints under <code>/api/v1</code>. Requests will be listed by their HTTP method and their endpoint; for example, GET /api/v1/endpoint should be interpreted as a GET request made to that endpoint on your domain, or in other words, <code>https://mastodon.example/api/v1/endpoint</code>.</p>
 <h2 id="timelines">Fetching public timelines</h2>
-<p>Let's take a look at one of the most basic use cases for public data from Mastodon &ndash; the public timelines.</p>
+<p>Let&rsquo;s take a look at one of the most basic use cases for public data from Mastodon &ndash; the public timelines.</p>
 <p>We can try to request <a href="/methods/timelines/">GET /api/v1/timelines/public</a> like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://mastodon.example/api/v1/timelines/public
-</code></pre></div><p>Wow, that's a lot of text in response! The public timeline returns 20 statuses by default. We can use the <code>limit</code> parameter to request less than that. Let's try requesting the same endpoint, but with a limit of 2 this time:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://mastodon.example/api/v1/timelines/public?limit<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>
-</code></pre></div><p>Our response should be more manageable this time. We can parse or beautify this JSON with our chosen utility, and we should see that the response looks something like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">[
-  {
-    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;103206804533200177&#34;</span>,
-    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-26T23:27:31.000Z&#34;</span>,
-    ...
-    <span style="color:#f1fa8c">&#34;visibility&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;public&#34;</span>,
-    ...
-  },
-  {
-    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;103206804086086361&#34;</span>,
-    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-26T23:27:32.000Z&#34;</span>,
-    ...
-    <span style="color:#f1fa8c">&#34;visibility&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;public&#34;</span>,
-    ...
-  }
-]
-</code></pre></div><p>We can do similarly for hashtags by calling <a href="/methods/timelines/#hashtag-timeline">GET /api/v1/timelines/tag/:hashtag</a> &ndash; here, the colon means that this part of the endpoint is a path parameter. In the case of :hashtag, this means we use the hashtag's name (and once again, a limit of 2):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://mastodon.example/api/v1/timelines/tag/cats?limit<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>
-</code></pre></div><p>We should once again see 2 statuses have been returned in a JSON array of <a href="/entities/status/">Status</a> entities. We can parse the JSON by array, then by object. If we were using Python, our code might look something like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">import</span> requests
-<span style="color:#ff79c6">import</span> json
-
-response <span style="color:#ff79c6">=</span> requests<span style="color:#ff79c6">.</span>get(<span style="color:#f1fa8c"></span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">https://mastodon.example/api/v1/timelines/tag/cats?limit=2</span><span style="color:#f1fa8c">&#34;</span>)
-statuses <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>loads(response<span style="color:#ff79c6">.</span>text) <span style="color:#6272a4"># this converts the json to a python list of dictionary</span>
-<span style="color:#ff79c6">assert</span> statuses[<span style="color:#bd93f9">0</span>][<span style="color:#f1fa8c"></span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">visibility</span><span style="color:#f1fa8c">&#34;</span>] <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c"></span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">public</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#6272a4"># we are reading a public timeline</span>
-<span style="color:#ff79c6">print</span>(statuses[<span style="color:#bd93f9">0</span>][<span style="color:#f1fa8c"></span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">content</span><span style="color:#f1fa8c">&#34;</span>]) <span style="color:#6272a4"># this prints the status text</span>
-</code></pre></div><div class="hint hint-info">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://mastodon.example/api/v1/timelines/public
+</span></span></code></pre></div><p>Wow, that&rsquo;s a lot of text in response! The public timeline returns 20 statuses by default. We can use the <code>limit</code> parameter to request less than that. Let&rsquo;s try requesting the same endpoint, but with a limit of 2 this time:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://mastodon.example/api/v1/timelines/public?limit<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>
+</span></span></code></pre></div><p>Our response should be more manageable this time. We can parse or beautify this JSON with our chosen utility, and we should see that the response looks something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;103206804533200177&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-26T23:27:31.000Z&#34;</span>,
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;visibility&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;public&#34;</span>,
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;103206804086086361&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-26T23:27:32.000Z&#34;</span>,
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;visibility&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;public&#34;</span>,
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p>We can do similarly for hashtags by calling <a href="/methods/timelines/#hashtag-timeline">GET /api/v1/timelines/tag/:hashtag</a> &ndash; here, the colon means that this part of the endpoint is a path parameter. In the case of :hashtag, this means we use the hashtag&rsquo;s name (and once again, a limit of 2):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://mastodon.example/api/v1/timelines/tag/cats?limit<span style="color:#ff79c6">=</span><span style="color:#bd93f9">2</span>
+</span></span></code></pre></div><p>We should once again see 2 statuses have been returned in a JSON array of <a href="/entities/status/">Status</a> entities. We can parse the JSON by array, then by object. If we were using Python, our code might look something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>response <span style="color:#ff79c6">=</span> requests<span style="color:#ff79c6">.</span>get(<span style="color:#f1fa8c">&#34;https://mastodon.example/api/v1/timelines/tag/cats?limit=2&#34;</span>)
+</span></span><span style="display:flex;"><span>statuses <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.</span>loads(response<span style="color:#ff79c6">.</span>text) <span style="color:#6272a4"># this converts the json to a python list of dictionary</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">assert</span> statuses[<span style="color:#bd93f9">0</span>][<span style="color:#f1fa8c">&#34;visibility&#34;</span>] <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;public&#34;</span> <span style="color:#6272a4"># we are reading a public timeline</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(statuses[<span style="color:#bd93f9">0</span>][<span style="color:#f1fa8c">&#34;content&#34;</span>]) <span style="color:#6272a4"># this prints the status text</span>
+</span></span></code></pre></div><div class="hint hint-info">
   <div class="hint-icon"><i class="fa fa-info-circle"></i></div>
 
   Parsing JSON and using it in your program is outside of the scope of this tutorial, as it will be different depending on your choice of programming language and on the design of your program. Look for other tutorials on how to work with JSON in your programming language of choice.
@@ -887,12 +887,12 @@ statuses <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.<
 <h2 id="toots">Fetching public accounts and statuses</h2>
 <p>Now that we are familiar with how to make requests and how to handle responses, you can experiment with more public data. The following methods may be of interest:</p>
 <ul>
-<li>Once you know an account's id, you can use <a href="/methods/accounts/">GET /api/v1/accounts/:id</a> to view the <a href="/entities/account/">Account</a> entity.
+<li>Once you know an account&rsquo;s id, you can use <a href="/methods/accounts/">GET /api/v1/accounts/:id</a> to view the <a href="/entities/account/">Account</a> entity.
 <ul>
 <li>To view public statuses posted by that account, you can use <a href="/methods/statuses/">GET /api/v1/accounts/:id/statuses</a> and parse the resulting array of <a href="/entities/status/">Status</a> entities.</li>
 </ul>
 </li>
-<li>Once you know a status's id, you can use <a href="/methods/statuses/#view-specific-status">GET /api/v1/statuses/:id</a> to view the Status entity.
+<li>Once you know a status&rsquo;s id, you can use <a href="/methods/statuses/#view-specific-status">GET /api/v1/statuses/:id</a> to view the Status entity.
 <ul>
 <li>You can also use <a href="/methods/statuses/#boosted-by">GET /api/v1/statuses/:id/reblogged_by</a> to view who boosted that status,</li>
 <li>or <a href="/methods/statuses/#favourited-by">GET /api/v1/statuses/:id/favourited_by</a> to view who favourited that status.</li>
@@ -901,7 +901,7 @@ statuses <span style="color:#ff79c6">=</span> json<span style="color:#ff79c6">.<
 </ul>
 </li>
 </ul>
-<p>IDs of accounts and statuses are local to the Mastodon website's database and will differ for each Mastodon website.</p>
+<p>IDs of accounts and statuses are local to the Mastodon website&rsquo;s database and will differ for each Mastodon website.</p>
 <h2 id="instance">Fetching public instance data</h2>
 <p>One last thing you can do with anonymous requests is to view information about the Mastodon website.</p>
 <ul>

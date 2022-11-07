@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>使用管理命令行 - Mastodon documentation</title>
@@ -289,7 +289,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#heading">基础命令</a></li>
+        <li><a href="#基础命令">基础命令</a></li>
         <li><a href="#accounts">帐户相关命令</a></li>
         <li><a href="#cache">缓存相关命令</a></li>
         <li><a href="#domains">域名相关命令</a></li>
@@ -308,11 +308,11 @@
   <div class="e-content">
     <hr>
 <p>Mastodon的命令行界面是一个位于Mastodon根目录内<code>bin</code>目录中的名为<code>tootctl</code>的可执行文件。你必须通过<code>RAILS_ENV</code>环境变量指定你执行时打算使用的环境。除非你是在本地计算机上进行开发工作，否则你需要使用<code>RAILS_ENV=production</code>。如果你确信永不使用其它环境（开发、测试），为了方便起见，你可以把它添加到 <code>.bashrc</code> 文件，例如：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;export RAILS_ENV=production&#34;</span> &gt;&gt; ~/.bashrc
-</code></pre></div><p>如果这样，便无需在每次执行时指定它。否则，通常会这样调用 <code>tootctl</code> 命令（假定你的Mastodon代码位于<code>/home/mastodon/live</code>）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">cd</span> /home/mastodon/live
-<span style="color:#8be9fd;font-style:italic">RAILS_ENV</span><span style="color:#ff79c6">=</span>production bin/tootctl <span style="color:#8be9fd;font-style:italic">help</span>
-</code></pre></div><h2 id="heading">基础命令</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;export RAILS_ENV=production&#34;</span> &gt;&gt; ~/.bashrc
+</span></span></code></pre></div><p>如果这样，便无需在每次执行时指定它。否则，通常会这样调用 <code>tootctl</code> 命令（假定你的Mastodon代码位于<code>/home/mastodon/live</code>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /home/mastodon/live
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">RAILS_ENV</span><span style="color:#ff79c6">=</span>production bin/tootctl <span style="color:#8be9fd;font-style:italic">help</span>
+</span></span></code></pre></div><h2 id="基础命令">基础命令</h2>
 <a href="https://github.com/tootsuite/mastodon/blob/master/lib/cli.rb" class="page-ref">
   <div class="page-ref-icon"><i class="fa fa-external-link-square-alt"></i></div>
   lib/cli.rb
@@ -334,14 +334,14 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--dry_run</code></td>
-<td align="left">仅打印预期结果，而不执行任何操作。</td>
+<td style="text-align:left"><code>--dry_run</code></td>
+<td style="text-align:left">仅打印预期结果，而不执行任何操作。</td>
 </tr>
 </tbody>
 </table>
@@ -366,18 +366,18 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">本地帐户用户名</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">本地帐户用户名</td>
 </tr>
 <tr>
-<td align="left"><code>--all</code></td>
-<td align="left">轮替所有本地帐户密钥，可取代 USERNAME。</td>
+<td style="text-align:left"><code>--all</code></td>
+<td style="text-align:left">轮替所有本地帐户密钥，可取代 USERNAME。</td>
 </tr>
 </tbody>
 </table>
@@ -390,38 +390,38 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">新帐户的本地用户名。 必须的。</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">新帐户的本地用户名。 必须的。</td>
 </tr>
 <tr>
-<td align="left"><code>--email EMAIL</code></td>
-<td align="left">要附加到用户的电子邮件地址。 必须的。</td>
+<td style="text-align:left"><code>--email EMAIL</code></td>
+<td style="text-align:left">要附加到用户的电子邮件地址。 必须的。</td>
 </tr>
 <tr>
-<td align="left"><code>--confirmed</code></td>
-<td align="left">跳过发送确认邮件步骤并立即激活帐户。</td>
+<td style="text-align:left"><code>--confirmed</code></td>
+<td style="text-align:left">跳过发送确认邮件步骤并立即激活帐户。</td>
 </tr>
 <tr>
-<td align="left"><code>--role ROLE</code></td>
-<td align="left">设定新用户的身份为 <code>user</code>, <code>moderator</code> 或 <code>admin</code>。默认为 <code>user</code>。</td>
+<td style="text-align:left"><code>--role ROLE</code></td>
+<td style="text-align:left">设定新用户的身份为 <code>user</code>, <code>moderator</code> 或 <code>admin</code>。默认为 <code>user</code>。</td>
 </tr>
 <tr>
-<td align="left"><code>--reattach</code></td>
-<td align="left">重用已被删除帐户的旧用户名。</td>
+<td style="text-align:left"><code>--reattach</code></td>
+<td style="text-align:left">重用已被删除帐户的旧用户名。</td>
 </tr>
 <tr>
-<td align="left"><code>--force</code></td>
-<td align="left">强制删除使用此用户名（USERNAME）的现有帐户，然后重新的新帐户代替（刚刚删除的）该帐户。</td>
+<td style="text-align:left"><code>--force</code></td>
+<td style="text-align:left">强制删除使用此用户名（USERNAME）的现有帐户，然后重新的新帐户代替（刚刚删除的）该帐户。</td>
 </tr>
 <tr>
-<td align="left"><code>--skip-sign-in-token</code></td>
-<td align="left">强制跳过该用户登录时的邮件验证码（目前这是不可逆操作）。</td>
+<td style="text-align:left"><code>--skip-sign-in-token</code></td>
+<td style="text-align:left">强制跳过该用户登录时的邮件验证码（目前这是不可逆操作）。</td>
 </tr>
 </tbody>
 </table>
@@ -434,50 +434,50 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">本地帐户的用户名。 必须的。</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">本地帐户的用户名。 必须的。</td>
 </tr>
 <tr>
-<td align="left"><code>--role ROLE</code></td>
-<td align="left">设定该帐户的身份为 <code>user</code>, <code>moderator</code> 或 <code>admin</code>。</td>
+<td style="text-align:left"><code>--role ROLE</code></td>
+<td style="text-align:left">设定该帐户的身份为 <code>user</code>, <code>moderator</code> 或 <code>admin</code>。</td>
 </tr>
 <tr>
-<td align="left"><code>--email EMAIL</code></td>
-<td align="left">将该帐户电子邮箱地址改为 EMAIL。</td>
+<td style="text-align:left"><code>--email EMAIL</code></td>
+<td style="text-align:left">将该帐户电子邮箱地址改为 EMAIL。</td>
 </tr>
 <tr>
-<td align="left"><code>--confirm</code></td>
-<td align="left">跳过邮件确认步骤，当使用 &ndash;email 时可用。</td>
+<td style="text-align:left"><code>--confirm</code></td>
+<td style="text-align:left">跳过邮件确认步骤，当使用 &ndash;email 时可用。</td>
 </tr>
 <tr>
-<td align="left"><code>--disable</code></td>
-<td align="left">禁止 USERNAME 帐户登录。</td>
+<td style="text-align:left"><code>--disable</code></td>
+<td style="text-align:left">禁止 USERNAME 帐户登录。</td>
 </tr>
 <tr>
-<td align="left"><code>--enable</code></td>
-<td align="left">允许 USERNAME 帐户登录，如果该帐户目前被禁止登录。</td>
+<td style="text-align:left"><code>--enable</code></td>
+<td style="text-align:left">允许 USERNAME 帐户登录，如果该帐户目前被禁止登录。</td>
 </tr>
 <tr>
-<td align="left"><code>--approve</code></td>
-<td align="left">审核通过该帐户，如果你的实例为审核制。</td>
+<td style="text-align:left"><code>--approve</code></td>
+<td style="text-align:left">审核通过该帐户，如果你的实例为审核制。</td>
 </tr>
 <tr>
-<td align="left"><code>--disable_2fa</code></td>
-<td align="left">移除额外认证因素，允许只用密码登录。</td>
+<td style="text-align:left"><code>--disable_2fa</code></td>
+<td style="text-align:left">移除额外认证因素，允许只用密码登录。</td>
 </tr>
 <tr>
-<td align="left"><code>--reset-password</code></td>
-<td align="left">重置此用户的密码，将用一个随机生成的字符串作为临时密码。</td>
+<td style="text-align:left"><code>--reset-password</code></td>
+<td style="text-align:left">重置此用户的密码，将用一个随机生成的字符串作为临时密码。</td>
 </tr>
 <tr>
-<td align="left"><code>--skip-sign-in-token</code></td>
-<td align="left">强制跳过该用户登录时的邮件验证码（目前这是不可逆操作）。</td>
+<td style="text-align:left"><code>--skip-sign-in-token</code></td>
+<td style="text-align:left">强制跳过该用户登录时的邮件验证码（目前这是不可逆操作）。</td>
 </tr>
 </tbody>
 </table>
@@ -490,14 +490,14 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">本地帐户的用户名。 必须的。</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">本地帐户的用户名。 必须的。</td>
 </tr>
 </tbody>
 </table>
@@ -510,14 +510,14 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">本地帐户的用户名。 必须的。</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">本地帐户的用户名。 必须的。</td>
 </tr>
 </tbody>
 </table>
@@ -531,18 +531,18 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认N=5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认N=5。</td>
 </tr>
 <tr>
-<td align="left"><code>--dry_run</code></td>
-<td align="left">仅打印预期结果，而不执行任何操作。</td>
+<td style="text-align:left"><code>--dry_run</code></td>
+<td style="text-align:left">仅打印预期结果，而不执行任何操作。</td>
 </tr>
 </tbody>
 </table>
@@ -555,34 +555,34 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">远程用户名</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">远程用户名</td>
 </tr>
 <tr>
-<td align="left"><code>--all</code></td>
-<td align="left">刷新所有远程帐户，可取代 USERNAME。</td>
+<td style="text-align:left"><code>--all</code></td>
+<td style="text-align:left">刷新所有远程帐户，可取代 USERNAME。</td>
 </tr>
 <tr>
-<td align="left"><code>--domain DOMAIN</code></td>
-<td align="left">仅操作此域名 DOMAIN 下的远程帐户。可取代 USERNAME。</td>
+<td style="text-align:left"><code>--domain DOMAIN</code></td>
+<td style="text-align:left">仅操作此域名 DOMAIN 下的远程帐户。可取代 USERNAME。</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认N=5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认N=5。</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">任务进行时，打印额外信息。</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">任务进行时，打印额外信息。</td>
 </tr>
 <tr>
-<td align="left"><code>--dry_run</code></td>
-<td align="left">仅打印预期结果，而不执行任何操作。</td>
+<td style="text-align:left"><code>--dry_run</code></td>
+<td style="text-align:left">仅打印预期结果，而不执行任何操作。</td>
 </tr>
 </tbody>
 </table>
@@ -596,22 +596,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">本地用户名</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">本地用户名</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认N=5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认N=5。</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">任务进行时，打印额外信息。</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">任务进行时，打印额外信息。</td>
 </tr>
 </tbody>
 </table>
@@ -624,22 +624,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>ACCT</code></td>
-<td align="left"><code>username@domain</code> 地址</td>
+<td style="text-align:left"><code>ACCT</code></td>
+<td style="text-align:left"><code>username@domain</code> 地址</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认N=5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认N=5。</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">任务进行时，打印额外信息。</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">任务进行时，打印额外信息。</td>
 </tr>
 </tbody>
 </table>
@@ -652,22 +652,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">本地用户名</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">本地用户名</td>
 </tr>
 <tr>
-<td align="left"><code>--follows</code></td>
-<td align="left">迫使 USERNAME 取消关注所有人后，再重新关注他们。</td>
+<td style="text-align:left"><code>--follows</code></td>
+<td style="text-align:left">迫使 USERNAME 取消关注所有人后，再重新关注他们。</td>
 </tr>
 <tr>
-<td align="left"><code>--followers</code></td>
-<td align="left">移除 USERNAME 的所有关注者。</td>
+<td style="text-align:left"><code>--followers</code></td>
+<td style="text-align:left">移除 USERNAME 的所有关注者。</td>
 </tr>
 </tbody>
 </table>
@@ -680,22 +680,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">审核通过这个用户名的待审核帐户。</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">审核通过这个用户名的待审核帐户。</td>
 </tr>
 <tr>
-<td align="left"><code>--number N</code></td>
-<td align="left">审核通过最近N个注册者。</td>
+<td style="text-align:left"><code>--number N</code></td>
+<td style="text-align:left">审核通过最近N个注册者。</td>
 </tr>
 <tr>
-<td align="left"><code>--all</code></td>
-<td align="left">审核通过所有待审核帐户。</td>
+<td style="text-align:left"><code>--all</code></td>
+<td style="text-align:left">审核通过所有待审核帐户。</td>
 </tr>
 </tbody>
 </table>
@@ -720,22 +720,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">TYPE</td>
-<td align="left"><code>accounts</code> 或 <code>statuses</code></td>
+<td style="text-align:left">TYPE</td>
+<td style="text-align:left"><code>accounts</code> 或 <code>statuses</code></td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认N=5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认N=5。</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">任务进行时，打印额外信息。</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">任务进行时，打印额外信息。</td>
 </tr>
 </tbody>
 </table>
@@ -757,30 +757,30 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>DOMAIN[...]</code></td>
-<td align="left">要移除的域名（Domains），使用空格进行分隔。</td>
+<td style="text-align:left"><code>DOMAIN[...]</code></td>
+<td style="text-align:left">要移除的域名（Domains），使用空格进行分隔。</td>
 </tr>
 <tr>
-<td align="left"><code>--whitelist_mode</code></td>
-<td align="left">可取代 DOMAIN。不是移除单一域名，而是从数据库移除所有来自非白名单站点的帐户。启用白名单模式并完成白名单设定后运行此命令。</td>
+<td style="text-align:left"><code>--whitelist_mode</code></td>
+<td style="text-align:left">可取代 DOMAIN。不是移除单一域名，而是从数据库移除所有来自非白名单站点的帐户。启用白名单模式并完成白名单设定后运行此命令。</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认为5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认为5。</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">任务进行时，打印额外信息。</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">任务进行时，打印额外信息。</td>
 </tr>
 <tr>
-<td align="left"><code>--dry_run</code></td>
-<td align="left">仅打印预期结果，而不执行任何操作。</td>
+<td style="text-align:left"><code>--dry_run</code></td>
+<td style="text-align:left">仅打印预期结果，而不执行任何操作。</td>
 </tr>
 </tbody>
 </table>
@@ -794,26 +794,26 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">START</td>
-<td align="left">可选的，从一个不同域名开始。</td>
+<td style="text-align:left">START</td>
+<td style="text-align:left">可选的，从一个不同域名开始。</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认为50。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认为50。</td>
 </tr>
 <tr>
-<td align="left"><code>--format FORMAT</code></td>
-<td align="left">控制数据的返回方式。<code>summary</code>将打印一个总结。<code>domains</code>将返回以换行符分隔的所有已发现节点列表。<code>json</code>将输出原始数据汇总。默认为<code>summary</code>。</td>
+<td style="text-align:left"><code>--format FORMAT</code></td>
+<td style="text-align:left">控制数据的返回方式。<code>summary</code>将打印一个总结。<code>domains</code>将返回以换行符分隔的所有已发现节点列表。<code>json</code>将输出原始数据汇总。默认为<code>summary</code>。</td>
 </tr>
 <tr>
-<td align="left"><code>--exclude_suspended</code></td>
-<td align="left">输出中不包括已被你封禁的域名，子域名也将包括内。</td>
+<td style="text-align:left"><code>--exclude_suspended</code></td>
+<td style="text-align:left">输出中不包括已被你封禁的域名，子域名也将包括内。</td>
 </tr>
 </tbody>
 </table>
@@ -832,34 +832,34 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>PATH</code></td>
-<td align="left">含图片的 .tar.gz 存档文件的路径。</td>
+<td style="text-align:left"><code>PATH</code></td>
+<td style="text-align:left">含图片的 .tar.gz 存档文件的路径。</td>
 </tr>
 <tr>
-<td align="left"><code>--prefix PREFIX</code></td>
-<td align="left">在生成的短代码开头附加前缀 PREFIX。</td>
+<td style="text-align:left"><code>--prefix PREFIX</code></td>
+<td style="text-align:left">在生成的短代码开头附加前缀 PREFIX。</td>
 </tr>
 <tr>
-<td align="left"><code>--suffix SUFFIX</code></td>
-<td align="left">在生成的短代码结尾附加后缀 SUFFIX。</td>
+<td style="text-align:left"><code>--suffix SUFFIX</code></td>
+<td style="text-align:left">在生成的短代码结尾附加后缀 SUFFIX。</td>
 </tr>
 <tr>
-<td align="left"><code>--overwrite</code></td>
-<td align="left">不是跳过已存在的emoji，而是覆盖同名短代码的emoji。</td>
+<td style="text-align:left"><code>--overwrite</code></td>
+<td style="text-align:left">不是跳过已存在的emoji，而是覆盖同名短代码的emoji。</td>
 </tr>
 <tr>
-<td align="left"><code>--unlisted</code></td>
-<td align="left">导入的emojis将不在emoji选择器中出现，但仍能通过它们的短代码来使用。</td>
+<td style="text-align:left"><code>--unlisted</code></td>
+<td style="text-align:left">导入的emojis将不在emoji选择器中出现，但仍能通过它们的短代码来使用。</td>
 </tr>
 <tr>
-<td align="left"><code>--category CATEGORY</code></td>
-<td align="left">导入的emoji在选择器的将会分组至 CATEGORY。</td>
+<td style="text-align:left"><code>--category CATEGORY</code></td>
+<td style="text-align:left">导入的emoji在选择器的将会分组至 CATEGORY。</td>
 </tr>
 </tbody>
 </table>
@@ -873,14 +873,14 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--remote_only</code></td>
-<td align="left">如果被提供，将仅移除远程实例。</td>
+<td style="text-align:left"><code>--remote_only</code></td>
+<td style="text-align:left">如果被提供，将仅移除远程实例。</td>
 </tr>
 </tbody>
 </table>
@@ -899,30 +899,30 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">要被生成时间流的本地用户名。</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">要被生成时间流的本地用户名。</td>
 </tr>
 <tr>
-<td align="left"><code>--all</code></td>
-<td align="left">刷新所有本地用户的时间流，可取代 USERNAME。</td>
+<td style="text-align:left"><code>--all</code></td>
+<td style="text-align:left">刷新所有本地用户的时间流，可取代 USERNAME。</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认N=5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认N=5。</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">任务进行时，打印额外信息。</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">任务进行时，打印额外信息。</td>
 </tr>
 <tr>
-<td align="left"><code>--dry_run</code></td>
-<td align="left">仅打印预期结果，而不执行任何操作。</td>
+<td style="text-align:left"><code>--dry_run</code></td>
+<td style="text-align:left">仅打印预期结果，而不执行任何操作。</td>
 </tr>
 </tbody>
 </table>
@@ -948,26 +948,26 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--days</code></td>
-<td align="left">多久之前的媒体附件将会被清理。默认为7天。</td>
+<td style="text-align:left"><code>--days</code></td>
+<td style="text-align:left">多久之前的媒体附件将会被清理。默认为7天。</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认为5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认为5。</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">任务进行时，打印额外信息。</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">任务进行时，打印额外信息。</td>
 </tr>
 <tr>
-<td align="left"><code>--dry_run</code></td>
-<td align="left">仅打印预期结果，而不执行任何操作。</td>
+<td style="text-align:left"><code>--dry_run</code></td>
+<td style="text-align:left">仅打印预期结果，而不执行任何操作。</td>
 </tr>
 </tbody>
 </table>
@@ -980,18 +980,18 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--start_after</code></td>
-<td align="left">循环开始的附件key值。如果之前中断过此操作，请使用此选项。</td>
+<td style="text-align:left"><code>--start_after</code></td>
+<td style="text-align:left">循环开始的附件key值。如果之前中断过此操作，请使用此选项。</td>
 </tr>
 <tr>
-<td align="left"><code>--dry_run</code></td>
-<td align="left">仅打印预期结果，而不执行任何操作。</td>
+<td style="text-align:left"><code>--dry_run</code></td>
+<td style="text-align:left">仅打印预期结果，而不执行任何操作。</td>
 </tr>
 </tbody>
 </table>
@@ -1005,38 +1005,38 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--account ACCT</code></td>
-<td align="left">需要被处理的帐号，格式 <code>username@domain</code></td>
+<td style="text-align:left"><code>--account ACCT</code></td>
+<td style="text-align:left">需要被处理的帐号，格式 <code>username@domain</code></td>
 </tr>
 <tr>
-<td align="left"><code>--domain DOMAIN</code></td>
-<td align="left">FQDN string</td>
+<td style="text-align:left"><code>--domain DOMAIN</code></td>
+<td style="text-align:left">FQDN string</td>
 </tr>
 <tr>
-<td align="left"><code>--status ID</code></td>
-<td align="left">数据库中的嘟文本地数字ID。</td>
+<td style="text-align:left"><code>--status ID</code></td>
+<td style="text-align:left">数据库中的嘟文本地数字ID。</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认为5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认为5。</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">任务进行时，打印额外信息。</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">任务进行时，打印额外信息。</td>
 </tr>
 <tr>
-<td align="left"><code>--dry_run</code></td>
-<td align="left">仅打印预期结果，而不执行任何操作。</td>
+<td style="text-align:left"><code>--dry_run</code></td>
+<td style="text-align:left">仅打印预期结果，而不执行任何操作。</td>
 </tr>
 <tr>
-<td align="left"><code>--force</code></td>
-<td align="left">强制重下载远程资源并覆写本地附件。</td>
+<td style="text-align:left"><code>--force</code></td>
+<td style="text-align:left">强制重下载远程资源并覆写本地附件。</td>
 </tr>
 </tbody>
 </table>
@@ -1067,30 +1067,30 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--days</code></td>
-<td align="left">多久之前的媒体附件将会被清理。默认为180天。（注意：不推荐删除14天内的预览卡片，因为同一链接两周之内再次发布将不会重抓取。）</td>
+<td style="text-align:left"><code>--days</code></td>
+<td style="text-align:left">多久之前的媒体附件将会被清理。默认为180天。（注意：不推荐删除14天内的预览卡片，因为同一链接两周之内再次发布将不会重抓取。）</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">执行该任务的worker数。默认为5。</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">执行该任务的worker数。默认为5。</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">任务进行时，打印额外信息。</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">任务进行时，打印额外信息。</td>
 </tr>
 <tr>
-<td align="left"><code>--dry_run</code></td>
-<td align="left">仅打印预期结果，而不执行任何操作。</td>
+<td style="text-align:left"><code>--dry_run</code></td>
+<td style="text-align:left">仅打印预期结果，而不执行任何操作。</td>
 </tr>
 <tr>
-<td align="left"><code>--link</code></td>
-<td align="left">仅删除链接型（link-type）预览卡片。不处理视频与图片卡片。</td>
+<td style="text-align:left"><code>--link</code></td>
+<td style="text-align:left">仅删除链接型（link-type）预览卡片。不处理视频与图片卡片。</td>
 </tr>
 </tbody>
 </table>
@@ -1110,14 +1110,14 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--processes N</code></td>
-<td align="left">并行执行命令。默认N=2。可以设为<code>auto</code>来基于可用CPU数获取相应数值。</td>
+<td style="text-align:left"><code>--processes N</code></td>
+<td style="text-align:left">并行执行命令。默认N=2。可以设为<code>auto</code>来基于可用CPU数获取相应数值。</td>
 </tr>
 </tbody>
 </table>
@@ -1155,14 +1155,14 @@
 <table>
 <thead>
 <tr>
-<th align="left">选项</th>
-<th align="left">描述</th>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--days</code></td>
-<td align="left">多久之前的嘟文将会被清理。默认为90天。</td>
+<td style="text-align:left"><code>--days</code></td>
+<td style="text-align:left">多久之前的嘟文将会被清理。默认为90天。</td>
 </tr>
 </tbody>
 </table>

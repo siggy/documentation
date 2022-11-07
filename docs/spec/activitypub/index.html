@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>ActivityPub - Mastodon documentation</title>
@@ -891,62 +891,62 @@
 <table>
 <thead>
 <tr>
-<th align="left">Property</th>
-<th align="left">Interpretation</th>
+<th style="text-align:left">Property</th>
+<th style="text-align:left">Interpretation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">preferredUsername</td>
-<td align="left">Used for Webfinger lookup. Must be unique on the domain, and must correspond to a Webfinger <code>acct:</code> URI.</td>
+<td style="text-align:left">preferredUsername</td>
+<td style="text-align:left">Used for Webfinger lookup. Must be unique on the domain, and must correspond to a Webfinger <code>acct:</code> URI.</td>
 </tr>
 <tr>
-<td align="left">name</td>
-<td align="left">Used as profile display name.</td>
+<td style="text-align:left">name</td>
+<td style="text-align:left">Used as profile display name.</td>
 </tr>
 <tr>
-<td align="left">summary</td>
-<td align="left">Used as profile bio.</td>
+<td style="text-align:left">summary</td>
+<td style="text-align:left">Used as profile bio.</td>
 </tr>
 <tr>
-<td align="left">type</td>
-<td align="left">Assumed to be Person. If type is Application or Service, it will be interpreted as a bot flag.</td>
+<td style="text-align:left">type</td>
+<td style="text-align:left">Assumed to be Person. If type is Application or Service, it will be interpreted as a bot flag.</td>
 </tr>
 <tr>
-<td align="left">url</td>
-<td align="left">Used as profile link.</td>
+<td style="text-align:left">url</td>
+<td style="text-align:left">Used as profile link.</td>
 </tr>
 <tr>
-<td align="left">icon</td>
-<td align="left">Used as profile avatar.</td>
+<td style="text-align:left">icon</td>
+<td style="text-align:left">Used as profile avatar.</td>
 </tr>
 <tr>
-<td align="left">image</td>
-<td align="left">Used as profile header.</td>
+<td style="text-align:left">image</td>
+<td style="text-align:left">Used as profile header.</td>
 </tr>
 <tr>
-<td align="left">manuallyApprovesFollowers</td>
-<td align="left">Will be shown as a locked account.</td>
+<td style="text-align:left">manuallyApprovesFollowers</td>
+<td style="text-align:left">Will be shown as a locked account.</td>
 </tr>
 <tr>
-<td align="left">discoverable</td>
-<td align="left">Will be shown in the profile directory. See <a href="/spec/activitypub/#discoverable">Discoverability flag</a>.</td>
+<td style="text-align:left">discoverable</td>
+<td style="text-align:left">Will be shown in the profile directory. See <a href="/spec/activitypub/#discoverable">Discoverability flag</a>.</td>
 </tr>
 <tr>
-<td align="left">publicKey</td>
-<td align="left">Required for signatures. See <a href="/spec/activitypub/#public-key">Public key</a>.</td>
+<td style="text-align:left">publicKey</td>
+<td style="text-align:left">Required for signatures. See <a href="/spec/activitypub/#public-key">Public key</a>.</td>
 </tr>
 <tr>
-<td align="left">featured</td>
-<td align="left">Pinned posts. See <a href="/spec/activitypub/#featured">Featured collection</a>.</td>
+<td style="text-align:left">featured</td>
+<td style="text-align:left">Pinned posts. See <a href="/spec/activitypub/#featured">Featured collection</a>.</td>
 </tr>
 <tr>
-<td align="left">attachment</td>
-<td align="left">Used for profile fields. See <a href="/spec/activitypub/#profile-metadata">Profile metadata</a> and <a href="/spec/activitypub/#identityproof">Identity proofs</a>.</td>
+<td style="text-align:left">attachment</td>
+<td style="text-align:left">Used for profile fields. See <a href="/spec/activitypub/#profile-metadata">Profile metadata</a> and <a href="/spec/activitypub/#identityproof">Identity proofs</a>.</td>
 </tr>
 <tr>
-<td align="left">alsoKnownAs</td>
-<td align="left">Required for Move activity.</td>
+<td style="text-align:left">alsoKnownAs</td>
+<td style="text-align:left">Required for Move activity.</td>
 </tr>
 </tbody>
 </table>
@@ -1022,210 +1022,210 @@
 <h2 id="extensions">Extensions</h2>
 <h3 id="publicKey">Public key</h3>
 <p>Public keys are used for HTTPS Signatures and Linked Data Signatures. This is implemented using an extra property <code>publicKey</code> on actor objects. See <a href="/spec/security/">Security</a> for more information. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    <span style="color:#f1fa8c">&#34;https://w3id.org/security/v1&#34;</span>
-  ],
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
-  <span style="color:#f1fa8c">&#34;publicKey&#34;</span><span style="color:#ff79c6">:</span> {
-    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron#main-key&#34;</span>,
-    <span style="color:#f1fa8c">&#34;owner&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
-    <span style="color:#f1fa8c">&#34;publicKeyPem&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvXc4vkECU2/CeuSo1wtn\nFoim94Ne1jBMYxTZ9wm2YTdJq1oiZKif06I2fOqDzY/4q/S9uccrE9Bkajv1dnkO\nVm31QjWlhVpSKynVxEWjVBO5Ienue8gND0xvHIuXf87o61poqjEoepvsQFElA5ym\novljWGSA/jpj7ozygUZhCXtaS2W5AD5tnBQUpcO0lhItYPYTjnmzcc4y2NbJV8hz\n2s2G8qKv8fyimE23gY1XrPJg+cRF+g4PqFXujjlJ7MihD9oqtLGxbu7o1cifTn3x\nBfIdPythWu5b4cujNsB3m3awJjVmx+MHQ9SugkSIYXV0Ina77cTNS0M2PYiH1PFR\nTwIDAQAB\n-----END PUBLIC KEY-----\n&#34;</span>
-  }
-}
-</code></pre></div><h3 id="featured">Featured collection</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://w3id.org/security/v1&#34;</span>
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;publicKey&#34;</span><span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron#main-key&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;owner&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;publicKeyPem&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvXc4vkECU2/CeuSo1wtn\nFoim94Ne1jBMYxTZ9wm2YTdJq1oiZKif06I2fOqDzY/4q/S9uccrE9Bkajv1dnkO\nVm31QjWlhVpSKynVxEWjVBO5Ienue8gND0xvHIuXf87o61poqjEoepvsQFElA5ym\novljWGSA/jpj7ozygUZhCXtaS2W5AD5tnBQUpcO0lhItYPYTjnmzcc4y2NbJV8hz\n2s2G8qKv8fyimE23gY1XrPJg+cRF+g4PqFXujjlJ7MihD9oqtLGxbu7o1cifTn3x\nBfIdPythWu5b4cujNsB3m3awJjVmx+MHQ9SugkSIYXV0Ina77cTNS0M2PYiH1PFR\nTwIDAQAB\n-----END PUBLIC KEY-----\n&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="featured">Featured collection</h3>
 <p>What is known in Mastodon as “pinned toots”, or statuses that are always featured at the top of people’s profiles, is implemented using an extra property <code>featured</code> on the actor object that points to a <code>Collection</code> of objects. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    {
-      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
-      <span style="color:#f1fa8c">&#34;featured&#34;</span><span style="color:#ff79c6">:</span> {
-        <span style="color:#f1fa8c">&#34;@id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:featured&#34;</span>,
-        <span style="color:#f1fa8c">&#34;@type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;@id&#34;</span>
-      }
-    }
-  ],
-
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
-  <span style="color:#f1fa8c">&#34;featured&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/collections/featured&#34;</span>
-}
-</code></pre></div><h3 id="featuredTags">Featured tags</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;featured&#34;</span><span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;@id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:featured&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;@type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;@id&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;featured&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/collections/featured&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="featuredTags">Featured tags</h3>
 <p>Mastodon allows users to feature specific hashtags on their profile for easy browsing, as a discoverability mechanism. This is implemented using an extra property <code>featuredTags</code> on the actor object that points to a <code>Collection</code> of <code>Hashtag</code> objects specifically.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    {
-      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
-      <span style="color:#f1fa8c">&#34;featuredTags&#34;</span><span style="color:#ff79c6">:</span> {
-        <span style="color:#f1fa8c">&#34;@id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:featuredTags&#34;</span>,
-        <span style="color:#f1fa8c">&#34;@type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;@id&#34;</span>
-      }
-    }
-  ],
-
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
-  <span style="color:#f1fa8c">&#34;featuredTags&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/collections/tags&#34;</span>
-}
-</code></pre></div><h3 id="emoji">Custom emojis</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;featuredTags&#34;</span><span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;@id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:featuredTags&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;@type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;@id&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;featuredTags&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/collections/tags&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="emoji">Custom emojis</h3>
 <p>Mastodon supports arbitrary emojis, that is, small images uploaded by admins and invokable via shortcodes. For this, an <code>Emoji</code> type is used. These emojis are listed in the <code>tag</code> property just like <code>Mention</code> and <code>Hashtag</code> objects, since they are entities that affect how the text is rendered. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    {
-      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
-      <span style="color:#f1fa8c">&#34;Emoji&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:Emoji&#34;</span>
-    }
-  ],
-
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/hello-world&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Note&#34;</span>,
-  <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Hello world :kappa:&#34;</span>,
-  <span style="color:#f1fa8c">&#34;tag&#34;</span><span style="color:#ff79c6">:</span> [
-    {
-      <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/emoji/123&#34;</span>,
-      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Emoji&#34;</span>,
-      <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;:kappa:&#34;</span>,
-      <span style="color:#f1fa8c">&#34;icon&#34;</span><span style="color:#ff79c6">:</span> {
-        <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Image&#34;</span>,
-        <span style="color:#f1fa8c">&#34;mediaType&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;image/png&#34;</span>,
-        <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/files/kappa.png&#34;</span>
-      }
-    }
-  ]
-}
-</code></pre></div><h3 id="focalPoint">Focal points</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;Emoji&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:Emoji&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/hello-world&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Note&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Hello world :kappa:&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;tag&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/emoji/123&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Emoji&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;:kappa:&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;icon&#34;</span><span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Image&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;mediaType&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;image/png&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/files/kappa.png&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="focalPoint">Focal points</h3>
 <p>Mastodon supports setting a focal point on uploaded images, so that wherever that image is displayed, the focal point stays in view. This is implemented using an extra property <code>focalPoint</code> on <code>Image</code> objects. The property is simply an array of two floating points between -1.0 and 1.0, with 0,0 being the center of the image, the first value being x (-1.0 is the left edge, +1.0 is the right edge) and the second value being y (-1.0 is the bottom edge, +1.0 is the top edge). See <a href="/methods/statuses/media/#focal-points">Focal points</a> for more information. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    {
-      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
-      <span style="color:#f1fa8c">&#34;focalPoint&#34;</span><span style="color:#ff79c6">:</span> {
-        <span style="color:#f1fa8c">&#34;@container&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;@list&#34;</span>,
-        <span style="color:#f1fa8c">&#34;@id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:focalPoint&#34;</span>
-      }
-    }
-  ],
-
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/hello-world&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Note&#34;</span>,
-  <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;A picture attached!&#34;</span>,
-  <span style="color:#f1fa8c">&#34;attachment&#34;</span><span style="color:#ff79c6">:</span> [
-    {
-      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Image&#34;</span>,
-      <span style="color:#f1fa8c">&#34;mediaType&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;image/png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/files/cats.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;focalPoint&#34;</span><span style="color:#ff79c6">:</span> [
-        <span style="color:#ff79c6">-</span><span style="color:#bd93f9">0.55</span>,
-        <span style="color:#bd93f9">0.43</span>
-      ]
-    }
-  ]
-}
-</code></pre></div><h3 id="blurhash">Blurhash</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;focalPoint&#34;</span><span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;@container&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;@list&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;@id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:focalPoint&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/hello-world&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Note&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;A picture attached!&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;attachment&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Image&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;mediaType&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;image/png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/files/cats.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;focalPoint&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">-</span><span style="color:#bd93f9">0.55</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#bd93f9">0.43</span>
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="blurhash">Blurhash</h3>
 <p>Mastodon generates colorful preview thumbnails for attachments. This is implemented using an extra property <code>blurhash</code> on <code>Image</code> objects. The property is a string generated by the <a href="https://blurha.sh">BlurHash algorithm</a>. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    {
-      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
-      <span style="color:#f1fa8c">&#34;blurhash&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:blurhash&#34;</span>
-    }
-  ],
-
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/hello-world&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Note&#34;</span>,
-  <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;A picture attached!&#34;</span>,
-  <span style="color:#f1fa8c">&#34;attachment&#34;</span><span style="color:#ff79c6">:</span> [
-    {
-      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Image&#34;</span>,
-      <span style="color:#f1fa8c">&#34;mediaType&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;image/png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/files/cats.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;blurhash&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;UBL_:rOpGG-oBUNG,qRj2so|=eE1w^n4S5NH&#34;</span>
-    }
-  ]
-}
-</code></pre></div><h3 id="PropertyValue">Profile metadata</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;blurhash&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:blurhash&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@alice/hello-world&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Note&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;A picture attached!&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;attachment&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Image&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;mediaType&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;image/png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/files/cats.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;blurhash&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;UBL_:rOpGG-oBUNG,qRj2so|=eE1w^n4S5NH&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="PropertyValue">Profile metadata</h3>
 <p>Mastodon supports arbitrary profile fields containing name-value pairs. This is implemented using the <code>attachment</code> property on actor objects, with objects in the array having a type of <code>PropertyValue</code> and a <code>value</code> property, both from the schema.org namespace. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    {
-      <span style="color:#f1fa8c">&#34;PropertyValue&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;schema:PropertyValue&#34;</span>,
-      <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;schema:value&#34;</span>
-    }
-  ],
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
-  <span style="color:#f1fa8c">&#34;attachment&#34;</span><span style="color:#ff79c6">:</span> [
-    {
-      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;PropertyValue&#34;</span>,
-      <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Patreon&#34;</span>,
-      <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://www.patreon.com/mastodon\&#34; rel=\&#34;me nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://www.&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;patreon.com/mastodon&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span}&#34;</span>
-    },
-    {
-      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;PropertyValue&#34;</span>,
-      <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Homepage&#34;</span>,
-      <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://zeonfederated.com\&#34; rel=\&#34;me nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;zeonfederated.com&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span}&#34;</span>
-    }
-  ]
-}
-</code></pre></div><h3 id="IdentityProof">Identity proofs</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;PropertyValue&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;schema:PropertyValue&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;schema:value&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;attachment&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;PropertyValue&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Patreon&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://www.patreon.com/mastodon\&#34; rel=\&#34;me nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://www.&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;patreon.com/mastodon&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span}&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;PropertyValue&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Homepage&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://zeonfederated.com\&#34; rel=\&#34;me nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;zeonfederated.com&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span}&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="IdentityProof">Identity proofs</h3>
 <p>Mastodon supports integration with identity providers to prove that a profile is linked to a certain identity. This is implemented using the <code>attachment</code> property on actor objects, with objects in the array having a type of <code>IdentityProof</code> from the Mastodon namespace. The object also includes <code>signatureAlgorithm</code> and <code>signatureValue</code> from the W3ID Security Vocabulary namespace. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    <span style="color:#f1fa8c">&#34;https://w3id.org/security/v1&#34;</span>,
-    {
-      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
-      <span style="color:#f1fa8c">&#34;IdentityProof&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:IdentityProof&#34;</span>
-    }
-  ],
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
-  <span style="color:#f1fa8c">&#34;attachment&#34;</span><span style="color:#ff79c6">:</span> [
-    {
-      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;IdentityProof&#34;</span>,
-      <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;gargron&#34;</span>,
-      <span style="color:#f1fa8c">&#34;signatureAlgorithm&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;keybase&#34;</span>,
-      <span style="color:#f1fa8c">&#34;signatureValue&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;5cfc20c7018f2beefb42a68836da59a792e55daa4d118498c9b1898de7e845690f&#34;</span>
-    }
-  ]
-}
-</code></pre></div><h3 id="discoverable">Discoverability flag</h3>
-<p>Mastodon allows users to opt-in or opt-out of discoverability features like the profile directory. This flag may also be used as an indicator of the user's preferences toward being included in external discovery services, such as search engines or other indexing tools. If you are implementing such a tool, it is recommended that you respect this property if it is present. This is implemented using an extra property <code>discoverable</code> on objects. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    {
-      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
-      <span style="color:#f1fa8c">&#34;discoverable&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:discoverable&#34;</span>
-    }
-  ],
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
-  <span style="color:#f1fa8c">&#34;discoverable&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
-}
-</code></pre></div><h3 id="suspended">Suspended flag</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://w3id.org/security/v1&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;IdentityProof&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:IdentityProof&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;attachment&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;IdentityProof&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;gargron&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;signatureAlgorithm&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;keybase&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;signatureValue&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;5cfc20c7018f2beefb42a68836da59a792e55daa4d118498c9b1898de7e845690f&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="discoverable">Discoverability flag</h3>
+<p>Mastodon allows users to opt-in or opt-out of discoverability features like the profile directory. This flag may also be used as an indicator of the user&rsquo;s preferences toward being included in external discovery services, such as search engines or other indexing tools. If you are implementing such a tool, it is recommended that you respect this property if it is present. This is implemented using an extra property <code>discoverable</code> on objects. Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;discoverable&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:discoverable&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://mastodon.social/users/Gargron&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;discoverable&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="suspended">Suspended flag</h3>
 <p>Mastodon reports whether a user was locally suspended, for better handling of these accounts. Suspended accounts in Mastodon return empty data. If a remote account is marked as suspended, it cannot be unsuspended locally. Suspended accounts can be targeted by activities such as Update, Undo, Reject, and Delete. This functionality is implemented using an extra property <code>suspended</code> on objects. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
-    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
-    {
-      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
-      <span style="color:#f1fa8c">&#34;suspended&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:suspended&#34;</span>
-    }
-  ],
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@eve&#34;</span>,
-  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
-  <span style="color:#f1fa8c">&#34;suspended&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
-}
-</code></pre></div><h2 id="other-functionality">Other functionality</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;@context&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;https://www.w3.org/ns/activitystreams&#34;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;toot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://joinmastodon.org/ns#&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;suspended&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;toot:suspended&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://example.com/@eve&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;suspended&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="other-functionality">Other functionality</h2>
 <h3 id="secure-mode">Secure mode</h3>
 <p>When a Mastodon server runs in secure mode, all cross-server HTTP requests to it must be signed (in other words, even <code>GET</code> requests to public resources). That way, the Mastodon server can choose to reject requests from servers it has blocked and avoid &ldquo;leaking&rdquo; public information. Mastodon itself uses a dedicated system actor to sign such HTTP requests. See <a href="../security">Security</a> for more details on HTTP signatures.</p>
 <p>Secure mode is the foundation upon which &ldquo;limited federation mode&rdquo; is built. A Mastodon server in limited federation mode will only federate with servers its admin has explicitly allowed, and reject all other requests.</p>
@@ -1233,29 +1233,29 @@
 <p>Mastodon has a concept of &ldquo;followers-only&rdquo; posts, but expanding the followers collection is currently handled at the destination rather than at the origin (i.e., not with explicit addressing). Therefore, a mechanism to detect synchronization issues and correct them is needed. This mechanism must work on partial followers collections, rather than the full collection (which may not be public information).</p>
 <p>When delivering a message to a remote user, an optional <code>Collection-Synchronization</code> HTTP header is attached, following the same syntax as the <code>Signature</code> header, with the following attributes:</p>
 <ul>
-<li><code>collectionId</code> = MUST be the sender's <code>followers</code> collection</li>
-<li><code>url</code> = a URL to a partial collection containing the identifiers of the sender's followers residing on the receiver's instance. MUST reside on the same domain as the actor itself, and SHOULD be only accessible with a signed query from the receiver's instance</li>
+<li><code>collectionId</code> = MUST be the sender&rsquo;s <code>followers</code> collection</li>
+<li><code>url</code> = a URL to a partial collection containing the identifiers of the sender&rsquo;s followers residing on the receiver&rsquo;s instance. MUST reside on the same domain as the actor itself, and SHOULD be only accessible with a signed query from the receiver&rsquo;s instance</li>
 <li><code>digest</code> = hexadecimal representation of the XORed SHA256 digests of each of the identifiers in the partial collection</li>
 </ul>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://mastodon.social/users/foo/inbox
-Collection-Synchronization:
-  collectionId=&#34;https://social.sitedethib.com/users/Thib/followers&#34;,
-  url=&#34;https://social.sitedethib.com/users/Thib/followers_synchronization&#34;,
-  digest=&#34;b08ab6951c7d6cc2b91e17ebd9557da7fae02489728e9332fcb3a97748244d50&#34;
-</code></pre></div><p>When a remote user attempts to GET the partial collection <code>url</code>, this request must be signed with HTTP signatures. Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://social.sitedethib.com/users/Thib/followers_synchronization
-Signature: ... # a signature from an account on mastodon.social
-
-{
-  &#34;@context&#34;: &#34;https://www.w3.org/ns/activitystreams&#34;,
-  &#34;id&#34;: &#34;https://social.sitedethib.com/users/Thib/followers?domain=mastodon.social&#34;,
-  &#34;type&#34;: &#34;OrderedCollection&#34;,
-  &#34;orderedItems&#34;: [
-    &#34;https://mastodon.social/users/Gargron&#34;
-  ]
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span>POST https://mastodon.social/users/foo/inbox
+</span></span><span style="display:flex;"><span>Collection-Synchronization:
+</span></span><span style="display:flex;"><span>  collectionId=&#34;https://social.sitedethib.com/users/Thib/followers&#34;,
+</span></span><span style="display:flex;"><span>  url=&#34;https://social.sitedethib.com/users/Thib/followers_synchronization&#34;,
+</span></span><span style="display:flex;"><span>  digest=&#34;b08ab6951c7d6cc2b91e17ebd9557da7fae02489728e9332fcb3a97748244d50&#34;
+</span></span></code></pre></div><p>When a remote user attempts to GET the partial collection <code>url</code>, this request must be signed with HTTP signatures. Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span>GET https://social.sitedethib.com/users/Thib/followers_synchronization
+</span></span><span style="display:flex;"><span>Signature: ... # a signature from an account on mastodon.social
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  &#34;@context&#34;: &#34;https://www.w3.org/ns/activitystreams&#34;,
+</span></span><span style="display:flex;"><span>  &#34;id&#34;: &#34;https://social.sitedethib.com/users/Thib/followers?domain=mastodon.social&#34;,
+</span></span><span style="display:flex;"><span>  &#34;type&#34;: &#34;OrderedCollection&#34;,
+</span></span><span style="display:flex;"><span>  &#34;orderedItems&#34;: [
+</span></span><span style="display:flex;"><span>    &#34;https://mastodon.social/users/Gargron&#34;
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
 
     <p style="color: #687590;">
       Last updated December 27, 2020 · <a href='https://github.com/tootsuite/documentation/tree/master/content/en/spec/activitypub.md' style="color: #687590;">Improve this page</a>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://documentation.sig.gy/pl/categories/</loc>
     <xhtml:link
@@ -24,9 +23,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/</loc>
     <lastmod>2022-10-23T23:57:54+02:00</lastmod>
     <xhtml:link
@@ -49,9 +46,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/profile/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -74,9 +69,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/profile/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/network/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -99,9 +92,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/network/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/external/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -124,9 +115,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/external/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/discoverability/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -149,9 +138,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/discoverability/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/run-your-own/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -174,9 +161,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/run-your-own/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/moving/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -199,9 +184,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/moving/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/moderating/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -224,9 +207,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/moderating/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -248,9 +229,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -273,9 +252,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/posting/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -298,9 +275,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/posting/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/contacts/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -323,9 +298,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/contacts/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/signup/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -348,9 +321,7 @@
                 hreflang="pl"
                 href="https://documentation.sig.gy/pl/user/signup/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/pl/user/preferences/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -374,5 +345,4 @@
                 href="https://documentation.sig.gy/pl/user/preferences/"
                 />
   </url>
-  
 </urlset>

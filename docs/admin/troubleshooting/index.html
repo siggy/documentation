@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Troubleshooting errors - Mastodon documentation</title>
@@ -819,11 +819,11 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#i-see-an-error-page-that-says-something-went-wrong-how-do-i-find-out-whats-wrong">I see an error page that says something went wrong. How do I find out what’s wrong?</a></li>
-        <li><a href="#after-an-upgrade-to-a-newer-version-some-pages-look-weird-like-they-have-unstyled-elements-why">After an upgrade to a newer version, some pages look weird, like they have unstyled elements. Why?</a></li>
-        <li><a href="#after-an-upgrade-to-a-newer-version-some-requests-fail-and-the-logs-show-error-messages-about-missing-columns-or-tables-why">After an upgrade to a newer version, some requests fail and the logs show error messages about missing columns or tables. Why?</a></li>
-        <li><a href="#i-am-trying-to-run-a-tootctl-or-rakerails-command-but-all-i-get-is-an-error-about-uninitialized-constants-whats-wrong">I am trying to run a tootctl or rake/rails command, but all I get is an error about uninitialized constants. What’s wrong?</a></li>
-        <li><a href="#i-encountered-a-compilation-error-while-executing-rails-envproduction-bundle-exec-rails-assetsprecompile-but-no-more-information-is-given-how-to-fix-it">I encountered a compilation error while executing RAILS_ENV=production bundle exec rails assets:precompile, but no more information is given. How to fix it?</a></li>
+        <li><a href="#i-see-an-error-page-that-says-something-went-wrong-how-do-i-find-out-whats-wrong"><strong>I see an error page that says something went wrong. How do I find out what’s wrong?</strong></a></li>
+        <li><a href="#after-an-upgrade-to-a-newer-version-some-pages-look-weird-like-they-have-unstyled-elements-why"><strong>After an upgrade to a newer version, some pages look weird, like they have unstyled elements. Why?</strong></a></li>
+        <li><a href="#after-an-upgrade-to-a-newer-version-some-requests-fail-and-the-logs-show-error-messages-about-missing-columns-or-tables-why"><strong>After an upgrade to a newer version, some requests fail and the logs show error messages about missing columns or tables. Why?</strong></a></li>
+        <li><a href="#i-am-trying-to-run-a-tootctl-or-rakerails-command-but-all-i-get-is-an-error-about-uninitialized-constants-whats-wrong"><strong>I am trying to run a <code>tootctl</code> or <code>rake</code>/<code>rails</code> command, but all I get is an error about uninitialized constants. What’s wrong?</strong></a></li>
+        <li><a href="#i-encountered-a-compilation-error-while-executing-rails_envproduction-bundle-exec-rails-assetsprecompile-but-no-more-information-is-given-how-to-fix-it"><strong>I encountered a compilation error while executing <code>RAILS_ENV=production bundle exec rails assets:precompile</code>, but no more information is given. How to fix it?</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -840,8 +840,8 @@
 <p>Check that you have run <code>RAILS_ENV=production bin/rails db:migrate</code> after the upgrade, because it looks like Mastodon’s code is accessing a newer or older database schema. If you are using PgBouncer, make sure this one command connects directly to PostgreSQL, as PgBouncer does not support the kind of table locks that are used within migrations.</p>
 <h2 id="i-am-trying-to-run-a-tootctl-or-rakerails-command-but-all-i-get-is-an-error-about-uninitialized-constants-whats-wrong"><strong>I am trying to run a <code>tootctl</code> or <code>rake</code>/<code>rails</code> command, but all I get is an error about uninitialized constants. What’s wrong?</strong></h2>
 <p>Check that you are specifying the correct environment with <code>RAILS_ENV=production</code> before the command. By default, the environment is assumed to be development, so the code tries to load development-related gems. However, in production environments, we avoid installing those gems, and that’s where the error comes from.</p>
-<h2 id="i-encountered-a-compilation-error-while-executing-rails-envproduction-bundle-exec-rails-assetsprecompile-but-no-more-information-is-given-how-to-fix-it"><strong>I encountered a compilation error while executing <code>RAILS_ENV=production bundle exec rails assets:precompile</code>, but no more information is given. How to fix it?</strong></h2>
-<p>Usually it's because your server ran out of memory while compiling assets. Use a swapfile or increase the swap space to increase the memory capacity. Run <code>RAILS_ENV=production bundle exec rake tmp:cache:clear</code> to clear cache, then execute <code>RAILS_ENV=production bundle exec rails assets:precompile</code> to compile again. Make sure you clear the cache after a compilation error, or it will show &ldquo;Everything's OK&rdquo; but leave the assets unchanged.</p>
+<h2 id="i-encountered-a-compilation-error-while-executing-rails_envproduction-bundle-exec-rails-assetsprecompile-but-no-more-information-is-given-how-to-fix-it"><strong>I encountered a compilation error while executing <code>RAILS_ENV=production bundle exec rails assets:precompile</code>, but no more information is given. How to fix it?</strong></h2>
+<p>Usually it&rsquo;s because your server ran out of memory while compiling assets. Use a swapfile or increase the swap space to increase the memory capacity. Run <code>RAILS_ENV=production bundle exec rake tmp:cache:clear</code> to clear cache, then execute <code>RAILS_ENV=production bundle exec rails assets:precompile</code> to compile again. Make sure you clear the cache after a compilation error, or it will show &ldquo;Everything&rsquo;s OK&rdquo; but leave the assets unchanged.</p>
 
 
     <p style="color: #687590;">

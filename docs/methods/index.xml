@@ -5,23 +5,20 @@
     <link>https://documentation.sig.gy/methods/</link>
     <description>Recent content in Methods on Mastodon documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://documentation.sig.gy/methods/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://documentation.sig.gy/methods/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>accounts</title>
       <link>https://documentation.sig.gy/methods/accounts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/</guid>
-      <description>Account credentials  post  Register an account  https://mastodon.example/api/v1/accounts   Creates a user and account records. Returns an account access token for the app that initiated the request. The app should save this token for later, and should wait for the user to confirm their account by clicking a link in their email inbox.
+      <description>Account credentials post Register an account https://mastodon.example/api/v1/accounts Creates a user and account records. Returns an account access token for the app that initiated the request. The app should save this token for later, and should wait for the user to confirm their account by clicking a link in their email inbox.
 Returns: Token
 OAuth: App token + write:accounts
 Version history:
 2.7.0 - added
-3.0.0 - added reason parameter</description>
+3.0.0 - added reason parameter
+Request Headers Authorization required string Bearer &amp;lt;app token&amp;gt; Form Data Parameters username required string The desired username for the account email required string The email address to be used for login password required string The password to be used for login agreement required boolean Whether the user agrees to the local rules, terms, and policies.</description>
     </item>
     
     <item>
@@ -30,12 +27,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/admin/</guid>
-      <description>Responses are not currently documented. Exact nature of parameters has not been validated.  Account methods  get  View accounts by criteria  https://mastodon.example/api/v1/admin/accounts   View accounts matching certain criteria for filtering, up to 100 at a time. Pagination may be done with the HTTP Link header in the response.
+      <description>Responses are not currently documented. Exact nature of parameters has not been validated. Account methods get View accounts by criteria https://mastodon.example/api/v1/admin/accounts View accounts matching certain criteria for filtering, up to 100 at a time. Pagination may be done with the HTTP Link header in the response.
 Returns: Admin::Account
 OAuth: User token + admin:read:accounts
 Version history:
 2.9.1 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters local optional  boolean  Filter for local accounts?</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters local optional boolean Filter for local accounts?</description>
     </item>
     
     <item>
@@ -44,12 +41,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/announcements/</guid>
-      <description>get  View all announcements  https://mastodon.example/api/v1/announcements   See all currently active announcements set by admins.
+      <description>get View all announcements https://mastodon.example/api/v1/announcements See all currently active announcements set by admins.
 Returns: Array of Announcement
 OAuth: User token
 Version history:
 3.1.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters with_dismissed optional  boolean  If true, response will include announcements dismissed by the user. Defaults to false.     Response   200: Success   Currently active announcements  [ { &amp;#34;id&amp;#34;: &amp;#34;8&amp;#34;, &amp;#34;content&amp;#34;: &amp;#34;&amp;lt;p&amp;gt;Looks like there was an issue processing audio attachments without embedded art since yesterday due to an experimental new feature.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters with_dismissed optional boolean If true, response will include announcements dismissed by the user. Defaults to false. Response 200: Success Currently active announcements [ { &amp;#34;id&amp;#34;: &amp;#34;8&amp;#34;, &amp;#34;content&amp;#34;: &amp;#34;&amp;lt;p&amp;gt;Looks like there was an issue processing audio attachments without embedded art since yesterday due to an experimental new feature.</description>
     </item>
     
     <item>
@@ -58,13 +55,13 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/apps/</guid>
-      <description>post  Create an application  https://mastodon.example/api/v1/apps   Create a new application to obtain OAuth2 credentials.
+      <description>post Create an application https://mastodon.example/api/v1/apps Create a new application to obtain OAuth2 credentials.
 Returns: Application, with client_id and client_secret
 OAuth: Public
 Version history:
 0.0.0 - added
 2.7.2 - now returns vapid_key
- Request Form Data Parameters client_name required  string  A name for your application   redirect_uris required  string  Where the user should be redirected after authorization. To display the authorization code to the user instead of redirecting to a web page, use urn:ietf:wg:oauth:2.</description>
+Request Form Data Parameters client_name required string A name for your application redirect_uris required string Where the user should be redirected after authorization. To display the authorization code to the user instead of redirecting to a web page, use urn:ietf:wg:oauth:2.</description>
     </item>
     
     <item>
@@ -73,11 +70,11 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/blocks/</guid>
-      <description>get  Blocked users  /api/v1/blocks   Returns: Array of Account
+      <description>get Blocked users /api/v1/blocks Returns: Array of Account
 OAuth: User token + read:blocks
 Version history:
 0.0.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters max_id optional  string  Internal parameter. Use HTTP Link header for pagination instead.   since_id optional  string  Internal parameter. Use HTTP Link header for pagination instead.   limit optional  string  Maximum number of results.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters max_id optional string Internal parameter. Use HTTP Link header for pagination instead. since_id optional string Internal parameter. Use HTTP Link header for pagination instead. limit optional string Maximum number of results. Defaults to 40. Response 200: Success Sample call with limit=2. Because block ids are private, you must parse the HTTP Link header to find next and previous pages.</description>
     </item>
     
     <item>
@@ -86,12 +83,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/bookmarks/</guid>
-      <description> get  Bookmarked statuses  https://mastodon.example/api/v1/bookmarks   Statuses the user has bookmarked.
+      <description> get Bookmarked statuses https://mastodon.example/api/v1/bookmarks Statuses the user has bookmarked.
 Returns: Array of Status
 OAuth: User token + read:bookmarks
 Version history:
 3.1.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters limit optional  string    max_id optional  string    since_id optional  string    min_id optional  string      Response   200: Success         </description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters limit optional string max_id optional string since_id optional string min_id optional string Response 200: Success </description>
     </item>
     
     <item>
@@ -100,11 +97,11 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/timelines/conversations/</guid>
-      <description>get  Show conversation  https://mastodon.example/api/v1/conversations   Returns: Array of Conversation
+      <description>get Show conversation https://mastodon.example/api/v1/conversations Returns: Array of Conversation
 OAuth: User token + read:statuses
 Version history:
 2.6.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters limit optional  string  Maximum number of results. Defaults to 20. Max 40.   max_id optional  string  Return results older than this ID. Use HTTP Link header to paginate.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters limit optional string Maximum number of results. Defaults to 20. Max 40. max_id optional string Return results older than this ID. Use HTTP Link header to paginate. since_id optional string Return results newer than this ID. Use HTTP Link header to paginate.</description>
     </item>
     
     <item>
@@ -113,13 +110,13 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/instance/custom_emojis/</guid>
-      <description>get  Custom emoji  https://mastodon.example/api/v1/custom_emojis   Returns custom emojis that are available on the server.
+      <description>get Custom emoji https://mastodon.example/api/v1/custom_emojis Returns custom emojis that are available on the server.
 Returns: Array of Emoji
 OAuth: Public
 Version history:
 2.0.0 - added
 3.0.0 - optional category added to response
- Request Response   200: Success   Sample response from mastodon.social  [ { &amp;#34;shortcode&amp;#34;: &amp;#34;aaaa&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/007/118/original/aaaa.png&amp;#34;, &amp;#34;static_url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/007/118/static/aaaa.png&amp;#34;, &amp;#34;visible_in_picker&amp;#34;: true }, { &amp;#34;shortcode&amp;#34;: &amp;#34;AAAAAA&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/071/387/original/AAAAAA.png&amp;#34;, &amp;#34;static_url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/071/387/static/AAAAAA.png&amp;#34;, &amp;#34;visible_in_picker&amp;#34;: true }, // [.</description>
+Request Response 200: Success Sample response from mastodon.social [ { &amp;#34;shortcode&amp;#34;: &amp;#34;aaaa&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/007/118/original/aaaa.png&amp;#34;, &amp;#34;static_url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/007/118/static/aaaa.png&amp;#34;, &amp;#34;visible_in_picker&amp;#34;: true }, { &amp;#34;shortcode&amp;#34;: &amp;#34;AAAAAA&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/071/387/original/AAAAAA.png&amp;#34;, &amp;#34;static_url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/071/387/static/AAAAAA.png&amp;#34;, &amp;#34;visible_in_picker&amp;#34;: true }, // [...] { &amp;#34;shortcode&amp;#34;: &amp;#34;blobaww&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/011/739/original/blobaww.png&amp;#34;, &amp;#34;static_url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/011/739/static/blobaww.png&amp;#34;, &amp;#34;visible_in_picker&amp;#34;: true, &amp;#34;category&amp;#34;: &amp;#34;Blobs&amp;#34; }, // [.</description>
     </item>
     
     <item>
@@ -128,12 +125,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/instance/directory/</guid>
-      <description>get  View profile directory  https://mastodon.example/api/v1/directory   List accounts visible in the directory.
+      <description>get View profile directory https://mastodon.example/api/v1/directory List accounts visible in the directory.
 Returns: Array of Account
 OAuth: Public
 Version history:
 3.0.0 - added
- Request Query Parameters offset optional  string  How many accounts to skip before returning results. Default 0.   limit optional  string  How many accounts to load. Default 40.   order optional  string  active to sort by most recently posted statuses (default) or new to sort by most recently created profiles.</description>
+Request Query Parameters offset optional string How many accounts to skip before returning results. Default 0. limit optional string How many accounts to load. Default 40. order optional string active to sort by most recently posted statuses (default) or new to sort by most recently created profiles. local optional boolean Only return local accounts.</description>
     </item>
     
     <item>
@@ -142,12 +139,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/domain_blocks/</guid>
-      <description>get  Fetch domain blocks  https://mastodon.example/api/v1/domain_blocks   View domains the user has blocked.
+      <description>get Fetch domain blocks https://mastodon.example/api/v1/domain_blocks View domains the user has blocked.
 Returns: Array of strings
 OAuth: User token + read:blocks or follow
 Version:
 1.4.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters max_id optional  string  Internal parameter. Use HTTP Link header from response for pagination.   since_id optional  string  Internal parameter.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters max_id optional string Internal parameter. Use HTTP Link header from response for pagination. since_id optional string Internal parameter. Use HTTP Link header from response for pagination. limit optional string Maximum number of results to return per page.</description>
     </item>
     
     <item>
@@ -156,12 +153,12 @@ Version:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/endorsements/</guid>
-      <description>get  View currently featured profiles  https://mastodon.example/api/v1/endorsements   Accounts that the user is currently featuring on their profile.
+      <description>get View currently featured profiles https://mastodon.example/api/v1/endorsements Accounts that the user is currently featuring on their profile.
 Returns: Array of Account
 OAuth: User token + read:accounts
 Version history:
 2.5.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters limit optional  string  Maximum number of results to return. Defaults to 40.   max_id optional  string  Internal parameter.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters limit optional string Maximum number of results to return. Defaults to 40. max_id optional string Internal parameter. Use HTTP Link header from response for pagination since_id optional string Internal parameter.</description>
     </item>
     
     <item>
@@ -170,13 +167,13 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/favourites/</guid>
-      <description>get  Favourited statuses  https://mastodon.example/api/v1/favourites   Statuses the user has favourited.
+      <description>get Favourited statuses https://mastodon.example/api/v1/favourites Statuses the user has favourited.
 Returns: Array of Status
 OAuth: User token + read:favourites
 Version:
 0.0.0 - added
 2.6.0 - min_id added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters limit optional  string    min_id optional  string  Internal parameter. Use HTTP Link header for pagination instead.   max_id optional  string  Internal parameter.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters limit optional string min_id optional string Internal parameter. Use HTTP Link header for pagination instead. max_id optional string Internal parameter. Use HTTP Link header for pagination instead. Response 200: Success An example call with limit=2.</description>
     </item>
     
     <item>
@@ -185,11 +182,12 @@ Version:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/featured_tags/</guid>
-      <description>get  View your featured tags  https://mastodon.example/api/v1/featured_tags   Returns: Array of FeaturedTag
+      <description>get View your featured tags https://mastodon.example/api/v1/featured_tags Returns: Array of FeaturedTag
 OAuth: User token + read:accounts
 Version history:
 3.0.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;     Response   200: Success    [ { &amp;#34;id&amp;#34;: &amp;#34;627&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;nowplaying&amp;#34;, &amp;#34;statuses_count&amp;#34;: 36, &amp;#34;last_status_at&amp;#34;: &amp;#34;2019-11-15T07:14:43.524Z&amp;#34; } ]    401: Unauthorized   Invalid or missing Authorization header  { &amp;#34;error&amp;#34;: &amp;#34;The access token is invalid&amp;#34; }      post  Feature a tag  https://mastodon.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Response 200: Success [ { &amp;#34;id&amp;#34;: &amp;#34;627&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;nowplaying&amp;#34;, &amp;#34;statuses_count&amp;#34;: 36, &amp;#34;last_status_at&amp;#34;: &amp;#34;2019-11-15T07:14:43.524Z&amp;#34; } ] 401: Unauthorized Invalid or missing Authorization header { &amp;#34;error&amp;#34;: &amp;#34;The access token is invalid&amp;#34; } post Feature a tag https://mastodon.example/api/v1/featured_tags Returns: FeaturedTag
+OAuth: User token + write:accounts</description>
     </item>
     
     <item>
@@ -198,11 +196,11 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/filters/</guid>
-      <description>get  View all filters  https://mastodon.example/api/v1/filters   Returns: Filter
+      <description>get View all filters https://mastodon.example/api/v1/filters Returns: Filter
 OAuth: User token + read:filters
 Version history:
 2.4.3 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;     Response   200: Success   Excerpts of various filters in different contexts.  [ { &amp;#34;id&amp;#34;: &amp;#34;6191&amp;#34;, &amp;#34;phrase&amp;#34;: &amp;#34;:eurovision2019:&amp;#34;, &amp;#34;context&amp;#34;: [ &amp;#34;home&amp;#34; ], &amp;#34;whole_word&amp;#34;: true, &amp;#34;expires_at&amp;#34;: &amp;#34;2019-05-21T13:47:31.333Z&amp;#34;, &amp;#34;irreversible&amp;#34;: false }, ... { &amp;#34;id&amp;#34;: &amp;#34;5580&amp;#34;, &amp;#34;phrase&amp;#34;: &amp;#34;@twitter.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Response 200: Success Excerpts of various filters in different contexts. [ { &amp;#34;id&amp;#34;: &amp;#34;6191&amp;#34;, &amp;#34;phrase&amp;#34;: &amp;#34;:eurovision2019:&amp;#34;, &amp;#34;context&amp;#34;: [ &amp;#34;home&amp;#34; ], &amp;#34;whole_word&amp;#34;: true, &amp;#34;expires_at&amp;#34;: &amp;#34;2019-05-21T13:47:31.333Z&amp;#34;, &amp;#34;irreversible&amp;#34;: false }, ... { &amp;#34;id&amp;#34;: &amp;#34;5580&amp;#34;, &amp;#34;phrase&amp;#34;: &amp;#34;@twitter.com&amp;#34;, &amp;#34;context&amp;#34;: [ &amp;#34;home&amp;#34;, &amp;#34;notifications&amp;#34;, &amp;#34;public&amp;#34;, &amp;#34;thread&amp;#34; ], &amp;#34;whole_word&amp;#34;: false, &amp;#34;expires_at&amp;#34;: null, &amp;#34;irreversible&amp;#34;: true }, .</description>
     </item>
     
     <item>
@@ -211,11 +209,11 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/follow_requests/</guid>
-      <description>get  Pending Follows  https://mastodon.example/api/v1/follow_requests   Returns: Array of Account
+      <description>get Pending Follows https://mastodon.example/api/v1/follow_requests Returns: Array of Account
 OAuth: User token + read:follows or follow
 Version history:
 0.0.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters limit optional  string  Maximum number of results to return. Defaults to 40. Paginate using the HTTP Link header.     Response   200: Success   Accounts that are requesting a follow  Link: &amp;lt;https://mastodon.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters limit optional string Maximum number of results to return. Defaults to 40. Paginate using the HTTP Link header. Response 200: Success Accounts that are requesting a follow Link: &amp;lt;https://mastodon.social/api/v1/follow_requests?max_id=23716836&amp;gt;; rel=&amp;#34;next&amp;#34;, &amp;lt;https://mastodon.social/api/v1/follow_requests?min_id=23716978&amp;gt;; rel=&amp;#34;prev&amp;#34; [ { &amp;#34;id&amp;#34;: &amp;#34;8889777&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;example&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;example@social.</description>
     </item>
     
     <item>
@@ -224,14 +222,14 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/instance/</guid>
-      <description>get  Fetch instance  https://mastodon.example/api/v1/instance   Information about the server.
+      <description>get Fetch instance https://mastodon.example/api/v1/instance Information about the server.
 Returns: Instance
 OAuth: Public
 Version history:
 1.1.0 - added
 3.0.0 - requires user token if instance is in whitelist mode
 3.1.4 - added invites_enabled to response
- Request Response   200: Success    &amp;#34;uri&amp;#34;: &amp;#34;mastodon.social&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;Mastodon&amp;#34;, &amp;#34;short_description&amp;#34;: &amp;#34;Server run by the main developers of the project &amp;lt;img draggable=\&amp;#34;false\&amp;#34; alt=\&amp;#34;🐘\&amp;#34; class=\&amp;#34;emojione\&amp;#34; src=\&amp;#34;https://mastodon.social/emoji/1f418.svg\&amp;#34; /&amp;gt; It is not focused on any particular niche interest - everyone is welcome as long as you follow our code of conduct!</description>
+Request Response 200: Success &amp;#34;uri&amp;#34;: &amp;#34;mastodon.social&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;Mastodon&amp;#34;, &amp;#34;short_description&amp;#34;: &amp;#34;Server run by the main developers of the project &amp;lt;img draggable=\&amp;#34;false\&amp;#34; alt=\&amp;#34;🐘\&amp;#34; class=\&amp;#34;emojione\&amp;#34; src=\&amp;#34;https://mastodon.social/emoji/1f418.svg\&amp;#34; /&amp;gt; It is not focused on any particular niche interest - everyone is welcome as long as you follow our code of conduct!</description>
     </item>
     
     <item>
@@ -240,12 +238,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/timelines/lists/</guid>
-      <description>get  Show user&amp;#39;s lists  https://mastodon.example/api/v1/lists   Fetch all lists that the user owns.
+      <description>get Show user&amp;#39;s lists https://mastodon.example/api/v1/lists Fetch all lists that the user owns.
 Returns: Array of List
 OAuth: User token + read:lists
 Version history:
 2.1.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;     Response   200: Success   Use id as a parameter for related API calls.  [ { &amp;#34;id&amp;#34;: &amp;#34;12249&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;Friends&amp;#34;, &amp;#34;replies_policy&amp;#34;: &amp;#34;followed&amp;#34; }, { &amp;#34;id&amp;#34;: &amp;#34;13585&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;test&amp;#34;, &amp;#34;replies_policy&amp;#34;: &amp;#34;list&amp;#34; } ]    401: Unauthorized   Invalid or missing Authorization header  { &amp;#34;error&amp;#34;: &amp;#34;The access token is invalid&amp;#34; }      get  Show a single list  https://mastodon.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Response 200: Success Use id as a parameter for related API calls. [ { &amp;#34;id&amp;#34;: &amp;#34;12249&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;Friends&amp;#34;, &amp;#34;replies_policy&amp;#34;: &amp;#34;followed&amp;#34; }, { &amp;#34;id&amp;#34;: &amp;#34;13585&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;test&amp;#34;, &amp;#34;replies_policy&amp;#34;: &amp;#34;list&amp;#34; } ] 401: Unauthorized Invalid or missing Authorization header { &amp;#34;error&amp;#34;: &amp;#34;The access token is invalid&amp;#34; } get Show a single list https://mastodon.</description>
     </item>
     
     <item>
@@ -254,11 +252,11 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/timelines/markers/</guid>
-      <description>get  Get saved timeline position  https://mastodon.example/api/v1/markers   Returns: Marker
+      <description>get Get saved timeline position https://mastodon.example/api/v1/markers Returns: Marker
 OAuth: User token + read:statuses
 Version history:
 3.0.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters timeline required  array  Array of markers to fetch. String enum anyOf home, notifications. If not provided, an empty object will be returned.     Response   200: Success   timeline[] = [&amp;ldquo;home&amp;rdquo;, &amp;ldquo;notifications&amp;rdquo;]  { &amp;#34;notifications&amp;#34;: { &amp;#34;last_read_id&amp;#34;: &amp;#34;35098814&amp;#34;, &amp;#34;version&amp;#34;: 361, &amp;#34;updated_at&amp;#34;: &amp;#34;2019-11-26T22:37:25.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters timeline required array Array of markers to fetch. String enum anyOf home, notifications. If not provided, an empty object will be returned. Response 200: Success timeline[] = [&amp;ldquo;home&amp;rdquo;, &amp;ldquo;notifications&amp;rdquo;] { &amp;#34;notifications&amp;#34;: { &amp;#34;last_read_id&amp;#34;: &amp;#34;35098814&amp;#34;, &amp;#34;version&amp;#34;: 361, &amp;#34;updated_at&amp;#34;: &amp;#34;2019-11-26T22:37:25.239Z&amp;#34; }, &amp;#34;home&amp;#34;: { &amp;#34;last_read_id&amp;#34;: &amp;#34;103206604258487607&amp;#34;, &amp;#34;version&amp;#34;: 468, &amp;#34;updated_at&amp;#34;: &amp;#34;2019-11-26T22:37:25.</description>
     </item>
     
     <item>
@@ -267,7 +265,7 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/statuses/media/</guid>
-      <description>post  Upload media as attachment  https://mastodon.example/api/v1/media   Creates an attachment to be used with a new status.
+      <description>post Upload media as attachment https://mastodon.example/api/v1/media Creates an attachment to be used with a new status.
 Returns: Attachment
 OAuth: User token + write:media
 Version history:
@@ -282,12 +280,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/mutes/</guid>
-      <description>get  Muted accounts  https://mastodon.example/api/v1/mutes   Accounts the user has muted.
+      <description>get Muted accounts https://mastodon.example/api/v1/mutes Accounts the user has muted.
 Returns: Array of Account
 OAuth: User token + read:mutes or follow
 Version history:
 0.0.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Form Data Parameters limit optional  string  Maximum number of results to return per page. Defaults to 40.   max_id optional  string  Internal parameter.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Form Data Parameters limit optional string Maximum number of results to return per page. Defaults to 40. max_id optional string Internal parameter. Use the HTTP Link header for pagination instead. since_id optional string Internal parameter. Use the HTTP Link header for pagination instead.</description>
     </item>
     
     <item>
@@ -296,7 +294,7 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/notifications/</guid>
-      <description>get  Get all notifications  https://mastodon.example/api/v1/notifications   Notifications concerning the user. This API returns Link headers containing links to the next/previous page. However, the links can also be constructed dynamically using query params and id values.
+      <description>get Get all notifications https://mastodon.example/api/v1/notifications Notifications concerning the user. This API returns Link headers containing links to the next/previous page. However, the links can also be constructed dynamically using query params and id values.
 Returns: Array of Notification
 OAuth: User token + read:notifications
 Version history:
@@ -304,7 +302,7 @@ Version history:
 2.6.0 - add min_id
 2.9.0 - add account_id
 3.1.0 - add follow_request type
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters max_id optional  string  Return results older than this ID   since_id optional  string  Return results newer than this ID   min_id optional  string  Return results immediately newer than this ID   limit optional  string  Maximum number of results to return (default 20)   exclude_types optional  array  Array of types to exclude (follow, favourite, reblog, mention, poll, follow_request)   account_id optional  string  Return only notifications received from this account     Response   200: Success   Sample call with limit=2.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters max_id optional string Return results older than this ID since_id optional string Return results newer than this ID min_id optional string Return results immediately newer than this ID limit optional string Maximum number of results to return (default 20) exclude_types optional array Array of types to exclude (follow, favourite, reblog, mention, poll, follow_request) account_id optional string Return only notifications received from this account Response 200: Success Sample call with limit=2.</description>
     </item>
     
     <item>
@@ -313,8 +311,8 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/apps/oauth/</guid>
-      <description>get  Authorize a user  https://mastodon.example/oauth/authorize   Displays an authorization form to the user. If approved, it will create and return an authorization code, then redirect to the desired redirect_uri, or show the authorization code if urn:ietf:wg:oauth:2.0:oob was requested. The authorization code can be used while requesting a token to obtain access to user-level methods.
- Request Form Data Parameters response_type required  string  Should be set equal to code.</description>
+      <description>get Authorize a user https://mastodon.example/oauth/authorize Displays an authorization form to the user. If approved, it will create and return an authorization code, then redirect to the desired redirect_uri, or show the authorization code if urn:ietf:wg:oauth:2.0:oob was requested. The authorization code can be used while requesting a token to obtain access to user-level methods.
+Request Form Data Parameters response_type required string Should be set equal to code. client_id required string Client ID, obtained during app registration.</description>
     </item>
     
     <item>
@@ -323,11 +321,11 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/oembed/</guid>
-      <description>get  OEmbed as JSON  https://mastodon.example/api/oembed   Returns: OEmbed metadata
+      <description>get OEmbed as JSON https://mastodon.example/api/oembed Returns: OEmbed metadata
 OAuth: Public
 Version history:
 1.0.0 - added
- Request Query Parameters url required  string  URL of a status   maxwidth optional  number  width of the iframe. Defaults to 400   maxheight optional  number  height of the iframe. Defaults to null     Response   200: Success   Represents OEmbed &amp;ldquo;rich&amp;rdquo; preview, with associated iframe and metadata.</description>
+Request Query Parameters url required string URL of a status maxwidth optional number width of the iframe. Defaults to 400 maxheight optional number height of the iframe. Defaults to null Response 200: Success Represents OEmbed &amp;ldquo;rich&amp;rdquo; preview, with associated iframe and metadata. { &amp;#34;type&amp;#34;: &amp;#34;rich&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;1.0&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;New status by trwnh&amp;#34;, &amp;#34;author_name&amp;#34;: &amp;#34;infinite love ⴳ&amp;#34;, &amp;#34;author_url&amp;#34;: &amp;#34;https://mastodon.</description>
     </item>
     
     <item>
@@ -336,11 +334,11 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/statuses/polls/</guid>
-      <description>get  View a poll  https://mastodon.example/api/v1/polls/:id   Returns: Poll
+      <description>get View a poll https://mastodon.example/api/v1/polls/:id Returns: Poll
 OAuth: Public if parent status is public. User token + read:statuses if parent status is private.
 Version history:
 2.8.0 - added
- Request Path Parameters :id required  string  ID of the poll in the database     Response   200: Success    { &amp;#34;id&amp;#34;: &amp;#34;34830&amp;#34;, &amp;#34;expires_at&amp;#34;: &amp;#34;2019-12-05T04:05:08.302Z&amp;#34;, &amp;#34;expired&amp;#34;: true, &amp;#34;multiple&amp;#34;: false, &amp;#34;votes_count&amp;#34;: 10, &amp;#34;voters_count&amp;#34;: null, &amp;#34;voted&amp;#34;: true, &amp;#34;own_votes&amp;#34;: [ 1 ], &amp;#34;options&amp;#34;: [ { &amp;#34;title&amp;#34;: &amp;#34;accept&amp;#34;, &amp;#34;votes_count&amp;#34;: 6 }, { &amp;#34;title&amp;#34;: &amp;#34;deny&amp;#34;, &amp;#34;votes_count&amp;#34;: 4 } ], &amp;#34;emojis&amp;#34;: [] }    404: Not Found   Poll does not exist, or poll&#39;s parent status is private  { &amp;#34;error&amp;#34;: &amp;#34;Record not found&amp;#34; }      post  Vote on a poll  https://mastodon.</description>
+Request Path Parameters :id required string ID of the poll in the database Response 200: Success { &amp;#34;id&amp;#34;: &amp;#34;34830&amp;#34;, &amp;#34;expires_at&amp;#34;: &amp;#34;2019-12-05T04:05:08.302Z&amp;#34;, &amp;#34;expired&amp;#34;: true, &amp;#34;multiple&amp;#34;: false, &amp;#34;votes_count&amp;#34;: 10, &amp;#34;voters_count&amp;#34;: null, &amp;#34;voted&amp;#34;: true, &amp;#34;own_votes&amp;#34;: [ 1 ], &amp;#34;options&amp;#34;: [ { &amp;#34;title&amp;#34;: &amp;#34;accept&amp;#34;, &amp;#34;votes_count&amp;#34;: 6 }, { &amp;#34;title&amp;#34;: &amp;#34;deny&amp;#34;, &amp;#34;votes_count&amp;#34;: 4 } ], &amp;#34;emojis&amp;#34;: [] } 404: Not Found Poll does not exist, or poll&amp;rsquo;s parent status is private { &amp;#34;error&amp;#34;: &amp;#34;Record not found&amp;#34; } post Vote on a poll https://mastodon.</description>
     </item>
     
     <item>
@@ -349,12 +347,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/preferences/</guid>
-      <description> get  View user preferences  https://mastodon.example/api/v1/preferences   Preferences defined by the user in their account settings.
+      <description> get View user preferences https://mastodon.example/api/v1/preferences Preferences defined by the user in their account settings.
 Returns: Preferences by key and value
 OAuth: User token + read:accounts
 Version history:
 2.8.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;     Response   200: Success    { &amp;#34;posting:default:visibility&amp;#34;: &amp;#34;public&amp;#34;, &amp;#34;posting:default:sensitive&amp;#34;: false, &amp;#34;posting:default:language&amp;#34;: null, &amp;#34;reading:expand:media&amp;#34;: &amp;#34;default&amp;#34;, &amp;#34;reading:expand:spoilers&amp;#34;: false }    401: Unauthorized   Incorrect Authorization header  { &amp;#34;error&amp;#34;: &amp;#34;The access token is invalid&amp;#34; }     </description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Response 200: Success { &amp;#34;posting:default:visibility&amp;#34;: &amp;#34;public&amp;#34;, &amp;#34;posting:default:sensitive&amp;#34;: false, &amp;#34;posting:default:language&amp;#34;: null, &amp;#34;reading:expand:media&amp;#34;: &amp;#34;default&amp;#34;, &amp;#34;reading:expand:spoilers&amp;#34;: false } 401: Unauthorized Incorrect Authorization header { &amp;#34;error&amp;#34;: &amp;#34;The access token is invalid&amp;#34; } </description>
     </item>
     
     <item>
@@ -363,11 +361,11 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/proofs/</guid>
-      <description>get  View identity proof  https://mastodon.example/api/proofs   Returns: custom response defined by provider
+      <description> get View identity proof https://mastodon.example/api/proofs Returns: custom response defined by provider
 OAuth: Public
 Version history:
 2.8.0 - added
- Request Query Parameters provider optional  string  The identity provider to be looked up. Currently only supports keybase (case-sensitive)   username optional  string  The username on the selected identity provider     Response   200: Success   gargron on keybase  { &amp;#34;avatar&amp;#34;: &amp;#34;https://files.</description>
+Request Query Parameters provider optional string The identity provider to be looked up. Currently only supports keybase (case-sensitive) username optional string The username on the selected identity provider Response 200: Success gargron on keybase { &amp;#34;avatar&amp;#34;: &amp;#34;https://files.mastodon.social/accounts/avatars/000/000/001/original/d96d39a0abb45b92.jpg&amp;#34;, &amp;#34;signatures&amp;#34;: [ { &amp;#34;sig_hash&amp;#34;: &amp;#34;5cfc20c7018f2beefb42a68836da59a792e55daa4d118498c9b1898de7e845690f&amp;#34;, &amp;#34;kb_username&amp;#34;: &amp;#34;gargron&amp;#34; } ] } 404: Not Found No identity proof found for username on provider { &amp;#34;error&amp;#34;: &amp;#34;Record not found&amp;#34; } </description>
     </item>
     
     <item>
@@ -377,7 +375,7 @@ Version history:
       
       <guid>https://documentation.sig.gy/methods/notifications/push/</guid>
       <description>Web Push API Mastodon natively supports the Web Push API. You can utilize the same mechanisms for your native app. It requires running a proxy server that connects to Android’s and Apple’s proprietary notification gateways. However, the proxy server does not have access to the contents of the notifications. For a reference, see Mozilla’s web push server, or more practically, see:
- toot-relay PushToFCM metatext-apns   post  Subscribe to push notifications  https://mastodon.</description>
+toot-relay PushToFCM metatext-apns post Subscribe to push notifications https://mastodon.example/api/v1/push/subscription Add a Web Push API subscription to receive notifications.</description>
     </item>
     
     <item>
@@ -386,12 +384,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/reports/</guid>
-      <description>Responses are not currently documented.   post  File a report  https://mastodon.example/api/v1/reports   Returns: Report
+      <description>Responses are not currently documented. post File a report https://mastodon.example/api/v1/reports Returns: Report
 OAuth: User token + write:reports
 Version history:
 1.1 - added
 2.3.0 - add forward parameter
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Form Data Parameters account_id required  string  ID of the account to report   status_ids optional  array  Array of Statuses to attach to the report, for context   comment optional  string  Reason for the report (default max 1000 characters)   forward optional  boolean  If the account is remote, should the report be forwarded to the remote admin?</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Form Data Parameters account_id required string ID of the account to report status_ids optional array Array of Statuses to attach to the report, for context comment optional string Reason for the report (default max 1000 characters) forward optional boolean If the account is remote, should the report be forwarded to the remote admin?</description>
     </item>
     
     <item>
@@ -400,11 +398,11 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/statuses/scheduled_statuses/</guid>
-      <description>get  View scheduled statuses  https://mastodon.example/api/v1/scheduled_statuses   Returns: Array of ScheduledStatus
+      <description>get View scheduled statuses https://mastodon.example/api/v1/scheduled_statuses Returns: Array of ScheduledStatus
 OAuth: User token + read:statuses
 Version history:
 2.7.0 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters limit optional  number  Max number of results to return. Defaults to 20.   max_id optional  string  Return results older than ID   since_id optional  string  Return results newer than ID   min_id optional  string  Return results immediately newer than ID     Response   200: Success    [ { &amp;#34;id&amp;#34;: &amp;#34;3221&amp;#34;, &amp;#34;scheduled_at&amp;#34;: &amp;#34;2019-12-05T12:33:01.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters limit optional number Max number of results to return. Defaults to 20. max_id optional string Return results older than ID since_id optional string Return results newer than ID min_id optional string Return results immediately newer than ID Response 200: Success [ { &amp;#34;id&amp;#34;: &amp;#34;3221&amp;#34;, &amp;#34;scheduled_at&amp;#34;: &amp;#34;2019-12-05T12:33:01.</description>
     </item>
     
     <item>
@@ -413,13 +411,13 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/search/</guid>
-      <description>get  Search results  https://mastodon.example/api/v2/search   Returns: Results
+      <description>get Search results https://mastodon.example/api/v2/search Returns: Results
 OAuth: User token + read:search
 Version history:
 2.4.1 - added, limit hardcoded to 5
 2.8.0 - add type, limit, offset, min_id, max_id, account_id
 3.0.0 - add exclude_unreviewed param
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters account_id optional  string  If provided, statuses returned will be authored only by this account   max_id optional  string  Return results older than this id   min_id optional  string  Return results immediately newer than this id   type optional  string  Enum(accounts, hashtags, statuses)   exclude_unreviewed optional  boolean  Filter out unreviewed tags?</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters account_id optional string If provided, statuses returned will be authored only by this account max_id optional string Return results older than this id min_id optional string Return results immediately newer than this id type optional string Enum(accounts, hashtags, statuses) exclude_unreviewed optional boolean Filter out unreviewed tags?</description>
     </item>
     
     <item>
@@ -428,14 +426,14 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/statuses/</guid>
-      <description>post  Publish new status  https://mastodon.example/api/v1/statuses   Post a new status.
+      <description>post Publish new status https://mastodon.example/api/v1/statuses Post a new status.
 Returns: Status. When scheduled_at is present, ScheduledStatus is returned instead.
 OAuth: User + write:statuses
 Version history:
 0.0.0 - added
 2.7.0 - scheduled_at added
 2.8.0 - poll added
- Request Headers Idempotency-Key optional  string  Prevent duplicate submissions of the same status. Idempotency keys are stored for up to 1 hour, and can be any arbitrary string.</description>
+Request Headers Idempotency-Key optional string Prevent duplicate submissions of the same status. Idempotency keys are stored for up to 1 hour, and can be any arbitrary string. Consider using a hash or UUID generated client-side.</description>
     </item>
     
     <item>
@@ -446,7 +444,7 @@ Version history:
       <guid>https://documentation.sig.gy/methods/timelines/streaming/</guid>
       <description>Your application can use a server-sent events endpoint to receive updates in real-time. Server-sent events is an incredibly simple transport method that relies entirely on chunked-encoding transfer, i.e. the HTTP connection is kept open and receives new data periodically.
 Alternatively, a WebSocket connection can also be established.
-Server-sent events (HTTP) Endpoints  GET /api/v1/streaming/health Returns OK when streaming service is fine. Added in 2.5.0
+Server-sent events (HTTP) Endpoints GET /api/v1/streaming/health Returns OK when streaming service is fine. Added in 2.5.0
 GET /api/v1/streaming/user Returns events that are relevant to the authorized user, i.</description>
     </item>
     
@@ -456,12 +454,12 @@ GET /api/v1/streaming/user Returns events that are relevant to the authorized us
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/accounts/suggestions/</guid>
-      <description>get  Follow suggestions  https://mastodon.example/api/v1/suggestions   Accounts the user has had past positive interactions with, but is not yet following.
+      <description>get Follow suggestions https://mastodon.example/api/v1/suggestions Accounts the user has had past positive interactions with, but is not yet following.
 Returns: Array of Account
 OAuth: User token + read
 Version history:
 2.4.3 - added
- Request Headers Authorization required  string  Bearer &amp;lt;user token&amp;gt;    Query Parameters limit optional  string  Maximum number of results to return. Defaults to 40.     Response   200: Success   Sample call with limit=2  [ { &amp;#34;id&amp;#34;: &amp;#34;332766&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;kaniini&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;kaniini@pleroma.</description>
+Request Headers Authorization required string Bearer &amp;lt;user token&amp;gt; Query Parameters limit optional string Maximum number of results to return. Defaults to 40. Response 200: Success Sample call with limit=2 [ { &amp;#34;id&amp;#34;: &amp;#34;332766&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;kaniini&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;kaniini@pleroma.site&amp;#34;, &amp;#34;display_name&amp;#34;: &amp;#34;:abunhdhappyhop: :abunhdhappy: :abunhdhop: :abunhd: :abunhdhappyhop: :abunhdhappy:&amp;#34;, &amp;#34;locked&amp;#34;: false, &amp;#34;bot&amp;#34;: false, &amp;#34;created_at&amp;#34;: &amp;#34;2018-04-18T13:56:23.</description>
     </item>
     
     <item>
@@ -470,7 +468,7 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/timelines/</guid>
-      <description>get  Public timeline  https://mastodon.example/api/v1/timelines/public   Returns: Array of Status
+      <description>get Public timeline https://mastodon.example/api/v1/timelines/public Returns: Array of Status
 OAuth: Public. Requires app token + read:statuses if the instance has disabled public preview.
 Version history:
 0.0.0 - added
@@ -479,7 +477,7 @@ Version history:
 3.0.0 - auth is required if public preview is disabled
 3.1.4 - added remote
 3.3.0 - both min_id and max_id can be used at the same time now
- Request Query Parameters local optional  boolean  Show only local statuses?</description>
+Request Query Parameters local optional boolean Show only local statuses?</description>
     </item>
     
     <item>
@@ -488,12 +486,12 @@ Version history:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/methods/instance/trends/</guid>
-      <description>get  Trending tags  https://mastodon.example/api/v1/trends   Tags that are being used more frequently within the past week.
+      <description>get Trending tags https://mastodon.example/api/v1/trends Tags that are being used more frequently within the past week.
 Returns: Array of Tag with History
 OAuth: Public
 Version history:
 3.0.0 - added
- Request Query Parameters limit optional  number  Maximum number of results to return. Defaults to 10.     Response   200: Success    [ { &amp;#34;name&amp;#34;: &amp;#34;hola&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://mastodon.social/tags/hola&amp;#34;, &amp;#34;history&amp;#34;: [ { &amp;#34;day&amp;#34;: &amp;#34;1574726400&amp;#34;, &amp;#34;uses&amp;#34;: &amp;#34;13&amp;#34;, &amp;#34;accounts&amp;#34;: &amp;#34;10&amp;#34; }, .</description>
+Request Query Parameters limit optional number Maximum number of results to return. Defaults to 10. Response 200: Success [ { &amp;#34;name&amp;#34;: &amp;#34;hola&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://mastodon.social/tags/hola&amp;#34;, &amp;#34;history&amp;#34;: [ { &amp;#34;day&amp;#34;: &amp;#34;1574726400&amp;#34;, &amp;#34;uses&amp;#34;: &amp;#34;13&amp;#34;, &amp;#34;accounts&amp;#34;: &amp;#34;10&amp;#34; }, ... ] }, { &amp;#34;name&amp;#34;: &amp;#34;SaveDotOrg&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://mastodon.</description>
     </item>
     
   </channel>

@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>从源中安装 - Mastodon documentation</title>
@@ -307,64 +307,64 @@
 <h3 id="system-repositories">软件仓库</h3>
 <p>首先确保已经安装curl：</p>
 <h4 id="node-js">Node.js</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sL https://deb.nodesource.com/setup_12.x | bash -
-</code></pre></div><h4 id="yarn">Yarn</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-<span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;deb https://dl.yarnpkg.com/debian/ stable main&#34;</span> | tee /etc/apt/sources.list.d/yarn.list
-</code></pre></div><h3 id="system-packages">软件包</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt update
-apt install -y <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  imagemagick ffmpeg libpq-dev libxml2-dev libxslt1-dev file git-core <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  g++ libprotobuf-dev protobuf-compiler pkg-config nodejs gcc autoconf <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  bison build-essential libssl-dev libyaml-dev libreadline6-dev <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  nginx redis-server redis-tools postgresql postgresql-contrib <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  certbot python-certbot-nginx yarn libidn11-dev libicu-dev libjemalloc-dev
-</code></pre></div><h3 id="installing-ruby">安装 Ruby</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -sL https://deb.nodesource.com/setup_12.x | bash -
+</span></span></code></pre></div><h4 id="yarn">Yarn</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;deb https://dl.yarnpkg.com/debian/ stable main&#34;</span> | tee /etc/apt/sources.list.d/yarn.list
+</span></span></code></pre></div><h3 id="system-packages">软件包</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>apt install -y <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  imagemagick ffmpeg libpq-dev libxml2-dev libxslt1-dev file git-core <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  g++ libprotobuf-dev protobuf-compiler pkg-config nodejs gcc autoconf <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  bison build-essential libssl-dev libyaml-dev libreadline6-dev <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  nginx redis-server redis-tools postgresql postgresql-contrib <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  certbot python-certbot-nginx yarn libidn11-dev libicu-dev libjemalloc-dev
+</span></span></code></pre></div><h3 id="installing-ruby">安装 Ruby</h3>
 <p>因为使用 rbenv 可以更容易的获得正确的版本并在新版本发布后进行更新，我们将使用 rbenv 来管理Ruby版本。rbenv 必须安装在单个Linux用户中，因此，我们首先需要使用以下命令创建一个Mastodon用户：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adduser --disabled-login mastodon
-</code></pre></div><p>切换到mastodon用户：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">su - mastodon
-</code></pre></div><p>执行以下步骤安装 rbenv 和 rbenv-build：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-<span style="color:#8be9fd;font-style:italic">cd</span> ~/.rbenv <span style="color:#ff79c6">&amp;&amp;</span> src/configure <span style="color:#ff79c6">&amp;&amp;</span> make -C src
-<span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#39;export PATH=&#34;$HOME/.rbenv/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bashrc
-<span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; ~/.bashrc
-<span style="color:#8be9fd;font-style:italic">exec</span> bash
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-</code></pre></div><p>上述操作完成，我们便可以安装正确的 Ruby 版本：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">RUBY_CONFIGURE_OPTS</span><span style="color:#ff79c6">=</span>--with-jemalloc rbenv install 2.6.6
-rbenv global 2.6.6
-</code></pre></div><p>我们同样需要安装 bundler：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gem install bundler --no-document
-</code></pre></div><p>返回root用户：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">exit</span>
-</code></pre></div><h2 id="setup">配置</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adduser --disabled-login mastodon
+</span></span></code></pre></div><p>切换到mastodon用户：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - mastodon
+</span></span></code></pre></div><p>执行以下步骤安装 rbenv 和 rbenv-build：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> ~/.rbenv <span style="color:#ff79c6">&amp;&amp;</span> src/configure <span style="color:#ff79c6">&amp;&amp;</span> make -C src
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#39;export PATH=&#34;$HOME/.rbenv/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; ~/.bashrc
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">exec</span> bash
+</span></span><span style="display:flex;"><span>git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+</span></span></code></pre></div><p>上述操作完成，我们便可以安装正确的 Ruby 版本：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">RUBY_CONFIGURE_OPTS</span><span style="color:#ff79c6">=</span>--with-jemalloc rbenv install 2.6.6
+</span></span><span style="display:flex;"><span>rbenv global 2.6.6
+</span></span></code></pre></div><p>我们同样需要安装 bundler：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install bundler --no-document
+</span></span></code></pre></div><p>返回root用户：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">exit</span>
+</span></span></code></pre></div><h2 id="setup">配置</h2>
 <h3 id="setting-up-postgresql">配置 PostgreSQL</h3>
 <h4 id="performance-configuration-optional">性能调优（可选）</h4>
 <p>为了优化性能，你可以使用 <a href="https://pgtune.leopard.in.ua/#/">pgTune</a> 生成一个合适的配置文件。编辑 <code>/etc/postgresql/9.6/main/postgresql.conf</code> 中的相应数值并使用 <code>systemctl restart postgresql</code> 命令重启 PostgreSQL。</p>
 <h4 id="creating-a-user">创建帐户</h4>
 <p>你需创建一个供Mastodon使用的PostgreSQL帐户。创建一个使用“ident”认证方式的帐户是最容易的配置方法，即PostgreSQL帐户不需要独立的密码并由同名Linux用户使用。</p>
 <p>打开控制台：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo -u postgres psql
-</code></pre></div><p>在控制台中执行：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">USER</span> mastodon <span style="color:#ff79c6">CREATEDB</span>;
-\q
-</code></pre></div><p>完成！</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -u postgres psql
+</span></span></code></pre></div><p>在控制台中执行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">USER</span> mastodon <span style="color:#ff79c6">CREATEDB</span>;
+</span></span><span style="display:flex;"><span>\q
+</span></span></code></pre></div><p>完成！</p>
 <h3 id="setting-up-mastodon">配置 Mastodon</h3>
 <p>现在该下载Mastodon代码了。切换至mastodon用户：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">su - mastodon
-</code></pre></div><h4 id="checking-out-the-code">检出代码</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - mastodon
+</span></span></code></pre></div><h4 id="checking-out-the-code">检出代码</h4>
 <p>使用git下载最新稳定版Mastodon：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/tootsuite/mastodon.git live <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">cd</span> live
-git checkout <span style="color:#ff79c6">$(</span>git tag -l | grep -v <span style="color:#f1fa8c">&#39;rc[0-9]*$&#39;</span> | sort -V | tail -n 1<span style="color:#ff79c6">)</span>
-</code></pre></div><h4 id="installing-the-last-dependencies">安装依赖</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/tootsuite/mastodon.git live <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#8be9fd;font-style:italic">cd</span> live
+</span></span><span style="display:flex;"><span>git checkout <span style="color:#ff79c6">$(</span>git tag -l | grep -v <span style="color:#f1fa8c">&#39;rc[0-9]*$&#39;</span> | sort -V | tail -n 1<span style="color:#ff79c6">)</span>
+</span></span></code></pre></div><h4 id="installing-the-last-dependencies">安装依赖</h4>
 <p>现在，安装Ruby和JavaScript依赖：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bundle config deployment <span style="color:#f1fa8c">&#39;true&#39;</span>
-bundle config without <span style="color:#f1fa8c">&#39;development test&#39;</span>
-bundle install -j<span style="color:#ff79c6">$(</span>getconf _NPROCESSORS_ONLN<span style="color:#ff79c6">)</span>
-yarn install --pure-lockfile
-</code></pre></div><div class="hint hint-info">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bundle config deployment <span style="color:#f1fa8c">&#39;true&#39;</span>
+</span></span><span style="display:flex;"><span>bundle config without <span style="color:#f1fa8c">&#39;development test&#39;</span>
+</span></span><span style="display:flex;"><span>bundle install -j<span style="color:#ff79c6">$(</span>getconf _NPROCESSORS_ONLN<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>yarn install --pure-lockfile
+</span></span></code></pre></div><div class="hint hint-info">
   <div class="hint-icon"><i class="fa fa-info-circle"></i></div>
 
   两个<code>bundle config</code>命令仅仅第一次安装依赖时需要。如果你之后进行升级或重安装依赖，只需要<code>bundle install</code>就够了。
@@ -372,8 +372,8 @@ yarn install --pure-lockfile
 
 <h4 id="generating-a-configuration">生成配置文件</h4>
 <p>运行交互式安装向导：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">RAILS_ENV</span><span style="color:#ff79c6">=</span>production bundle <span style="color:#8be9fd;font-style:italic">exec</span> rake mastodon:setup
-</code></pre></div><p>它将：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">RAILS_ENV</span><span style="color:#ff79c6">=</span>production bundle <span style="color:#8be9fd;font-style:italic">exec</span> rake mastodon:setup
+</span></span></code></pre></div><p>它将：</p>
 <ul>
 <li>创建一个配置文件</li>
 <li>预编译静态文件</li>
@@ -381,32 +381,32 @@ yarn install --pure-lockfile
 </ul>
 <p>配置文件被保存在<code>.env.production</code>。如果你愿意的话，你可以查看并编辑这个文件。请参阅<a href="/zh-cn/admin/config/">配置文件的文档</a>。</p>
 <p>你已经完成需使用mastodon用户进行的操作，请切换回root用户：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">exit</span>
-</code></pre></div><h3 id="setting-up-nginx">配置 nginx</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">exit</span>
+</span></span></code></pre></div><h3 id="setting-up-nginx">配置 nginx</h3>
 <p>从Mastodon目录复制配置文件模版到nginx：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp /home/mastodon/live/dist/nginx.conf /etc/nginx/sites-available/mastodon
-ln -s /etc/nginx/sites-available/mastodon /etc/nginx/sites-enabled/mastodon
-</code></pre></div><p>编辑 <code>/etc/nginx/sites-available/mastodon</code>，替换 <code>example.com</code> 为你自己的域名，你可以根据自己的需求做出其它的一些调整。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp /home/mastodon/live/dist/nginx.conf /etc/nginx/sites-available/mastodon
+</span></span><span style="display:flex;"><span>ln -s /etc/nginx/sites-available/mastodon /etc/nginx/sites-enabled/mastodon
+</span></span></code></pre></div><p>编辑 <code>/etc/nginx/sites-available/mastodon</code>，替换 <code>example.com</code> 为你自己的域名，你可以根据自己的需求做出其它的一些调整。</p>
 <p>重载 nginx 以使变更生效：</p>
 <h3 id="acquiring-a-ssl-certificate">获取SSL证书</h3>
 <p>我们将使用 Let’s Encrypt 获取一个免费的SSL证书：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">certbot --nginx -d example.com
-</code></pre></div><p>这个命令将获取一个证书，自动更新 <code>/etc/nginx/sites-available/mastodon</code> 以使用新证书并重载nginx以使变更生效。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>certbot --nginx -d example.com
+</span></span></code></pre></div><p>这个命令将获取一个证书，自动更新 <code>/etc/nginx/sites-available/mastodon</code> 以使用新证书并重载nginx以使变更生效。</p>
 <p>现在你应该能够通过浏览器访问你的域名，然后看到一只大象锤击电脑屏幕的错误页面。这是因为我们还没有启动Mastodon进程。</p>
 <h3 id="setting-up-systemd-services">配置 systemd 服务</h3>
 <p>从Mastodon目录复制systemd服务模版：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp /home/mastodon/live/dist/mastodon-*.service /etc/systemd/system/
-</code></pre></div><p>然后修改以下文件，以保证用户名与路径是正确的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp /home/mastodon/live/dist/mastodon-*.service /etc/systemd/system/
+</span></span></code></pre></div><p>然后修改以下文件，以保证用户名与路径是正确的：</p>
 <ul>
 <li><code>/etc/systemd/system/mastodon-web.service</code></li>
 <li><code>/etc/systemd/system/mastodon-sidekiq.service</code></li>
 <li><code>/etc/systemd/system/mastodon-streaming.service</code></li>
 </ul>
 <p>最后，启动新systemd服务并将该服务设为开机自动激活：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl daemon-reload
-systemctl start mastodon-web mastodon-sidekiq mastodon-streaming
-systemctl <span style="color:#8be9fd;font-style:italic">enable</span> mastodon-*
-</code></pre></div><p>他们将在开机启动时自动开始运行。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl daemon-reload
+</span></span><span style="display:flex;"><span>systemctl start mastodon-web mastodon-sidekiq mastodon-streaming
+</span></span><span style="display:flex;"><span>systemctl <span style="color:#8be9fd;font-style:italic">enable</span> mastodon-*
+</span></span></code></pre></div><p>他们将在开机启动时自动开始运行。</p>
 <div class="hint hint-success">
   <div class="hint-icon"><i class="fa fa-check-circle"></i></div>
 

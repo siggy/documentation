@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Moderation actions - Mastodon documentation</title>
@@ -840,17 +840,17 @@
 <p>When an account is marked as sensitive, all media that user posts will be automatically <a href="https://docs.joinmastodon.org/user/posting/#cw">marked as sensitive</a>.</p>
 <h3 id="freeze-user">Freeze</h3>
 <p>A Mastodon account can be frozen. This prevents the user from doing anything with the account, but all of the content is still there untouched. This limitation is reversible; the account can be un-frozen at any time. This limitation is only available for local users on your server.</p>
-<p>When a user's account is frozen, they are redirected to their <strong>Account Settings</strong> page, where the following message is displayed:</p>
+<p>When a user&rsquo;s account is frozen, they are redirected to their <strong>Account Settings</strong> page, where the following message is displayed:</p>
 <blockquote>
 <p>You can no longer login to your account or use it in any other way, but your profile and other data remains intact.</p>
 </blockquote>
-<p>When the user's account is un-frozen, normal functionality resumes.</p>
+<p>When the user&rsquo;s account is un-frozen, normal functionality resumes.</p>
 <h3 id="limit-user">Limit</h3>
 <p>A limited account is hidden to all other users on that instance, except for its followers. All of the content is still there, and it can still be found via search, mentions, and following, but the content is invisible publicly.</p>
 <p>At this moment, limit does not affect federation. A locally limited account is <em>not</em> limited automatically on other servers. Account limitations are reversible.</p>
 <h3 id="suspend-user">Suspend</h3>
 <p>A Mastodon suspension means the account is effectively deleted. The account no longer appears in search, the profile page is gone, all of the posts, uploads, followers, and all other data is removed publicly. However, all the data is available in the admin back-end for a period of 30 days from suspension. This is to give the user an opportunity to work with instance admins to resolve any potential issues and have the account re-instated.</p>
-<p>If the account is reinstated within the 30 day period, all data is once again accessible publicly without any adverse affects. If the 30 day period lapses, <strong>all</strong> that user's data is purged from the instance. Admins also have the option to immediately delete the user's account data at any point during the 30 days.</p>
+<p>If the account is reinstated within the 30 day period, all data is once again accessible publicly without any adverse affects. If the 30 day period lapses, <strong>all</strong> that user&rsquo;s data is purged from the instance. Admins also have the option to immediately delete the user&rsquo;s account data at any point during the 30 days.</p>
 <p>Once the data has been deleted, whether than be after the 30 day period, or if an admin has force deleted it, the account can still be un-suspended. However, the account will have no data (toots, profile information, avatar or header image) associated with it.</p>
 <h2 id="server-wide-moderation">Server-wide moderation</h2>
 <p>Because individually moderating a large volume of users from a misbehaving server can be exhausting, it is possible to pre-emptively moderate against all users from that particular server using a so-called <strong>domain block</strong>, which comes with several different levels of severity.</p>
@@ -871,15 +871,15 @@
 <p>Spammers will often use different e-mail domains so it looks like they are using a lot of different e-mail servers that would all be difficult to blacklist separately. However, sometimes all of those domains resolve to a single e-mail server IP. If you see a lot of spammers signing up at the same time, you can check for this, either using an online DNS lookup tool, or the Linux <code>dig</code> utility, e.g. <code>dig example.com</code> will return all DNS A records for that Domain. If you notice the IP is the same for all domains, you can add it to the e-mail domain blacklist.</p>
 <h3 id="blocking-by-ip">Blocking by IP</h3>
 <p>It is not possible to block visitors by IP address in Mastodon itself, and it is not a fool-proof strategy. IPs are sometimes shared by a lot of different people, and sometimes change hands. But it is possible to block visitors by IP address in Linux using a firewall. Here is an example using <code>iptables</code> and <code>ipset</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#6272a4"># Install ipset</span>
-sudo apt install ipset
-<span style="color:#6272a4"># Create blacklist named &#34;spambots&#34;</span>
-sudo ipset create spambots nethash
-<span style="color:#6272a4"># Add 1.2.3.4 to the blacklist</span>
-sudo ipset add spambots 1.2.3.4
-<span style="color:#6272a4"># Add firewall rule based on the blacklist</span>
-sudo iptables -I INPUT <span style="color:#bd93f9">1</span> -m <span style="color:#8be9fd;font-style:italic">set</span> --match-set spambots src -j DROP
-</code></pre></div><p>Be careful not to lock yourself out of your machine.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># Install ipset</span>
+</span></span><span style="display:flex;"><span>sudo apt install ipset
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Create blacklist named &#34;spambots&#34;</span>
+</span></span><span style="display:flex;"><span>sudo ipset create spambots nethash
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Add 1.2.3.4 to the blacklist</span>
+</span></span><span style="display:flex;"><span>sudo ipset add spambots 1.2.3.4
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Add firewall rule based on the blacklist</span>
+</span></span><span style="display:flex;"><span>sudo iptables -I INPUT <span style="color:#bd93f9">1</span> -m <span style="color:#8be9fd;font-style:italic">set</span> --match-set spambots src -j DROP
+</span></span></code></pre></div><p>Be careful not to lock yourself out of your machine.</p>
 
 
     <p style="color: #687590;">

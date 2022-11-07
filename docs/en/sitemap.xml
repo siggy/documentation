@@ -1,43 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://documentation.sig.gy/entities/account/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/</loc>
     <lastmod>2021-09-13T17:55:48+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/activity/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/spec/activitypub/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/admin/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/admin-account/</loc>
     <lastmod>2020-06-07T17:55:32-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/admin-report/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/</loc>
     <lastmod>2022-11-05T22:59:41+00:00</lastmod>
     <xhtml:link
@@ -50,44 +35,28 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/announcement/</loc>
     <lastmod>2020-07-03T06:35:55-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/announcementreaction/</loc>
     <lastmod>2020-07-03T06:35:55-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/announcements/</loc>
     <lastmod>2020-07-03T06:35:55-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/api/</loc>
     <lastmod>2020-03-05T22:33:10+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/application/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/apps/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/attachment/</loc>
     <lastmod>2021-09-13T17:55:19+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/backups/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
     <xhtml:link
@@ -100,34 +69,22 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/backups/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/spec/bearcaps/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/blocks/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/bookmarks/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/dev/disclosure/</loc>
     <lastmod>2020-04-29T14:54:04+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/card/</loc>
     <lastmod>2020-07-25T09:35:41-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -149,19 +106,13 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/client/</loc>
     <lastmod>2022-08-28T20:39:12+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/dev/code/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/config/</loc>
     <lastmod>2022-05-04T10:26:49+09:30</lastmod>
     <xhtml:link
@@ -174,34 +125,22 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/config/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/context/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/conversation/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/timelines/conversations/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/instance/custom_emojis/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/troubleshooting/index-corruption/</loc>
     <lastmod>2022-01-16T17:03:38+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/moderating/</loc>
     <lastmod>2021-01-13T08:27:35-05:00</lastmod>
     <xhtml:link
@@ -224,79 +163,49 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/moderating/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/dev/</loc>
     <lastmod>2020-10-17T15:33:34+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/instance/directory/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/domain_blocks/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/emoji/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/endorsements/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/</loc>
     <lastmod>2022-03-12T20:33:34+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/error/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/favourites/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/featured_tags/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/featuredtag/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/field/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/filter/</loc>
     <lastmod>2020-11-26T01:48:32+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/filters/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/follow_requests/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/optional/elasticsearch/</loc>
     <lastmod>2022-10-30T12:57:34+02:00</lastmod>
     <xhtml:link
@@ -309,19 +218,13 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/optional/elasticsearch/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/client/intro/</loc>
     <lastmod>2020-08-23T19:26:17-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/client/guidelines/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/optional/tor/</loc>
     <lastmod>2020-07-26T01:46:40+02:00</lastmod>
     <xhtml:link
@@ -334,19 +237,13 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/optional/tor/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/history/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/identityproof/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/install/</loc>
     <lastmod>2022-03-31T16:14:51+08:00</lastmod>
     <xhtml:link
@@ -359,9 +256,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/install/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/optional/</loc>
     <lastmod>2020-01-01T22:37:59+01:00</lastmod>
     <xhtml:link
@@ -374,69 +269,43 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/optional/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/entities/instance/</loc>
-    <lastmod>2022-03-12T20:33:34+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/instance/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://documentation.sig.gy/entities/instance/</loc>
+    <lastmod>2022-03-12T20:33:34+02:00</lastmod>
+  </url><url>
     <loc>https://documentation.sig.gy/client/libraries/</loc>
     <lastmod>2022-08-28T20:39:12+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/list/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/timelines/lists/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/client/authorized/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/marker/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/timelines/markers/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/statuses/media/</loc>
     <lastmod>2022-07-16T08:02:20-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/mention/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/</loc>
     <lastmod>2022-07-16T08:02:20-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/spec/microformats/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/migrating/</loc>
     <lastmod>2021-05-06T09:26:36+09:00</lastmod>
     <xhtml:link
@@ -449,9 +318,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/migrating/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/moderation/</loc>
     <lastmod>2021-05-06T01:27:15+01:00</lastmod>
     <xhtml:link
@@ -464,9 +331,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/moderation/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/contacts/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
     <xhtml:link
@@ -489,9 +354,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/contacts/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/moving/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
     <xhtml:link
@@ -514,64 +377,40 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/moving/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/mutes/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/notification/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/notifications/</loc>
     <lastmod>2020-06-30T19:11:40-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/spec/oauth/</loc>
-    <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/apps/oauth/</loc>
     <lastmod>2021-09-13T17:55:48+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://documentation.sig.gy/spec/oauth/</loc>
+    <lastmod>2020-08-10T23:01:50+02:00</lastmod>
+  </url><url>
     <loc>https://documentation.sig.gy/api/oauth-scopes/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/client/token/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/oembed/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/client/public/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/poll/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/statuses/polls/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/posting/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
     <xhtml:link
@@ -594,19 +433,13 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/posting/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/entities/preferences/</loc>
-    <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/preferences/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://documentation.sig.gy/entities/preferences/</loc>
+    <lastmod>2020-08-10T23:01:50+02:00</lastmod>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/prerequisites/</loc>
     <lastmod>2022-11-04T22:39:59-04:00</lastmod>
     <xhtml:link
@@ -619,9 +452,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/prerequisites/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/discoverability/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
     <xhtml:link
@@ -644,59 +475,37 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/discoverability/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/proofs/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/optional/object-storage-proxy/</loc>
     <lastmod>2020-09-28T12:10:25+09:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/notifications/push/</loc>
     <lastmod>2021-03-17T21:48:58-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/pushsubscription/</loc>
     <lastmod>2020-07-10T05:28:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/api/rate-limits/</loc>
     <lastmod>2020-03-05T22:33:10+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/relationship/</loc>
     <lastmod>2021-09-20T02:05:03+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/report/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/reports/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/results/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/dev/routes/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/run-your-own/</loc>
     <lastmod>2022-10-31T16:33:05+01:00</lastmod>
     <xhtml:link
@@ -719,9 +528,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/run-your-own/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/scaling/</loc>
     <lastmod>2021-05-05T20:16:45+08:00</lastmod>
     <xhtml:link
@@ -734,29 +541,19 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/scaling/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/statuses/scheduled_statuses/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/scheduledstatus/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/search/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/spec/security/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/preferences/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
     <xhtml:link
@@ -779,14 +576,10 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/preferences/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/dev/setup/</loc>
     <lastmod>2020-10-17T15:33:34+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/setup/</loc>
     <lastmod>2022-11-05T22:59:41+00:00</lastmod>
     <xhtml:link
@@ -799,9 +592,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/setup/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/profile/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
     <xhtml:link
@@ -824,9 +615,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/profile/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/signup/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
     <xhtml:link
@@ -849,9 +638,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/signup/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/optional/sso/</loc>
     <lastmod>2020-01-01T22:37:59+01:00</lastmod>
     <xhtml:link
@@ -864,44 +651,28 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/optional/sso/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/source/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/spec/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/status/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/statuses/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/timelines/streaming/</loc>
     <lastmod>2020-05-06T06:13:42-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/accounts/suggestions/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/tag/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -923,29 +694,19 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/dev/overview/</loc>
     <lastmod>2020-06-20T04:56:56-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/timelines/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/entities/token/</loc>
     <lastmod>2020-08-10T23:01:50+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/methods/instance/trends/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/troubleshooting/</loc>
     <lastmod>2020-12-07T17:09:21-06:00</lastmod>
     <xhtml:link
@@ -958,9 +719,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/troubleshooting/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/upgrading/</loc>
     <lastmod>2020-02-28T14:27:39+01:00</lastmod>
     <xhtml:link
@@ -973,9 +732,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/upgrading/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/</loc>
     <lastmod>2022-10-31T16:33:05+01:00</lastmod>
     <xhtml:link
@@ -998,9 +755,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/external/</loc>
     <lastmod>2020-12-27T00:03:55-06:00</lastmod>
     <xhtml:link
@@ -1023,9 +778,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/external/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/admin/tootctl/</loc>
     <lastmod>2022-10-30T20:34:34-05:00</lastmod>
     <xhtml:link
@@ -1038,9 +791,7 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/admin/tootctl/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/user/network/</loc>
     <lastmod>2021-01-20T01:19:19+01:00</lastmod>
     <xhtml:link
@@ -1063,14 +814,10 @@
                 hreflang="en"
                 href="https://documentation.sig.gy/user/network/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/spec/webfinger/</loc>
     <lastmod>2020-01-12T07:11:56-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/</loc>
     <lastmod>2022-10-23T23:57:54+02:00</lastmod>
     <xhtml:link
@@ -1094,5 +841,4 @@
                 href="https://documentation.sig.gy/"
                 />
   </url>
-  
 </urlset>

@@ -5,11 +5,7 @@
     <link>https://documentation.sig.gy/client/</link>
     <description>Recent content in Clients on Mastodon documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://documentation.sig.gy/client/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://documentation.sig.gy/client/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting started with the API</title>
       <link>https://documentation.sig.gy/client/intro/</link>
@@ -26,7 +22,7 @@ Understanding HTTP requests and responses REST API endpoints can be called with 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/client/guidelines/</guid>
-      <description>Login The user must be able to login to any Mastodon server from the app. This means you must ask for the server&#39;s domain and use the app registrations API to dynamically obtain OAuth2 credentials.
+      <description>Login The user must be able to login to any Mastodon server from the app. This means you must ask for the server&amp;rsquo;s domain and use the app registrations API to dynamically obtain OAuth2 credentials.
 Usernames Decentralization must be transparent to the user. It should be possible to see that a given user is from another server, by e.g. displaying their acct somewhere. Note that acct is equal to username for local users, and equal to username@domain for remote users.</description>
     </item>
     
@@ -36,7 +32,7 @@ Usernames Decentralization must be transparent to the user. It should be possibl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/client/libraries/</guid>
-      <description>Apex (Salesforce)  apex-mastodon  C# (.NET Standard)  Mastodot Mastonet TootNet mastodon-api-cs Mastodon.Net  C++  mastodonpp  Crystal  mastodon.cr  Common Lisp  tooter  Dart  mastodon_dart  Elixir  hunter  Go  go-mastodon madon  Haskell  hastodon  Java  mastodon4j  JavaScript  masto.js libodonjs  JavaScript (Browser)  mastodon.js  JavaScript (Node.js)  node-mastodon mastodon-api  Perl  Mastodon::Client  PHP  Mastodon API for Laravel Composer based php API wrapper MastodonOAuthPHP Phediverse Mastodon REST Client TootoPHP oauth2-mastodon Mastodon Wordpress API  Python  Mastodon.</description>
+      <description>Apex (Salesforce) apex-mastodon C# (.NET Standard) Mastodot Mastonet TootNet mastodon-api-cs Mastodon.Net C++ mastodonpp Crystal mastodon.cr Common Lisp tooter Dart mastodon_dart Elixir hunter Go go-mastodon madon Haskell hastodon Java mastodon4j JavaScript masto.js libodonjs JavaScript (Browser) mastodon.js JavaScript (Node.js) node-mastodon mastodon-api Perl Mastodon::Client PHP Mastodon API for Laravel Composer based php API wrapper MastodonOAuthPHP Phediverse Mastodon REST Client TootoPHP oauth2-mastodon Mastodon Wordpress API Python Mastodon.py R mastodon Ruby mastodon-api Rust mammut (unmaintained) elefren (unmaintained) Scala scaladon Scheme Guile elefan Swift MastodonKit </description>
     </item>
     
     <item>
@@ -55,8 +51,8 @@ Scopes must be a subset. When we created our app, we specified read write follow
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/client/token/</guid>
-      <description>Authentication and authorization Up until this point, we&#39;ve been working with publicly available information, but not all information is public. Some information requires permission before viewing it, in order to audit who is requesting that information (and to potentially revoke or deny access).
-This is where OAuth comes in. OAuth is a mechanism for generating access tokens which can be used to authenticate (verify) that a request is coming from a specific client, and ensure that the requested action is authorized (allowed) by the server&#39;s access control policies.</description>
+      <description>Authentication and authorization Up until this point, we&amp;rsquo;ve been working with publicly available information, but not all information is public. Some information requires permission before viewing it, in order to audit who is requesting that information (and to potentially revoke or deny access).
+This is where OAuth comes in. OAuth is a mechanism for generating access tokens which can be used to authenticate (verify) that a request is coming from a specific client, and ensure that the requested action is authorized (allowed) by the server&amp;rsquo;s access control policies.</description>
     </item>
     
     <item>
@@ -65,7 +61,7 @@ This is where OAuth comes in. OAuth is a mechanism for generating access tokens 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/client/public/</guid>
-      <description>Now that you know how to construct HTTP requests using cURL or your favorite programming language&#39;s HTTP utility or library, it is time to learn about endpoints and responses.
+      <description>Now that you know how to construct HTTP requests using cURL or your favorite programming language&amp;rsquo;s HTTP utility or library, it is time to learn about endpoints and responses.
 Endpoints explained All HTTP requests are made against a target URL. When you request data to or from a website, you do so by using a specific URL. Depending on the URL, your request will be interpreted by the HTTP server and the appropriate response will be returned to you.</description>
     </item>
     

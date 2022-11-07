@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>迁移到新机器 - Mastodon documentation</title>
@@ -335,17 +335,17 @@
 <h3 id="dump-and-load-postgres">导出并导入Postgres数据库</h3>
 <p>不要运行<code>mastodon:setup</code>，而是创建一个名为<code>template0</code>的空白Postgres数据库（当导入Postgres导出文件时，这是很有用的，参见<a href="https://www.postgresql.org/docs/9.1/static/backup-dump.html#BACKUP-DUMP-RESTORE">pg_dump文档</a>）。</p>
 <p>在你的旧系统，使用<code>mastodon</code>用户运行如下命令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pg_dump -Fc mastodon_production -f backup.dump
-</code></pre></div><p>使用 <code>rsync</code> 或 <code>scp</code> 复制 <code>backup.dump</code> 文件。然后在新系统，使用<code>mastodon</code>帐户创建一个空数据库：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createdb -T template0 mastodon_production
-</code></pre></div><p>然后导入它：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pg_restore -U mastodon -n public --no-owner --role<span style="color:#ff79c6">=</span>mastodon <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  -d mastodon_production backup.dump
-</code></pre></div><p>（注意：如果新服务器上的帐户名不是<code>mastodon</code>，你应当修改上面命令中 <code>-U</code> <strong>和</strong> <code>--role</code> 参数。两台服务器的用户名不同也可以。）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pg_dump -Fc mastodon_production -f backup.dump
+</span></span></code></pre></div><p>使用 <code>rsync</code> 或 <code>scp</code> 复制 <code>backup.dump</code> 文件。然后在新系统，使用<code>mastodon</code>帐户创建一个空数据库：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>createdb -T template0 mastodon_production
+</span></span></code></pre></div><p>然后导入它：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pg_restore -U mastodon -n public --no-owner --role<span style="color:#ff79c6">=</span>mastodon <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  -d mastodon_production backup.dump
+</span></span></code></pre></div><p>（注意：如果新服务器上的帐户名不是<code>mastodon</code>，你应当修改上面命令中 <code>-U</code> <strong>和</strong> <code>--role</code> 参数。两台服务器的用户名不同也可以。）</p>
 <h3 id="copy-files">复制文件</h3>
 <p>本操作可能花费一些时间，若你希望避免不必要重复制，建议使用<code>rsync</code>。在你的旧机器上，使用<code>mastodon</code>用户，运行：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -avz ~/live/public/system/ mastodon@example.com:~/live/public/system/
-</code></pre></div><p>如果旧服务器上任何文件有改动，你需要重运行此命令。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -avz ~/live/public/system/ mastodon@example.com:~/live/public/system/
+</span></span></code></pre></div><p>如果旧服务器上任何文件有改动，你需要重运行此命令。</p>
 <p>你同样需要复制<code>.env.production</code>文件，该文件内含密钥。</p>
 <p>可选的，你可以复制nginx、systemd、pgbouncer配置文件，或者从头开始重写它们。</p>
 <h3 id="during-migration">迁移期间</h3>

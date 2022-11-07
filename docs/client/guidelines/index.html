@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Guidelines and best practices - Mastodon documentation</title>
@@ -837,7 +837,7 @@
   </aside>
   <div class="e-content">
     <h2 id="login">Login</h2>
-<p><strong>The user must be able to login to any Mastodon server from the app</strong>. This means you must ask for the server's domain and use the app registrations API to dynamically obtain OAuth2 credentials.</p>
+<p><strong>The user must be able to login to any Mastodon server from the app</strong>. This means you must ask for the server&rsquo;s domain and use the app registrations API to dynamically obtain OAuth2 credentials.</p>
 <h2 id="username">Usernames</h2>
 <p><strong>Decentralization must be transparent to the user</strong>. It should be possible to see that a given user is from another server, by e.g. displaying their <code>acct</code> somewhere. Note that <code>acct</code> is equal to username for local users, and equal to username@domain for remote users.</p>
 <h2 id="id">Handling and sorting IDs</h2>
@@ -853,10 +853,10 @@
 <p>Mentions and hashtags are <code>&lt;a&gt;</code> tags. Custom emoji remain in their plain text shortcode form. To give those entities their semantic meaning and add special handling, such as opening a mentioned profile within your app instead of as a web page, metadata is included with the <a href="/entities/status/">Status</a>, which can be matched to a particular tag. See <a href="/entities/status/#rendering-attributes">Status &gt; Rendering attributes</a> for more information.</p>
 <h3 id="links">Link shortening</h3>
 <p>Links in Mastodon are not shortened using URL shorteners, and the usage of URL shorteners is heavily discouraged. URLs in text always count for 23 characters, and are intended to be shortened visually. For that purpose, a link is marked up like this:</p>
-<pre><code class="language-markup" data-lang="markup">&lt;a href=&quot;https://example.com/page/that/is/very/long&quot;&gt;
-  &lt;span class=&quot;invisible&quot;&gt;https://&lt;/span&gt;
-  &lt;span class=&quot;ellipsis&quot;&gt;example.com/page&lt;/span&gt;
-  &lt;span class=&quot;invisible&quot;&gt;/that/is/very/long&lt;/span&gt;
+<pre tabindex="0"><code class="language-markup" data-lang="markup">&lt;a href=&#34;https://example.com/page/that/is/very/long&#34;&gt;
+  &lt;span class=&#34;invisible&#34;&gt;https://&lt;/span&gt;
+  &lt;span class=&#34;ellipsis&#34;&gt;example.com/page&lt;/span&gt;
+  &lt;span class=&#34;invisible&#34;&gt;/that/is/very/long&lt;/span&gt;
 &lt;/a&gt;
 </code></pre><p>The spans with the <code>invisible</code> class can be hidden. The middle span is intended to remain visible. It may have no class if the URL is not very long, otherwise it will have an <code>ellipsis</code> class. No ellipsis (<code>…</code>) character is inserted in the markup, instead, you are expected to insert it yourself if you need it in your app.</p>
 <h2 id="filters">Filters</h2>

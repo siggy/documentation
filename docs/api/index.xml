@@ -5,11 +5,7 @@
     <link>https://documentation.sig.gy/api/</link>
     <description>Recent content in Apis on Mastodon documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://documentation.sig.gy/api/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://documentation.sig.gy/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OAuth Scopes</title>
       <link>https://documentation.sig.gy/api/oauth-scopes/</link>
@@ -18,7 +14,7 @@
       <guid>https://documentation.sig.gy/api/oauth-scopes/</guid>
       <description>OAuth Scopes The API is divided up into access scopes. The scopes are hierarchical, i.e. if you have access to read, you automatically have access to read:accounts. It is recommended that you request as little as possible for your application.
 Multiple scopes can be requested at the same time: During app creation with the scopes param, and during the authorization phase with the scope query param (space-separate the scopes).
- Mind the scope vs scopes difference.</description>
+Mind the scope vs scopes difference.</description>
     </item>
     
     <item>
@@ -28,7 +24,8 @@ Multiple scopes can be requested at the same time: During app creation with the 
       
       <guid>https://documentation.sig.gy/api/rate-limits/</guid>
       <description>Rate limit information is returned in the response headers:
-   Header Description     X-RateLimit-Limit Number of requests permitted per time period   X-RateLimit-Remaining Number of requests you can still make   X-RateLimit-Reset Timestamp when your rate limit will reset     Mind that an API method can be subject to multiple overlapping rate limits. The headers return information about the one you are closest to exceeding.</description>
+Header Description X-RateLimit-Limit Number of requests permitted per time period X-RateLimit-Remaining Number of requests you can still make X-RateLimit-Reset Timestamp when your rate limit will reset Mind that an API method can be subject to multiple overlapping rate limits. The headers return information about the one you are closest to exceeding. Here is a list of various rate limits:
+Endpoint Bucket Time period Limit Limit type * /api/* Account access 5 minutes 300 Account * /api/* IP access 5 minutes 300 IP POST /api/v1/accounts App sign-up 30 minutes 5 IP POST /api/v1/media Uploading 30 minutes 30 Account DELETE /api/v1/statuses/:id Deletion 30 minutes 30 Account POST /api/v1/statuses/:id/unreblog Deletion 30 minutes 30 Account </description>
     </item>
     
   </channel>

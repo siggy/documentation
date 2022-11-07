@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Logging in with an account - Mastodon documentation</title>
@@ -826,7 +826,7 @@
     <li>
       <ul>
         <li><a href="#scopes">Scopes explained</a></li>
-        <li><a href="#flow">Example authorization code flow</a></li>
+        <li><a href="#flow"><strong>Example authorization code flow</strong></a></li>
         <li><a href="#actions">Performing actions as the authorized user</a></li>
       </ul>
     </li>
@@ -836,48 +836,48 @@
   <div class="e-content">
     <h2 id="scopes">Scopes explained</h2>
 <p>When we registered our app and when we will authorize our user, we need to define what exactly our generated token will have permission to do. This is done through the use of OAuth scopes. Each API method has an associated scope, and can only be called if the token being used for authorization has been generated with the corresponding scope.</p>
-<p>Scopes must be a subset. When we created our app, we specified <code>read write follow push</code> &ndash; we could simply request all available scopes by specifying <code>read write follow push</code>, but it is a better idea to only request what your app will actually need through granular scopes. See <a href="/api/oauth-scopes/">OAuth Scopes</a> for a full list of scopes. Each API method's documentation will also specify the OAuth access level and scope required to call it.</p>
+<p>Scopes must be a subset. When we created our app, we specified <code>read write follow push</code> &ndash; we could simply request all available scopes by specifying <code>read write follow push</code>, but it is a better idea to only request what your app will actually need through granular scopes. See <a href="/api/oauth-scopes/">OAuth Scopes</a> for a full list of scopes. Each API method&rsquo;s documentation will also specify the OAuth access level and scope required to call it.</p>
 <h2 id="flow"><strong>Example authorization code flow</strong></h2>
 <p>This is similar to the authentication flow from before, but this time, we need to obtain authorization from a user as well.</p>
 <h3 id="client">Client ID and secret</h3>
 <p>First, if you have not already registered a client application, then see <a href="/client/token/#creating-our-application">Creating our application</a> on the previous page or go directly to <a href="/methods/apps/#create-an-application">POST /api/v1/apps</a> for the full documentation of that method. We will need the <code>client_id</code> and <code>client_secret</code> for our application.</p>
 <h3 id="login">Authorize the user</h3>
 <p>To authorize a user, request <a href="/methods/apps/oauth/#authorize-a-user">GET /oauth/authorize</a> in a browser with the following query parameters:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">https://mastodon.example/oauth/authorize
-?client_id<span style="color:#ff79c6">=</span>CLIENT_ID
-&amp;<span style="color:#8be9fd;font-style:italic">scope</span><span style="color:#ff79c6">=</span>read+write+follow+push
-&amp;<span style="color:#8be9fd;font-style:italic">redirect_uri</span><span style="color:#ff79c6">=</span>urn:ietf:wg:oauth:2.0:oob
-&amp;<span style="color:#8be9fd;font-style:italic">response_type</span><span style="color:#ff79c6">=</span>code
-</code></pre></div><p>Note the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>https://mastodon.example/oauth/authorize
+</span></span><span style="display:flex;"><span>?client_id<span style="color:#ff79c6">=</span>CLIENT_ID
+</span></span><span style="display:flex;"><span>&amp;<span style="color:#8be9fd;font-style:italic">scope</span><span style="color:#ff79c6">=</span>read+write+follow+push
+</span></span><span style="display:flex;"><span>&amp;<span style="color:#8be9fd;font-style:italic">redirect_uri</span><span style="color:#ff79c6">=</span>urn:ietf:wg:oauth:2.0:oob
+</span></span><span style="display:flex;"><span>&amp;<span style="color:#8be9fd;font-style:italic">response_type</span><span style="color:#ff79c6">=</span>code
+</span></span></code></pre></div><p>Note the following:</p>
 <ul>
 <li><code>client_id</code> and <code>client_secret</code> were obtained when registering our application.</li>
-<li><code>scope</code> must be a subset of our registered app's registered scopes. It is a good idea to only request what you need. See <a href="/api/oauth-scopes/">OAuth Scopes</a> for more information.</li>
+<li><code>scope</code> must be a subset of our registered app&rsquo;s registered scopes. It is a good idea to only request what you need. See <a href="/api/oauth-scopes/">OAuth Scopes</a> for more information.</li>
 <li><code>redirect_uri</code> is one of the URIs we registered with our app. We are still using &ldquo;out of band&rdquo; for this example, which means we will have to manually copy and paste the resulting code, but if you registered your application with a URI that you control, then the code will be returned as a query parameter <code>code</code> and can be logged by your request handler. See the response section of the API method documentation for more information on this.</li>
 </ul>
 <h3 id="token">Obtain the token</h3>
-<p>Now that we have an authorization <code>code</code>, let's obtain an access token that will authenticate our requests as the authorized user. To do so, use <a href="/methods/apps/oauth/#obtain-a-token">POST /oauth/token</a> like before, but pass the authorization code we just obtained:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_id=your_client_id_here&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_secret=your_client_secret_here&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;redirect_uri=urn:ietf:wg:oauth:2.0:oob&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;grant_type=authorization_code&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;code=user_authzcode_here&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;scope=read write follow push&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	https://mastodon.example/oauth/token
-</code></pre></div><p>Note the following:</p>
+<p>Now that we have an authorization <code>code</code>, let&rsquo;s obtain an access token that will authenticate our requests as the authorized user. To do so, use <a href="/methods/apps/oauth/#obtain-a-token">POST /oauth/token</a> like before, but pass the authorization code we just obtained:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_id=your_client_id_here&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_secret=your_client_secret_here&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;redirect_uri=urn:ietf:wg:oauth:2.0:oob&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;grant_type=authorization_code&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;code=user_authzcode_here&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;scope=read write follow push&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	https://mastodon.example/oauth/token
+</span></span></code></pre></div><p>Note the following:</p>
 <ul>
 <li><code>client_id</code> and <code>client_secret</code> were provided in the response text when you registered your application.</li>
 <li><code>redirect_uri</code> must be one of the URIs defined when registering the application.</li>
 <li>We are requesting a <code>grant_type</code> of <code>authorization_code</code>, which still defaults to giving us the <code>read</code> scope. However, while authorizing our user, we requested a certain <code>scope</code> &ndash; pass the exact same value here.</li>
 <li>The <code>code</code> can only be used once. If you need to obtain a new token, you will need to have the user authorize again by repeating the above <a href="/client/authorized/#authorize-the-user">Authorize the user</a> step.</li>
 </ul>
-<p>The response of this method is a <a href="/entities/token/">Token</a> entity. We will need the <code>access_token</code> value. Once you have the access token, save it in your local cache. To use it in requests, add the HTTP header <code>Authorization: Bearer ...</code> to any API call that requires OAuth (i.e., one that is not publicly accessible). Let's verify that our obtained credentials are working by calling <a href="/methods/accounts/#verify-account-credentials">GET /api/v1/accounts/verify_credentials</a>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-H <span style="color:#f1fa8c">&#39;Authorization: Bearer our_access_token_here&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	https://mastodon.example/api/v1/accounts/verify_credentials
-</code></pre></div><p>If we've obtained our token and formatted our request correctly, we should see our details returned to us as an <a href="/entities/account/">Account</a> entity, with the <code>source</code> parameter included.</p>
+<p>The response of this method is a <a href="/entities/token/">Token</a> entity. We will need the <code>access_token</code> value. Once you have the access token, save it in your local cache. To use it in requests, add the HTTP header <code>Authorization: Bearer ...</code> to any API call that requires OAuth (i.e., one that is not publicly accessible). Let&rsquo;s verify that our obtained credentials are working by calling <a href="/methods/accounts/#verify-account-credentials">GET /api/v1/accounts/verify_credentials</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-H <span style="color:#f1fa8c">&#39;Authorization: Bearer our_access_token_here&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	https://mastodon.example/api/v1/accounts/verify_credentials
+</span></span></code></pre></div><p>If we&rsquo;ve obtained our token and formatted our request correctly, we should see our details returned to us as an <a href="/entities/account/">Account</a> entity, with the <code>source</code> parameter included.</p>
 <h2 id="actions">Performing actions as the authorized user</h2>
-<p>With our OAuth token for the authorized user, we can now perform any action as that user that is within our token's scope.</p>
+<p>With our OAuth token for the authorized user, we can now perform any action as that user that is within our token&rsquo;s scope.</p>
 <h3 id="statuses">Publish and delete statuses</h3>
 <ul>
 <li>See <a href="/methods/statuses/#publish-new-status">POST /api/v1/statuses</a> for how to create statuses.
@@ -910,7 +910,7 @@
 </ul>
 <h3 id="notifications">Receive notifications</h3>
 <ul>
-<li>See <a href="/methods/notifications/">/api/v1/notifications</a> for managing a user's notifications.</li>
+<li>See <a href="/methods/notifications/">/api/v1/notifications</a> for managing a user&rsquo;s notifications.</li>
 <li>See <a href="/methods/notifications/push/">/api/v1/push</a> for subscribing to push notifications.</li>
 </ul>
 <h3 id="discovery">Discovery features</h3>
@@ -927,8 +927,8 @@
 </ul>
 <h3 id="manage">Manage account info</h3>
 <ul>
-<li>See <a href="/methods/accounts/endorsements/">/api/v1/endorsements</a> for managing a user profile's featured accounts.</li>
-<li>See <a href="/methods/accounts/featured_tags/">/api/v1/featured_tags</a> for managing a user profile's featured hashtags.</li>
+<li>See <a href="/methods/accounts/endorsements/">/api/v1/endorsements</a> for managing a user profile&rsquo;s featured accounts.</li>
+<li>See <a href="/methods/accounts/featured_tags/">/api/v1/featured_tags</a> for managing a user profile&rsquo;s featured hashtags.</li>
 <li>See <a href="/methods/accounts/preferences/">/api/v1/preferences</a> for reading user preferences.</li>
 </ul>
 

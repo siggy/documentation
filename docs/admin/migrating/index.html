@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Migrating to a new machine - Mastodon documentation</title>
@@ -871,17 +871,17 @@
 <h3 id="dump-and-load-postgres">Dump and load Postgres</h3>
 <p>Instead of running <code>mastodon:setup</code>, we’re going to create an empty Postgres database using the <code>template0</code> database (which is useful when restoring a Postgres dump, <a href="https://www.postgresql.org/docs/9.1/static/backup-dump.html#BACKUP-DUMP-RESTORE">as described in the pg_dump documentation</a>).</p>
 <p>Run this as the <code>mastodon</code> user on your old system:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pg_dump -Fc mastodon_production -f backup.dump
-</code></pre></div><p>Copy the <code>backup.dump</code> file over, using <code>rsync</code> or <code>scp</code>. Then on the new system, create an empty database as the <code>mastodon</code> user:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createdb -T template0 mastodon_production
-</code></pre></div><p>Then import it:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pg_restore -Fc -U mastodon -n public --no-owner --role<span style="color:#ff79c6">=</span>mastodon <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>  -d mastodon_production backup.dump
-</code></pre></div><p>(Note that if the username is not <code>mastodon</code> on the new server, you should change the <code>-U</code> AND <code>--role</code> values above. It’s okay if the username is different between the two servers.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pg_dump -Fc mastodon_production -f backup.dump
+</span></span></code></pre></div><p>Copy the <code>backup.dump</code> file over, using <code>rsync</code> or <code>scp</code>. Then on the new system, create an empty database as the <code>mastodon</code> user:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>createdb -T template0 mastodon_production
+</span></span></code></pre></div><p>Then import it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pg_restore -Fc -U mastodon -n public --no-owner --role<span style="color:#ff79c6">=</span>mastodon <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>  -d mastodon_production backup.dump
+</span></span></code></pre></div><p>(Note that if the username is not <code>mastodon</code> on the new server, you should change the <code>-U</code> AND <code>--role</code> values above. It’s okay if the username is different between the two servers.)</p>
 <h3 id="copy-files">Copy files</h3>
 <p>This will probably take some time, and you’ll want to avoid re-copying unnecessarily, so using <code>rsync</code> is recommended. On your old machine, as the <code>mastodon</code> user, run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -avz ~/live/public/system/ mastodon@example.com:~/live/public/system/
-</code></pre></div><p>You’ll want to re-run this if any of the files on the old server change.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -avz ~/live/public/system/ mastodon@example.com:~/live/public/system/
+</span></span></code></pre></div><p>You’ll want to re-run this if any of the files on the old server change.</p>
 <p>You should also copy over the <code>.env.production</code> file, which contains secrets.</p>
 <p>Optionally, you may copy over the nginx, systemd, and pgbouncer config files, or rewrite them from scratch.</p>
 <h3 id="during-migration">During migration</h3>

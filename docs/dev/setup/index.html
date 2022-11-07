@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Setting up a dev environment - Mastodon documentation</title>
@@ -839,7 +839,7 @@
 </div>
 
 <h3 id="prerequisites">Pre-requisites</h3>
-<p>You can follow the <a href="https://docs.joinmastodon.org/admin/install/">pre-requisites instructions from the production guide</a>, but do not create a <code>mastodon</code> user. You also don't have to install <code>nginx</code>, <code>certbot</code> and <code>python-certbot-nginx</code> as the development environment brings its own webserver. Setting up and running a development environment has been proven successful over WSL2 as well if you are on Windows.</p>
+<p>You can follow the <a href="https://docs.joinmastodon.org/admin/install/">pre-requisites instructions from the production guide</a>, but do not create a <code>mastodon</code> user. You also don&rsquo;t have to install <code>nginx</code>, <code>certbot</code> and <code>python-certbot-nginx</code> as the development environment brings its own webserver. Setting up and running a development environment has been proven successful over WSL2 as well if you are on Windows.</p>
 <h3 id="setup">Setup</h3>
 <p>Run following commands in the project directory <code>bundle install</code>, <code>yarn install</code>.</p>
 <p>In the development environment, Mastodon will use PostgreSQL as the currently signed-in Linux user using the <code>ident</code> method, which usually works out of the box. The one command you need to run is <code>rails db:setup</code> which will create the databases <code>mastodon_development</code> and <code>mastodon_test</code>, load the schema into them, and then create seed data defined in <code>db/seed.rb</code> in <code>mastodon_development</code>. The only seed data is an admin account with the credentials <code>admin@localhost:3000</code> / <code>mastodonadmin</code>.</p>
@@ -855,28 +855,28 @@
 <p>This will create the necessary Postgres user with the permission to create a database.</p>
 <h3 id="running">Running</h3>
 <p>There are multiple processes that need to be run for the full set of Mastodon’s functionality, although they can be selectively omitted. To run all of them with just one command, you can install Foreman with <code>gem install foreman --no-document</code> and then use:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">foreman start
-</code></pre></div><p>In the Mastodon directory. This will start processes defined in <code>Procfile.dev</code>, which will give you: A Rails server, a Webpack server, a streaming API server, and Sidekiq. Of course, you can run any of those things stand-alone depending on your needs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>foreman start
+</span></span></code></pre></div><p>In the Mastodon directory. This will start processes defined in <code>Procfile.dev</code>, which will give you: A Rails server, a Webpack server, a streaming API server, and Sidekiq. Of course, you can run any of those things stand-alone depending on your needs.</p>
 <h3 id="testing">Testing</h3>
 <table>
 <thead>
 <tr>
-<th align="left">Command</th>
-<th align="left">Description</th>
+<th style="text-align:left">Command</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>rspec</code></td>
-<td align="left">Run the Ruby test suite</td>
+<td style="text-align:left"><code>rspec</code></td>
+<td style="text-align:left">Run the Ruby test suite</td>
 </tr>
 <tr>
-<td align="left"><code>yarn run test</code></td>
-<td align="left">Run the JavaScript test suite</td>
+<td style="text-align:left"><code>yarn run test</code></td>
+<td style="text-align:left">Run the JavaScript test suite</td>
 </tr>
 <tr>
-<td align="left"><code>rubocop</code></td>
-<td align="left">Check the Ruby code for conformance with our code style</td>
+<td style="text-align:left"><code>rubocop</code></td>
+<td style="text-align:left">Check the Ruby code for conformance with our code style</td>
 </tr>
 </tbody>
 </table>

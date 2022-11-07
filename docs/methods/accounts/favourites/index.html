@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>favourites - Mastodon documentation</title>
@@ -941,162 +941,162 @@ Internal parameter. Use HTTP <code>Link</code> header for pagination instead.
 <p>An example call with limit=2. Results will be returned as a Status entity with embedded Account entity. Because the id of a favourite is not public, an HTTP <code>Link</code> header can be parsed for next and previous pages.Internal
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">Link<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">&lt;</span>https<span style="color:#ff79c6">:</span><span style="color:#6272a4">//mastodon.social/api/v1/favourites?limit=2&amp;max_id=23716836&gt;; rel=&#34;next&#34;, &lt;https://mastodon.social/api/v1/favourites?limit=2&amp;min_id=23716978&gt;; rel=&#34;prev&#34;
-</span><span style="color:#6272a4"></span>
-[
-    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;103186075217296344&#34;</span>,
-    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:35:52.000Z&#34;</span>,
-    <span style="color:#f1fa8c">&#34;in_reply_to_id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
-    <span style="color:#f1fa8c">&#34;in_reply_to_account_id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
-    <span style="color:#f1fa8c">&#34;sensitive&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-    <span style="color:#f1fa8c">&#34;spoiler_text&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>,
-    <span style="color:#f1fa8c">&#34;visibility&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;unlisted&#34;</span>,
-    <span style="color:#f1fa8c">&#34;language&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;enCy&#34;</span>,
-    <span style="color:#f1fa8c">&#34;uri&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/users/haskal/statuses/103186075002013902&#34;</span>,
-    <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/@haskal/103186075002013902&#34;</span>,
-    <span style="color:#f1fa8c">&#34;replies_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
-    <span style="color:#f1fa8c">&#34;reblogs_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
-    <span style="color:#f1fa8c">&#34;favourites_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
-    <span style="color:#f1fa8c">&#34;favourited&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
-    <span style="color:#f1fa8c">&#34;reblogged&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-    <span style="color:#f1fa8c">&#34;muted&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-    <span style="color:#f1fa8c">&#34;bookmarked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-    <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;p&gt;the pirate gay&lt;/p&gt;&#34;</span>,
-    <span style="color:#f1fa8c">&#34;reblog&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
-    <span style="color:#f1fa8c">&#34;account&#34;</span><span style="color:#ff79c6">:</span> {
-      <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;297420&#34;</span>,
-      <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal&#34;</span>,
-      <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal@cybre.space&#34;</span>,
-      <span style="color:#f1fa8c">&#34;display_name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;soft nb friend :blobcatsleep:&#34;</span>,
-      <span style="color:#f1fa8c">&#34;locked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-      <span style="color:#f1fa8c">&#34;bot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-      <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2018-03-16T00:47:36.470Z&#34;</span>,
-      <span style="color:#f1fa8c">&#34;note&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;p&gt;a very distinctive nya&lt;/p&gt;&lt;p&gt;systems hecker, -1x engineer, server maid, professional yak shaver&lt;br&gt;free software | digital rights | rhythm games | cyberponk | homelab | ham radio | electronics&lt;/p&gt;&lt;p&gt;🇺🇸/🇭🇺/🏴‍☠️&lt;br&gt;21; they/them&lt;/p&gt;&lt;p&gt;b618ac8ac69b6ac7bae267acb1a81e&lt;/p&gt;&#34;</span>,
-      <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/@haskal&#34;</span>,
-      <span style="color:#f1fa8c">&#34;avatar&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/297/420/original/5e2def6e305cecee.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;avatar_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/297/420/original/5e2def6e305cecee.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;header&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/297/420/original/2df598299cc677db.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;header_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/297/420/original/2df598299cc677db.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;followers_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">268</span>,
-      <span style="color:#f1fa8c">&#34;following_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">258</span>,
-      <span style="color:#f1fa8c">&#34;statuses_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">8743</span>,
-      <span style="color:#f1fa8c">&#34;last_status_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:49:39.880Z&#34;</span>,
-      <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [
-        {
-          <span style="color:#f1fa8c">&#34;shortcode&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;blobcatsleep&#34;</span>,
-          <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/077/451/original/fc39ac6778d2ca02.png&#34;</span>,
-          <span style="color:#f1fa8c">&#34;static_url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/077/451/static/fc39ac6778d2ca02.png&#34;</span>,
-          <span style="color:#f1fa8c">&#34;visible_in_picker&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
-        }
-      ],
-      <span style="color:#f1fa8c">&#34;fields&#34;</span><span style="color:#ff79c6">:</span> [
-        {
-          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;web&#34;</span>,
-          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://tilde.town/~haskal\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;tilde.town/~haskal&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span&gt;&lt;/a&gt;&#34;</span>,
-          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-22T21:16:30.009+00:00&#34;</span>
-        },
-        {
-          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;other web&#34;</span>,
-          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://awoo.systems\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;awoo.systems&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span&gt;&lt;/a&gt;&#34;</span>,
-          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-22T21:16:30.578+00:00&#34;</span>
-        },
-        {
-          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;xmpp&#34;</span>,
-          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal@lain.faith&#34;</span>,
-          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
-        },
-        {
-          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;matrix&#34;</span>,
-          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;span class=\&#34;h-card\&#34;&gt;&lt;a href=\&#34;https://cybre.space/@haskal\&#34; class=\&#34;u-url mention\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;@&lt;span&gt;haskal&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;:matrix.org&#34;</span>,
-          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
-        }
-      ]
-    },
-    <span style="color:#f1fa8c">&#34;media_attachments&#34;</span><span style="color:#ff79c6">:</span> [],
-    <span style="color:#f1fa8c">&#34;mentions&#34;</span><span style="color:#ff79c6">:</span> [],
-    <span style="color:#f1fa8c">&#34;tags&#34;</span><span style="color:#ff79c6">:</span> [],
-    <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [],
-    <span style="color:#f1fa8c">&#34;card&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
-    <span style="color:#f1fa8c">&#34;poll&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
-  },
-  {
-    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;103186044372624124&#34;</span>,
-    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:28:03.000Z&#34;</span>,
-    <span style="color:#f1fa8c">&#34;in_reply_to_id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
-    <span style="color:#f1fa8c">&#34;in_reply_to_account_id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
-    <span style="color:#f1fa8c">&#34;sensitive&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
-    <span style="color:#f1fa8c">&#34;spoiler_text&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;no context&#34;</span>,
-    <span style="color:#f1fa8c">&#34;visibility&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;unlisted&#34;</span>,
-    <span style="color:#f1fa8c">&#34;language&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;enCy&#34;</span>,
-    <span style="color:#f1fa8c">&#34;uri&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/users/haskal/statuses/103186044253681902&#34;</span>,
-    <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/@haskal/103186044253681902&#34;</span>,
-    <span style="color:#f1fa8c">&#34;replies_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
-    <span style="color:#f1fa8c">&#34;reblogs_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
-    <span style="color:#f1fa8c">&#34;favourites_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
-    <span style="color:#f1fa8c">&#34;favourited&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
-    <span style="color:#f1fa8c">&#34;reblogged&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-    <span style="color:#f1fa8c">&#34;muted&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-    <span style="color:#f1fa8c">&#34;bookmarked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-    <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;p&gt;cute,,,&lt;/p&gt;&#34;</span>,
-    <span style="color:#f1fa8c">&#34;reblog&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
-    <span style="color:#f1fa8c">&#34;account&#34;</span><span style="color:#ff79c6">:</span> {
-      <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;297420&#34;</span>,
-      <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal&#34;</span>,
-      <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal@cybre.space&#34;</span>,
-      <span style="color:#f1fa8c">&#34;display_name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;soft nb friend :blobcatsleep:&#34;</span>,
-      <span style="color:#f1fa8c">&#34;locked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-      <span style="color:#f1fa8c">&#34;bot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-      <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2018-03-16T00:47:36.470Z&#34;</span>,
-      <span style="color:#f1fa8c">&#34;note&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;p&gt;a very distinctive nya&lt;/p&gt;&lt;p&gt;systems hecker, -1x engineer, server maid, professional yak shaver&lt;br&gt;free software | digital rights | rhythm games | cyberponk | homelab | ham radio | electronics&lt;/p&gt;&lt;p&gt;🇺🇸/🇭🇺/🏴‍☠️&lt;br&gt;21; they/them&lt;/p&gt;&lt;p&gt;b618ac8ac69b6ac7bae267acb1a81e&lt;/p&gt;&#34;</span>,
-      <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/@haskal&#34;</span>,
-      <span style="color:#f1fa8c">&#34;avatar&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/297/420/original/5e2def6e305cecee.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;avatar_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/297/420/original/5e2def6e305cecee.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;header&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/297/420/original/2df598299cc677db.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;header_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/297/420/original/2df598299cc677db.png&#34;</span>,
-      <span style="color:#f1fa8c">&#34;followers_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">268</span>,
-      <span style="color:#f1fa8c">&#34;following_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">258</span>,
-      <span style="color:#f1fa8c">&#34;statuses_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">8743</span>,
-      <span style="color:#f1fa8c">&#34;last_status_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:49:39.880Z&#34;</span>,
-      <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [
-        {
-          <span style="color:#f1fa8c">&#34;shortcode&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;blobcatsleep&#34;</span>,
-          <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/077/451/original/fc39ac6778d2ca02.png&#34;</span>,
-          <span style="color:#f1fa8c">&#34;static_url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/077/451/static/fc39ac6778d2ca02.png&#34;</span>,
-          <span style="color:#f1fa8c">&#34;visible_in_picker&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
-        }
-      ],
-      <span style="color:#f1fa8c">&#34;fields&#34;</span><span style="color:#ff79c6">:</span> [
-        {
-          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;web&#34;</span>,
-          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://tilde.town/~haskal\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;tilde.town/~haskal&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span&gt;&lt;/a&gt;&#34;</span>,
-          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-22T21:16:30.009+00:00&#34;</span>
-        },
-        {
-          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;other web&#34;</span>,
-          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://awoo.systems\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;awoo.systems&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span&gt;&lt;/a&gt;&#34;</span>,
-          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-22T21:16:30.578+00:00&#34;</span>
-        },
-        {
-          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;xmpp&#34;</span>,
-          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal@lain.faith&#34;</span>,
-          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
-        },
-        {
-          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;matrix&#34;</span>,
-          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;span class=\&#34;h-card\&#34;&gt;&lt;a href=\&#34;https://cybre.space/@haskal\&#34; class=\&#34;u-url mention\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;@&lt;span&gt;haskal&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;:matrix.org&#34;</span>,
-          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
-        }
-      ]
-    },
-    <span style="color:#f1fa8c">&#34;media_attachments&#34;</span><span style="color:#ff79c6">:</span> [],
-    <span style="color:#f1fa8c">&#34;mentions&#34;</span><span style="color:#ff79c6">:</span> [],
-    <span style="color:#f1fa8c">&#34;tags&#34;</span><span style="color:#ff79c6">:</span> [],
-    <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [],
-    <span style="color:#f1fa8c">&#34;card&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
-    <span style="color:#f1fa8c">&#34;poll&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
-  }
-]
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>Link<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">&lt;</span>https<span style="color:#ff79c6">:</span><span style="color:#6272a4">//mastodon.social/api/v1/favourites?limit=2&amp;max_id=23716836&gt;; rel=&#34;next&#34;, &lt;https://mastodon.social/api/v1/favourites?limit=2&amp;min_id=23716978&gt;; rel=&#34;prev&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;103186075217296344&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:35:52.000Z&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;in_reply_to_id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;in_reply_to_account_id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;sensitive&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;spoiler_text&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;visibility&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;unlisted&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;language&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;enCy&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;uri&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/users/haskal/statuses/103186075002013902&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/@haskal/103186075002013902&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;replies_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;reblogs_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;favourites_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;favourited&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;reblogged&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;muted&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;bookmarked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;p&gt;the pirate gay&lt;/p&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;reblog&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;account&#34;</span><span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;297420&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal@cybre.space&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;display_name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;soft nb friend :blobcatsleep:&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;locked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;bot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2018-03-16T00:47:36.470Z&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;note&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;p&gt;a very distinctive nya&lt;/p&gt;&lt;p&gt;systems hecker, -1x engineer, server maid, professional yak shaver&lt;br&gt;free software | digital rights | rhythm games | cyberponk | homelab | ham radio | electronics&lt;/p&gt;&lt;p&gt;🇺🇸/🇭🇺/🏴‍☠️&lt;br&gt;21; they/them&lt;/p&gt;&lt;p&gt;b618ac8ac69b6ac7bae267acb1a81e&lt;/p&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/@haskal&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;avatar&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/297/420/original/5e2def6e305cecee.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;avatar_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/297/420/original/5e2def6e305cecee.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;header&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/297/420/original/2df598299cc677db.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;header_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/297/420/original/2df598299cc677db.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;followers_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">268</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;following_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">258</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;statuses_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">8743</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;last_status_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:49:39.880Z&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;shortcode&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;blobcatsleep&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/077/451/original/fc39ac6778d2ca02.png&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;static_url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/077/451/static/fc39ac6778d2ca02.png&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;visible_in_picker&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;fields&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;web&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://tilde.town/~haskal\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;tilde.town/~haskal&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span&gt;&lt;/a&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-22T21:16:30.009+00:00&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;other web&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://awoo.systems\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;awoo.systems&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span&gt;&lt;/a&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-22T21:16:30.578+00:00&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;xmpp&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal@lain.faith&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;matrix&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;span class=\&#34;h-card\&#34;&gt;&lt;a href=\&#34;https://cybre.space/@haskal\&#34; class=\&#34;u-url mention\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;@&lt;span&gt;haskal&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;:matrix.org&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;media_attachments&#34;</span><span style="color:#ff79c6">:</span> [],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;mentions&#34;</span><span style="color:#ff79c6">:</span> [],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;tags&#34;</span><span style="color:#ff79c6">:</span> [],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;card&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;poll&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;103186044372624124&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:28:03.000Z&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;in_reply_to_id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;in_reply_to_account_id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;sensitive&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;spoiler_text&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;no context&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;visibility&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;unlisted&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;language&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;enCy&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;uri&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/users/haskal/statuses/103186044253681902&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/@haskal/103186044253681902&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;replies_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;reblogs_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;favourites_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;favourited&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;reblogged&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;muted&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;bookmarked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;content&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;p&gt;cute,,,&lt;/p&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;reblog&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;account&#34;</span><span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;297420&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal@cybre.space&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;display_name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;soft nb friend :blobcatsleep:&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;locked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;bot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2018-03-16T00:47:36.470Z&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;note&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;p&gt;a very distinctive nya&lt;/p&gt;&lt;p&gt;systems hecker, -1x engineer, server maid, professional yak shaver&lt;br&gt;free software | digital rights | rhythm games | cyberponk | homelab | ham radio | electronics&lt;/p&gt;&lt;p&gt;🇺🇸/🇭🇺/🏴‍☠️&lt;br&gt;21; they/them&lt;/p&gt;&lt;p&gt;b618ac8ac69b6ac7bae267acb1a81e&lt;/p&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://cybre.space/@haskal&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;avatar&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/297/420/original/5e2def6e305cecee.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;avatar_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/297/420/original/5e2def6e305cecee.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;header&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/297/420/original/2df598299cc677db.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;header_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/297/420/original/2df598299cc677db.png&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;followers_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">268</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;following_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">258</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;statuses_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">8743</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;last_status_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:49:39.880Z&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;shortcode&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;blobcatsleep&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/077/451/original/fc39ac6778d2ca02.png&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;static_url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/077/451/static/fc39ac6778d2ca02.png&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;visible_in_picker&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;fields&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;web&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://tilde.town/~haskal\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;tilde.town/~haskal&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span&gt;&lt;/a&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-22T21:16:30.009+00:00&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;other web&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;a href=\&#34;https://awoo.systems\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;&lt;span class=\&#34;invisible\&#34;&gt;https://&lt;/span&gt;&lt;span class=\&#34;\&#34;&gt;awoo.systems&lt;/span&gt;&lt;span class=\&#34;invisible\&#34;&gt;&lt;/span&gt;&lt;/a&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-22T21:16:30.578+00:00&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;xmpp&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;haskal@lain.faith&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;matrix&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;value&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;&lt;span class=\&#34;h-card\&#34;&gt;&lt;a href=\&#34;https://cybre.space/@haskal\&#34; class=\&#34;u-url mention\&#34; rel=\&#34;nofollow noopener noreferrer\&#34; target=\&#34;_blank\&#34;&gt;@&lt;span&gt;haskal&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;:matrix.org&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f1fa8c">&#34;verified_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      ]
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;media_attachments&#34;</span><span style="color:#ff79c6">:</span> [],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;mentions&#34;</span><span style="color:#ff79c6">:</span> [],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;tags&#34;</span><span style="color:#ff79c6">:</span> [],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;card&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;poll&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p></div>
 
 <div class="api-method-response-example">
   <h5>
@@ -1109,10 +1109,10 @@ Internal parameter. Use HTTP <code>Link</code> header for pagination instead.
 <p>If a user token is not provided or is incorrect, the request will fail.
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
-}
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p></div>
 
 </div>
 

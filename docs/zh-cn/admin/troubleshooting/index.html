@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>故障分析 - Mastodon documentation</title>
@@ -283,25 +283,25 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#heading">我看到一个故障页说一些东西出错了。我怎么找出哪里出错了？</a></li>
-        <li><a href="#heading-1">升级新版本后，有些页面看起来很奇怪，就像它们含有未设置样式的元素一样。为什么？</a></li>
-        <li><a href="#-missing-columns-or-tables">升级新版本后，一些请求失败了，日志中的错误信息是 missing columns or tables。为什么？</a></li>
-        <li><a href="#-tootctl--rakerails--uninitialized-constants-">我试图运行 tootctl 或 rake/rails 命令，但我得到 uninitialized constants 错误信息。哪里出错了？</a></li>
+        <li><a href="#我看到一个故障页说一些东西出错了我怎么找出哪里出错了"><strong>我看到一个故障页说一些东西出错了。我怎么找出哪里出错了？</strong></a></li>
+        <li><a href="#升级新版本后有些页面看起来很奇怪就像它们含有未设置样式的元素一样为什么"><strong>升级新版本后，有些页面看起来很奇怪，就像它们含有未设置样式的元素一样。为什么？</strong></a></li>
+        <li><a href="#升级新版本后一些请求失败了日志中的错误信息是-missing-columns-or-tables为什么"><strong>升级新版本后，一些请求失败了，日志中的错误信息是 missing columns or tables。为什么？</strong></a></li>
+        <li><a href="#我试图运行-tootctl-或-rakerails-命令但我得到-uninitialized-constants-错误信息哪里出错了"><strong>我试图运行 <code>tootctl</code> 或 <code>rake</code>/<code>rails</code> 命令，但我得到 uninitialized constants 错误信息。哪里出错了？</strong></a></li>
       </ul>
     </li>
   </ul>
 </nav>
   </aside>
   <div class="e-content">
-    <h2 id="heading"><strong>我看到一个故障页说一些东西出错了。我怎么找出哪里出错了？</strong></h2>
+    <h2 id="我看到一个故障页说一些东西出错了我怎么找出哪里出错了"><strong>我看到一个故障页说一些东西出错了。我怎么找出哪里出错了？</strong></h2>
 <p>所有带堆栈追踪（stack traces）的错误信息都将会被写入系统日志。当使用systemd时，可使用 <code>journalctl -u mastodon-web</code>（替换以相应的服务名） 来浏览每个服务的日志。当使用Docker时，与之类似：<code>docker logs mastodon_web_1</code>（替换以相应的容器名）。</p>
 <p>服务端详细错误信息将<em>永不会</em>公开显示，因为它们可能会暴露你的内部设置，并为攻击者提供线索，让他们了解如何更好的入侵或如何更高效的滥用。</p>
 <p>来自Mastodon web服务器的每一个响应都带有独一无二的请求ID（request ID），该ID也将反映在日志中。通过检查错误页的请求头，你可以在日志中轻松找到与之对应的堆栈追踪（stack traces）。</p>
-<h2 id="heading-1"><strong>升级新版本后，有些页面看起来很奇怪，就像它们含有未设置样式的元素一样。为什么？</strong></h2>
+<h2 id="升级新版本后有些页面看起来很奇怪就像它们含有未设置样式的元素一样为什么"><strong>升级新版本后，有些页面看起来很奇怪，就像它们含有未设置样式的元素一样。为什么？</strong></h2>
 <p>检查升级后，你是否运行 <code>RAILS_ENV=production bin/rails assets:precompile</code> 并重启Mastodon web 进程。因为这看起来像提供了过期的样式与脚本。这也有可能由于内存缺乏导致预编译失败，很不幸webpack会占用大量内存。如果是这个原因，请确保你已经分配了swap空间。另外，也可以在另一台机器上预编译静态文件，然后把它们复制至 <code>public/packs</code> 目录。</p>
-<h2 id="-missing-columns-or-tables"><strong>升级新版本后，一些请求失败了，日志中的错误信息是 missing columns or tables。为什么？</strong></h2>
+<h2 id="升级新版本后一些请求失败了日志中的错误信息是-missing-columns-or-tables为什么"><strong>升级新版本后，一些请求失败了，日志中的错误信息是 missing columns or tables。为什么？</strong></h2>
 <p>检查升级后，你是否运行 <code>RAILS_ENV=production bin/rails db:migrate</code>。因为这看起来Mastodon代码访问了一个更新或更旧的数据库schema。如果你使用PgBouncer，请确保此命令直接连接PostgreSQL，因为PgBouncer不支持迁移过程中的锁表操作。</p>
-<h2 id="-tootctl--rakerails--uninitialized-constants-"><strong>我试图运行 <code>tootctl</code> 或 <code>rake</code>/<code>rails</code> 命令，但我得到 uninitialized constants 错误信息。哪里出错了？</strong></h2>
+<h2 id="我试图运行-tootctl-或-rakerails-命令但我得到-uninitialized-constants-错误信息哪里出错了"><strong>我试图运行 <code>tootctl</code> 或 <code>rake</code>/<code>rails</code> 命令，但我得到 uninitialized constants 错误信息。哪里出错了？</strong></h2>
 <p>检查你是否在命令前使用 <code>RAILS_ENV=production</code> 指定正确的环境。默认情况下，假定使用开发环境，因此代码尝试加载开发相关gem。然而，在生产环境中，我们避免安装这些gem。这就是错误的来源。</p>
 <figure>
     <p>

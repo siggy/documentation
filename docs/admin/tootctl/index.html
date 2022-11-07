@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Using the admin CLI - Mastodon documentation</title>
@@ -846,11 +846,11 @@
   </aside>
   <div class="e-content">
     <p>The command-line interface of Mastodon is an executable file called <code>tootctl</code> residing in the <code>bin</code> directory within the Mastodon root directory. You must specify which environment you intend to use whenever you execute it by specifying the <code>RAILS_ENV</code> environment variable. Unless you are a developer working on a local machine, you need to use <code>RAILS_ENV=production</code>. If you are sure that you will never need another environment (for development, testing, or staging), you can add it to your <code>.bashrc</code> file for convenience, e.g.:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;export RAILS_ENV=production&#34;</span> &gt;&gt; ~/.bashrc
-</code></pre></div><p>If so, you won’t need to specify it each time inline. Otherwise, calls to <code>tootctl</code> will usually go like this, assuming that the Mastodon code is checked out in <code>/home/mastodon/live</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">cd</span> /home/mastodon/live
-<span style="color:#8be9fd;font-style:italic">RAILS_ENV</span><span style="color:#ff79c6">=</span>production bin/tootctl <span style="color:#8be9fd;font-style:italic">help</span>
-</code></pre></div><h2 id="base-cli">Base CLI</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;export RAILS_ENV=production&#34;</span> &gt;&gt; ~/.bashrc
+</span></span></code></pre></div><p>If so, you won’t need to specify it each time inline. Otherwise, calls to <code>tootctl</code> will usually go like this, assuming that the Mastodon code is checked out in <code>/home/mastodon/live</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /home/mastodon/live
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">RAILS_ENV</span><span style="color:#ff79c6">=</span>production bin/tootctl <span style="color:#8be9fd;font-style:italic">help</span>
+</span></span></code></pre></div><h2 id="base-cli">Base CLI</h2>
 <a href="https://github.com/tootsuite/mastodon/blob/master/lib/cli.rb" class="page-ref">
   <div class="page-ref-icon"><i class="fa fa-external-link-square-alt"></i></div>
   lib/cli.rb
@@ -870,14 +870,14 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 </tbody>
 </table>
@@ -898,18 +898,18 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">Local username for an account.</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">Local username for an account.</td>
 </tr>
 <tr>
-<td align="left"><code>--all</code></td>
-<td align="left">Can be provided instead of USERNAME to rotate keys for all local accounts.</td>
+<td style="text-align:left"><code>--all</code></td>
+<td style="text-align:left">Can be provided instead of USERNAME to rotate keys for all local accounts.</td>
 </tr>
 </tbody>
 </table>
@@ -920,93 +920,93 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">Local username for the new account. Required.</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">Local username for the new account. Required.</td>
 </tr>
 <tr>
-<td align="left"><code>--email EMAIL</code></td>
-<td align="left">Email address to be attached to the user. Required.</td>
+<td style="text-align:left"><code>--email EMAIL</code></td>
+<td style="text-align:left">Email address to be attached to the user. Required.</td>
 </tr>
 <tr>
-<td align="left"><code>--confirmed</code></td>
-<td align="left">Skip sending the confirmation email and activate the account immediately.</td>
+<td style="text-align:left"><code>--confirmed</code></td>
+<td style="text-align:left">Skip sending the confirmation email and activate the account immediately.</td>
 </tr>
 <tr>
-<td align="left"><code>--role ROLE</code></td>
-<td align="left">Define the new account as a <code>User</code>, <code>Moderator</code>, or <code>Admin</code>. Defaults to <code>User</code>.</td>
+<td style="text-align:left"><code>--role ROLE</code></td>
+<td style="text-align:left">Define the new account as a <code>User</code>, <code>Moderator</code>, or <code>Admin</code>. Defaults to <code>User</code>.</td>
 </tr>
 <tr>
-<td align="left"><code>--reattach</code></td>
-<td align="left">Reuse an old USERNAME after its account has been deleted.</td>
+<td style="text-align:left"><code>--reattach</code></td>
+<td style="text-align:left">Reuse an old USERNAME after its account has been deleted.</td>
 </tr>
 <tr>
-<td align="left"><code>--force</code></td>
-<td align="left">Forcefully delete any existing account with this USERNAME and reattach the new account in place of the (just-deleted) account.</td>
+<td style="text-align:left"><code>--force</code></td>
+<td style="text-align:left">Forcefully delete any existing account with this USERNAME and reattach the new account in place of the (just-deleted) account.</td>
 </tr>
 <tr>
-<td align="left"><code>--skip-sign-in-token</code></td>
-<td align="left">Forcefully ensure that the user is never asked for an e-mailed security code.</td>
+<td style="text-align:left"><code>--skip-sign-in-token</code></td>
+<td style="text-align:left">Forcefully ensure that the user is never asked for an e-mailed security code.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="accounts-modify"><code>tootctl accounts modify</code></h3>
-<p>Modify a user account's role, email, active status, approval mode, or 2FA requirement.</p>
+<p>Modify a user account&rsquo;s role, email, active status, approval mode, or 2FA requirement.</p>
 <p><strong>Version history:</strong><br>
 2.6.0 - added<br>
 3.1.2 - added <code>--reset-password</code></p>
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">Local username for the account. Required.</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">Local username for the account. Required.</td>
 </tr>
 <tr>
-<td align="left"><code>--role ROLE</code></td>
-<td align="left">Define the account as a <code>user</code>, <code>moderator</code>, or <code>admin</code>.</td>
+<td style="text-align:left"><code>--role ROLE</code></td>
+<td style="text-align:left">Define the account as a <code>user</code>, <code>moderator</code>, or <code>admin</code>.</td>
 </tr>
 <tr>
-<td align="left"><code>--email EMAIL</code></td>
-<td align="left">Update the user's email address to EMAIL.</td>
+<td style="text-align:left"><code>--email EMAIL</code></td>
+<td style="text-align:left">Update the user&rsquo;s email address to EMAIL.</td>
 </tr>
 <tr>
-<td align="left"><code>--confirm</code></td>
-<td align="left">Skip confirmation email, when used with &ndash;email.</td>
+<td style="text-align:left"><code>--confirm</code></td>
+<td style="text-align:left">Skip confirmation email, when used with &ndash;email.</td>
 </tr>
 <tr>
-<td align="left"><code>--disable</code></td>
-<td align="left">Lock USERNAME out of their account.</td>
+<td style="text-align:left"><code>--disable</code></td>
+<td style="text-align:left">Lock USERNAME out of their account.</td>
 </tr>
 <tr>
-<td align="left"><code>--enable</code></td>
-<td align="left">Unlock USERNAME's account if it is currently disabled.</td>
+<td style="text-align:left"><code>--enable</code></td>
+<td style="text-align:left">Unlock USERNAME&rsquo;s account if it is currently disabled.</td>
 </tr>
 <tr>
-<td align="left"><code>--approve</code></td>
-<td align="left">Approve the account, if you are/were in approval mode.</td>
+<td style="text-align:left"><code>--approve</code></td>
+<td style="text-align:left">Approve the account, if you are/were in approval mode.</td>
 </tr>
 <tr>
-<td align="left"><code>--disable-2fa</code></td>
-<td align="left">Remove additional factors and allow login with password.</td>
+<td style="text-align:left"><code>--disable-2fa</code></td>
+<td style="text-align:left">Remove additional factors and allow login with password.</td>
 </tr>
 <tr>
-<td align="left"><code>--reset-password</code></td>
-<td align="left">Resets the password of the given account.</td>
+<td style="text-align:left"><code>--reset-password</code></td>
+<td style="text-align:left">Resets the password of the given account.</td>
 </tr>
 <tr>
-<td align="left"><code>--skip-sign-in-token</code></td>
-<td align="left">Forcefully ensure that the user is never asked for an e-mailed security code.</td>
+<td style="text-align:left"><code>--skip-sign-in-token</code></td>
+<td style="text-align:left">Forcefully ensure that the user is never asked for an e-mailed security code.</td>
 </tr>
 </tbody>
 </table>
@@ -1017,55 +1017,55 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">Local username for the account. Required.</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">Local username for the account. Required.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="accounts-backup"><code>tootctl accounts backup</code></h3>
-<p>Request a backup for a user account with given USERNAME. The backup will be created in Sidekiq asynchronously, and the user will receive an email with a link to it once it's done.</p>
+<p>Request a backup for a user account with given USERNAME. The backup will be created in Sidekiq asynchronously, and the user will receive an email with a link to it once it&rsquo;s done.</p>
 <p><strong>Version history:</strong><br>
 2.6.0 - added</p>
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">Local username for the account. Required.</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">Local username for the account. Required.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="accounts-cull"><code>tootctl accounts cull</code></h3>
-<p>Remove remote accounts that no longer exist. Queries every single remote account in the database to determine if it still exists on the origin server, and if it doesn't, then remove it from the database. Accounts that have had confirmed activity within the last week are excluded from the checks, in case the server is just down.</p>
+<p>Remove remote accounts that no longer exist. Queries every single remote account in the database to determine if it still exists on the origin server, and if it doesn&rsquo;t, then remove it from the database. Accounts that have had confirmed activity within the last week are excluded from the checks, in case the server is just down.</p>
 <p><strong>Version history:</strong><br>
 2.6.0 - added<br>
 2.8.0 - add <code>--dry-run</code></p>
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to N=5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to N=5.</td>
 </tr>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 </tbody>
 </table>
@@ -1076,34 +1076,34 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">username@domain for the remote account.</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">username@domain for the remote account.</td>
 </tr>
 <tr>
-<td align="left"><code>--all</code></td>
-<td align="left">Can be provided instead of USERNAME to refresh all remote accounts.</td>
+<td style="text-align:left"><code>--all</code></td>
+<td style="text-align:left">Can be provided instead of USERNAME to refresh all remote accounts.</td>
 </tr>
 <tr>
-<td align="left"><code>--domain DOMAIN</code></td>
-<td align="left">Can be provided instead of USERNAME. Operate only on remote accounts from this DOMAIN.</td>
+<td style="text-align:left"><code>--domain DOMAIN</code></td>
+<td style="text-align:left">Can be provided instead of USERNAME. Operate only on remote accounts from this DOMAIN.</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to N=5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to N=5.</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 </tbody>
 </table>
@@ -1114,22 +1114,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>FROM</code></td>
-<td align="left">username@domain for the remote account to be removed.</td>
+<td style="text-align:left"><code>FROM</code></td>
+<td style="text-align:left">username@domain for the remote account to be removed.</td>
 </tr>
 <tr>
-<td align="left"><code>TO</code></td>
-<td align="left">username@domain for the remote account to be kept.</td>
+<td style="text-align:left"><code>TO</code></td>
+<td style="text-align:left">username@domain for the remote account to be kept.</td>
 </tr>
 <tr>
-<td align="left"><code>--force</code></td>
-<td align="left">Override the public key check.</td>
+<td style="text-align:left"><code>--force</code></td>
+<td style="text-align:left">Override the public key check.</td>
 </tr>
 </tbody>
 </table>
@@ -1141,22 +1141,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">Local username</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">Local username</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to N=5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to N=5.</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 </tbody>
 </table>
@@ -1167,22 +1167,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>ACCT</code></td>
-<td align="left"><code>username@domain</code> address</td>
+<td style="text-align:left"><code>ACCT</code></td>
+<td style="text-align:left"><code>username@domain</code> address</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to N=5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to N=5.</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 </tbody>
 </table>
@@ -1193,22 +1193,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">Local username</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">Local username</td>
 </tr>
 <tr>
-<td align="left"><code>--follows</code></td>
-<td align="left">Force USERNAME to unfollow everyone, then re-follow them.</td>
+<td style="text-align:left"><code>--follows</code></td>
+<td style="text-align:left">Force USERNAME to unfollow everyone, then re-follow them.</td>
 </tr>
 <tr>
-<td align="left"><code>--followers</code></td>
-<td align="left">Remove all of USERNAME's followers.</td>
+<td style="text-align:left"><code>--followers</code></td>
+<td style="text-align:left">Remove all of USERNAME&rsquo;s followers.</td>
 </tr>
 </tbody>
 </table>
@@ -1219,22 +1219,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">Approve the pending account with this username.</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">Approve the pending account with this username.</td>
 </tr>
 <tr>
-<td align="left"><code>--number N</code></td>
-<td align="left">Approve the N most recent registrations.</td>
+<td style="text-align:left"><code>--number N</code></td>
+<td style="text-align:left">Approve the N most recent registrations.</td>
 </tr>
 <tr>
-<td align="left"><code>--all</code></td>
-<td align="left">Approve all pending registrations.</td>
+<td style="text-align:left"><code>--all</code></td>
+<td style="text-align:left">Approve all pending registrations.</td>
 </tr>
 </tbody>
 </table>
@@ -1255,22 +1255,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">TYPE</td>
-<td align="left">Either <code>accounts</code> or <code>statuses</code></td>
+<td style="text-align:left">TYPE</td>
+<td style="text-align:left">Either <code>accounts</code> or <code>statuses</code></td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to N=5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to N=5.</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 </tbody>
 </table>
@@ -1291,61 +1291,61 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>DOMAIN[...]</code></td>
-<td align="left">Domains to purge, separated by space.</td>
+<td style="text-align:left"><code>DOMAIN[...]</code></td>
+<td style="text-align:left">Domains to purge, separated by space.</td>
 </tr>
 <tr>
-<td align="left"><code>--limited-federation-mode</code></td>
-<td align="left">Can be provided instead of DOMAIN. Instead of purging from a single domain, all accounts from domains that are not allow-listed will be removed from the database. Use this after enabling limited federation mode and defining your allow-list.</td>
+<td style="text-align:left"><code>--limited-federation-mode</code></td>
+<td style="text-align:left">Can be provided instead of DOMAIN. Instead of purging from a single domain, all accounts from domains that are not allow-listed will be removed from the database. Use this after enabling limited federation mode and defining your allow-list.</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to 5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to 5.</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="domains-crawl"><code>tootctl domains crawl</code></h3>
-<p>Crawl the known fediverse by using Mastodon REST API endpoints that expose all known peers, and collect statistics from those peers, as long as those peers support those API endpoints. When no START is given, the command uses the server's own database of known peers to seed the crawl. Returns total servers, total registered users, total active users in the last week, and total users joined in the last week.</p>
+<p>Crawl the known fediverse by using Mastodon REST API endpoints that expose all known peers, and collect statistics from those peers, as long as those peers support those API endpoints. When no START is given, the command uses the server&rsquo;s own database of known peers to seed the crawl. Returns total servers, total registered users, total active users in the last week, and total users joined in the last week.</p>
 <p><strong>Version history:</strong><br>
 2.7.0 - added<br>
 3.0.0 - add <code>--exclude-suspended</code></p>
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">START</td>
-<td align="left">Optionally start from a different domain name.</td>
+<td style="text-align:left">START</td>
+<td style="text-align:left">Optionally start from a different domain name.</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to 50.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to 50.</td>
 </tr>
 <tr>
-<td align="left"><code>--format FORMAT</code></td>
-<td align="left">Control how results are returned. <code>summary</code> will print a summary. <code>domains</code> will return a newline-delimited list of all discovered peers. <code>json</code> will dump aggregated raw data. Defaults to <code>summary</code>.</td>
+<td style="text-align:left"><code>--format FORMAT</code></td>
+<td style="text-align:left">Control how results are returned. <code>summary</code> will print a summary. <code>domains</code> will return a newline-delimited list of all discovered peers. <code>json</code> will dump aggregated raw data. Defaults to <code>summary</code>.</td>
 </tr>
 <tr>
-<td align="left"><code>--exclude-suspended</code></td>
-<td align="left">Do not include instances that you have suspended in the output. Also includes any subdomains.</td>
+<td style="text-align:left"><code>--exclude-suspended</code></td>
+<td style="text-align:left">Do not include instances that you have suspended in the output. Also includes any subdomains.</td>
 </tr>
 </tbody>
 </table>
@@ -1366,18 +1366,18 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>DOMAIN[...]</code></td>
-<td align="left">E-mail domains to block, separated by space.</td>
+<td style="text-align:left"><code>DOMAIN[...]</code></td>
+<td style="text-align:left">E-mail domains to block, separated by space.</td>
 </tr>
 <tr>
-<td align="left"><code>--with-dns-records</code></td>
-<td align="left">If provided, will also lookup A, AAAA, and MX records and block them as well.</td>
+<td style="text-align:left"><code>--with-dns-records</code></td>
+<td style="text-align:left">If provided, will also lookup A, AAAA, and MX records and block them as well.</td>
 </tr>
 </tbody>
 </table>
@@ -1388,14 +1388,14 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>DOMAIN[...]</code></td>
-<td align="left">E-mail domains to unblock, separated by space.</td>
+<td style="text-align:left"><code>DOMAIN[...]</code></td>
+<td style="text-align:left">E-mail domains to unblock, separated by space.</td>
 </tr>
 </tbody>
 </table>
@@ -1412,22 +1412,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>PATH</code></td>
-<td align="left">Path to create a .tar.gz archive containing pictures.</td>
+<td style="text-align:left"><code>PATH</code></td>
+<td style="text-align:left">Path to create a .tar.gz archive containing pictures.</td>
 </tr>
 <tr>
-<td align="left"><code>--overwrite</code></td>
-<td align="left">Overwrite the existing archive.</td>
+<td style="text-align:left"><code>--overwrite</code></td>
+<td style="text-align:left">Overwrite the existing archive.</td>
 </tr>
 <tr>
-<td align="left"><code>--category CATEGORY</code></td>
-<td align="left">Export only the specified CATEGORY. If not provided, will export all emoji.</td>
+<td style="text-align:left"><code>--category CATEGORY</code></td>
+<td style="text-align:left">Export only the specified CATEGORY. If not provided, will export all emoji.</td>
 </tr>
 </tbody>
 </table>
@@ -1438,34 +1438,34 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>PATH</code></td>
-<td align="left">Path to a .tar.gz archive containing pictures.</td>
+<td style="text-align:left"><code>PATH</code></td>
+<td style="text-align:left">Path to a .tar.gz archive containing pictures.</td>
 </tr>
 <tr>
-<td align="left"><code>--prefix PREFIX</code></td>
-<td align="left">Add PREFIX to the beginning of generated shortcodes.</td>
+<td style="text-align:left"><code>--prefix PREFIX</code></td>
+<td style="text-align:left">Add PREFIX to the beginning of generated shortcodes.</td>
 </tr>
 <tr>
-<td align="left"><code>--suffix SUFFIX</code></td>
-<td align="left">Add SUFFIX to the end of generated shortcodes.</td>
+<td style="text-align:left"><code>--suffix SUFFIX</code></td>
+<td style="text-align:left">Add SUFFIX to the end of generated shortcodes.</td>
 </tr>
 <tr>
-<td align="left"><code>--overwrite</code></td>
-<td align="left">Instead of skipping existing emoji, replace them with any discovered emoji with the same shortcode.</td>
+<td style="text-align:left"><code>--overwrite</code></td>
+<td style="text-align:left">Instead of skipping existing emoji, replace them with any discovered emoji with the same shortcode.</td>
 </tr>
 <tr>
-<td align="left"><code>--unlisted</code></td>
-<td align="left">Processed emoji will not be shown in the emoji picker, but will be usable only by their direct shortcode.</td>
+<td style="text-align:left"><code>--unlisted</code></td>
+<td style="text-align:left">Processed emoji will not be shown in the emoji picker, but will be usable only by their direct shortcode.</td>
 </tr>
 <tr>
-<td align="left"><code>--category CATEGORY</code></td>
-<td align="left">Group the processed emoji under CATEGORY in the picker.</td>
+<td style="text-align:left"><code>--category CATEGORY</code></td>
+<td style="text-align:left">Group the processed emoji under CATEGORY in the picker.</td>
 </tr>
 </tbody>
 </table>
@@ -1477,14 +1477,14 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--remote-only</code></td>
-<td align="left">If provided, remove only from remote domains.</td>
+<td style="text-align:left"><code>--remote-only</code></td>
+<td style="text-align:left">If provided, remove only from remote domains.</td>
 </tr>
 </tbody>
 </table>
@@ -1501,30 +1501,30 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>USERNAME</code></td>
-<td align="left">Local username whose feeds will be regenerated.</td>
+<td style="text-align:left"><code>USERNAME</code></td>
+<td style="text-align:left">Local username whose feeds will be regenerated.</td>
 </tr>
 <tr>
-<td align="left"><code>--all</code></td>
-<td align="left">Can be provided instead of USERNAME to refresh all local accounts&rsquo; feeds.</td>
+<td style="text-align:left"><code>--all</code></td>
+<td style="text-align:left">Can be provided instead of USERNAME to refresh all local accounts&rsquo; feeds.</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to N=5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to N=5.</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 </tbody>
 </table>
@@ -1554,26 +1554,26 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--days</code></td>
-<td align="left">How old media attachments have to be before they are removed. Defaults to 7.</td>
+<td style="text-align:left"><code>--days</code></td>
+<td style="text-align:left">How old media attachments have to be before they are removed. Defaults to 7.</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to 5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to 5.</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 </tbody>
 </table>
@@ -1586,26 +1586,26 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--start-after</code></td>
-<td align="left">The Paperclip attachment key where the loop will start. Use this option if the command was interrupted before.</td>
+<td style="text-align:left"><code>--start-after</code></td>
+<td style="text-align:left">The Paperclip attachment key where the loop will start. Use this option if the command was interrupted before.</td>
 </tr>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 <tr>
-<td align="left"><code>--prefix</code></td>
-<td align="left">Traverse only a specific prefix of files in the system.</td>
+<td style="text-align:left"><code>--prefix</code></td>
+<td style="text-align:left">Traverse only a specific prefix of files in the system.</td>
 </tr>
 <tr>
-<td align="left"><code>--fix-permissions</code></td>
-<td align="left">Sets S3 ACL to be default according to environment variables.</td>
+<td style="text-align:left"><code>--fix-permissions</code></td>
+<td style="text-align:left">Sets S3 ACL to be default according to environment variables.</td>
 </tr>
 </tbody>
 </table>
@@ -1617,38 +1617,38 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--account ACCT</code></td>
-<td align="left">String <code>username@domain</code> handle of the account</td>
+<td style="text-align:left"><code>--account ACCT</code></td>
+<td style="text-align:left">String <code>username@domain</code> handle of the account</td>
 </tr>
 <tr>
-<td align="left"><code>--domain DOMAIN</code></td>
-<td align="left">FQDN string</td>
+<td style="text-align:left"><code>--domain DOMAIN</code></td>
+<td style="text-align:left">FQDN string</td>
 </tr>
 <tr>
-<td align="left"><code>--status ID</code></td>
-<td align="left">Local numeric ID of the status in the database.</td>
+<td style="text-align:left"><code>--status ID</code></td>
+<td style="text-align:left">Local numeric ID of the status in the database.</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to 5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to 5.</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 <tr>
-<td align="left"><code>--force</code></td>
-<td align="left">Force redownload the remote resource and overwrite the local attachment.</td>
+<td style="text-align:left"><code>--force</code></td>
+<td style="text-align:left">Force redownload the remote resource and overwrite the local attachment.</td>
 </tr>
 </tbody>
 </table>
@@ -1673,30 +1673,30 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--days</code></td>
-<td align="left">How old media attachments have to be before they are removed. Defaults to 180. (NOTE: it is not recommended to delete preview cards within the last 14 days, because preview cards will not be refetched unless the link is reposted after 2 weeks from last time.)</td>
+<td style="text-align:left"><code>--days</code></td>
+<td style="text-align:left">How old media attachments have to be before they are removed. Defaults to 180. (NOTE: it is not recommended to delete preview cards within the last 14 days, because preview cards will not be refetched unless the link is reposted after 2 weeks from last time.)</td>
 </tr>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">The number of workers to use for this task. Defaults to 5.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">The number of workers to use for this task. Defaults to 5.</td>
 </tr>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 <tr>
-<td align="left"><code>--link</code></td>
-<td align="left">Only delete link-type preview cards; leave video and photo cards untouched.</td>
+<td style="text-align:left"><code>--link</code></td>
+<td style="text-align:left">Only delete link-type preview cards; leave video and photo cards untouched.</td>
 </tr>
 </tbody>
 </table>
@@ -1715,18 +1715,18 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--concurrency N</code></td>
-<td align="left">Parallelize execution of the command on multiple threads. Defaults to N=2.</td>
+<td style="text-align:left"><code>--concurrency N</code></td>
+<td style="text-align:left">Parallelize execution of the command on multiple threads. Defaults to N=2.</td>
 </tr>
 <tr>
-<td align="left"><code>--only INDEX</code></td>
-<td align="left">Specify an index name [<code>accounts</code>, <code>tags</code>, <code>statuses</code>] to create or update only that index.</td>
+<td style="text-align:left"><code>--only INDEX</code></td>
+<td style="text-align:left">Specify an index name [<code>accounts</code>, <code>tags</code>, <code>statuses</code>] to create or update only that index.</td>
 </tr>
 </tbody>
 </table>
@@ -1759,18 +1759,18 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--days</code></td>
-<td align="left">How old statuses have to be before they are removed. Defaults to 90.</td>
+<td style="text-align:left"><code>--days</code></td>
+<td style="text-align:left">How old statuses have to be before they are removed. Defaults to 90.</td>
 </tr>
 <tr>
-<td align="left"><code>--skip-media-remove</code></td>
-<td align="left">Skips removing the media, in case S3 errors out. Defaults to false.</td>
+<td style="text-align:left"><code>--skip-media-remove</code></td>
+<td style="text-align:left">Skips removing the media, in case S3 errors out. Defaults to false.</td>
 </tr>
 </tbody>
 </table>
@@ -1787,18 +1787,18 @@
 <table>
 <thead>
 <tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>--verbose</code></td>
-<td align="left">Print additional information while task is processing.</td>
+<td style="text-align:left"><code>--verbose</code></td>
+<td style="text-align:left">Print additional information while task is processing.</td>
 </tr>
 <tr>
-<td align="left"><code>--dry-run</code></td>
-<td align="left">Print expected results only, without performing any actions.</td>
+<td style="text-align:left"><code>--dry-run</code></td>
+<td style="text-align:left">Print expected results only, without performing any actions.</td>
 </tr>
 </tbody>
 </table>

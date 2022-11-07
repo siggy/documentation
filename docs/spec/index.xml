@@ -5,18 +5,14 @@
     <link>https://documentation.sig.gy/spec/</link>
     <description>Recent content in Specs on Mastodon documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://documentation.sig.gy/spec/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://documentation.sig.gy/spec/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ActivityPub</title>
       <link>https://documentation.sig.gy/spec/activitypub/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/spec/activitypub/</guid>
-      <description>Sample payloads will be added at a future date.  Status federation  app/lib/activitypub/activity.rb  Supported activities for statuses  Create = transformed into a status and saved into database Delete = removes a status from the database Like = transformed into a favourite on a status Announce = transformed into a boost on a status Flag = transformed into a report to the moderation team. Update = only supported on polls.</description>
+      <description>Sample payloads will be added at a future date. Status federation app/lib/activitypub/activity.rb Supported activities for statuses Create = transformed into a status and saved into database Delete = removes a status from the database Like = transformed into a favourite on a status Announce = transformed into a boost on a status Flag = transformed into a report to the moderation team. Update = only supported on polls. Used to refresh vote count.</description>
     </item>
     
     <item>
@@ -27,7 +23,7 @@
       <guid>https://documentation.sig.gy/spec/bearcaps/</guid>
       <description>What are bearcaps? In certain cases, resources may not be publically available and may require a token to successfully fetch them. This is typically done by using an HTTP Authorization header containing a Bearer token, like so:
 GET https://example.com/foo Authorization: Bearer &amp;lt;token&amp;gt; Bearcaps allow for a way to link to a resource with the token included, like so:
-bear:?t=&amp;lt;token&amp;gt;&amp;amp;u=https://example.com/foo&#39; To translate a bearcap to an HTTP request, simply make a request to the u parameter and attach the t parameter as a Bearer token in the Authorization header.</description>
+bear:?t=&amp;lt;token&amp;gt;&amp;amp;u=https://example.com/foo&amp;#39; To translate a bearcap to an HTTP request, simply make a request to the u parameter and attach the t parameter as a Bearer token in the Authorization header.</description>
     </item>
     
     <item>
@@ -54,8 +50,9 @@ bear:?t=&amp;lt;token&amp;gt;&amp;amp;u=https://example.com/foo&#39; To translat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/spec/security/</guid>
-      <description>HTTP Signatures  app/lib/request.rb  HTTP Signatures is a specification for signing HTTP messages by using a `Signature:` header with your HTTP request. Mastodon requires the use of HTTP Signatures in order to validate that any activity received was authored by the actor generating it. When secure mode is enabled, all GET requests require HTTP signatures as well.
-For any HTTP request incoming to Mastodon, the following header should be attached:</description>
+      <description>HTTP Signatures app/lib/request.rb HTTP Signatures is a specification for signing HTTP messages by using a `Signature:` header with your HTTP request. Mastodon requires the use of HTTP Signatures in order to validate that any activity received was authored by the actor generating it. When secure mode is enabled, all GET requests require HTTP signatures as well.
+For any HTTP request incoming to Mastodon, the following header should be attached:
+Signature: keyId=&amp;#34;https://my-example.</description>
     </item>
     
     <item>
@@ -64,7 +61,7 @@ For any HTTP request incoming to Mastodon, the following header should be attach
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/spec/webfinger/</guid>
-      <description>What is WebFinger, and why is it used? On Mastodon, user profiles can be hosted either locally on the same website as yours, or remotely on a completely different website. The same username may be used on a different domain. Therefore, a Mastodon user&#39;s full mention consists of both the username and the domain, in the form @username@domain. In practical terms, @user@example.com is not the same as @user@example.org. If the domain is not included, Mastodon will try to find a local user named @username.</description>
+      <description>What is WebFinger, and why is it used? On Mastodon, user profiles can be hosted either locally on the same website as yours, or remotely on a completely different website. The same username may be used on a different domain. Therefore, a Mastodon user&amp;rsquo;s full mention consists of both the username and the domain, in the form @username@domain. In practical terms, @user@example.com is not the same as @user@example.org. If the domain is not included, Mastodon will try to find a local user named @username.</description>
     </item>
     
   </channel>

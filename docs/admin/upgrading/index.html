@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Upgrading to a new release - Mastodon documentation</title>
@@ -824,15 +824,15 @@
   When a new version of Mastodon comes out, it appears on the <a href="https://github.com/tootsuite/mastodon/releases">GitHub releases page</a>. Please mind that running unreleased code from the <code>master</code> branch, while possible, is not recommended.
 </div>
 
-<p>Mastodon releases correspond to git tags. Before attempting an upgrade, look up the desired release on the <a href="https://github.com/tootsuite/mastodon/releases">GitHub releases page</a>. The page will contain a <strong>changelog</strong> describing everything you need to know about what's different, as well as <strong>specific upgrade instructions</strong>.</p>
+<p>Mastodon releases correspond to git tags. Before attempting an upgrade, look up the desired release on the <a href="https://github.com/tootsuite/mastodon/releases">GitHub releases page</a>. The page will contain a <strong>changelog</strong> describing everything you need to know about what&rsquo;s different, as well as <strong>specific upgrade instructions</strong>.</p>
 <p>To begin, switch to the <code>mastodon</code> user:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">su - mastodon
-</code></pre></div><p>And navigate to the Mastodon root directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">cd</span> /home/mastodon/live
-</code></pre></div><p>Download the releases’s code, assuming that the version is called <code>v3.1.2</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch --tags
-git checkout v3.1.2
-</code></pre></div><p>Now execute the upgrade instructions that are included in that version's release notes on GitHub. Because different releases require different instructions, we do not include any instructions on this page.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - mastodon
+</span></span></code></pre></div><p>And navigate to the Mastodon root directory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /home/mastodon/live
+</span></span></code></pre></div><p>Download the releases’s code, assuming that the version is called <code>v3.1.2</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git fetch --tags
+</span></span><span style="display:flex;"><span>git checkout v3.1.2
+</span></span></code></pre></div><p>Now execute the upgrade instructions that are included in that version&rsquo;s release notes on GitHub. Because different releases require different instructions, we do not include any instructions on this page.</p>
 <div class="hint hint-info">
   <div class="hint-icon"><i class="fa fa-info-circle"></i></div>
 
@@ -840,20 +840,20 @@ git checkout v3.1.2
 </div>
 
 <p>After you have executed the instructions from the release notes, switch back to root:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">exit</span>
-</code></pre></div><p>Restart <strong>background workers</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart mastodon-sidekiq
-</code></pre></div><p>And reload the <strong>web process</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl reload mastodon-web
-</code></pre></div><div class="hint hint-info">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">exit</span>
+</span></span></code></pre></div><p>Restart <strong>background workers</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart mastodon-sidekiq
+</span></span></code></pre></div><p>And reload the <strong>web process</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl reload mastodon-web
+</span></span></code></pre></div><div class="hint hint-info">
   <div class="hint-icon"><i class="fa fa-info-circle"></i></div>
 
   The <code>reload</code> operation is a zero-downtime restart, also called &ldquo;phased restart&rdquo;. As such, Mastodon upgrades usually do not require any advance notice to users about planned downtime. In rare cases, you can use the <code>restart</code> operation instead, but there will be a (short) felt interruption of service for your users.
 </div>
 
 <p>Rarely, the <strong>streaming API</strong> server is also updated and requires a restart:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart mastodon-streaming
-</code></pre></div><div class="hint hint-danger">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart mastodon-streaming
+</span></span></code></pre></div><div class="hint hint-danger">
   <div class="hint-icon"><i class="fa fa-exclamation-triangle"></i></div>
 
   The streaming API server is updated very rarely, and in most releases, does <em>not</em> require a restart. Restarting the streaming API leads to an increased load on your server as disconnected clients attempt to reconnect or poll the REST API instead, so avoid it whenever you can.

@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Preparing your machine - Mastodon documentation</title>
@@ -819,7 +819,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#do-not-allow-password-based-ssh-login-keys-only">Do not allow password-based SSH login \(keys only\)</a></li>
+        <li><a href="#do-not-allow-password-based-ssh-login-keys-only">Do not allow password-based SSH login (keys only)</a></li>
         <li><a href="#update-system-packages">Update system packages</a></li>
         <li><a href="#install-fail2ban-so-it-blocks-repeated-login-attempts">Install fail2ban so it blocks repeated login attempts</a></li>
         <li><a href="#install-a-firewall-and-only-allow-ssh-http-and-https-ports">Install a firewall and only allow SSH, HTTP and HTTPS ports</a></li>
@@ -833,64 +833,64 @@
 <h2 id="do-not-allow-password-based-ssh-login-keys-only">Do not allow password-based SSH login (keys only)</h2>
 <p>First make sure you are actually logging in to the server using keys and not via a password, otherwise this will lock you out. Many hosting providers support uploading a public key and automatically set up key-based root login on new machines for you.</p>
 <p>Edit <code>/etc/ssh/sshd_config</code> and find <code>PasswordAuthentication</code>. Make sure it’s uncommented and set to <code>no</code>. If you made any changes, restart sshd:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart ssh.service
-</code></pre></div><h2 id="update-system-packages">Update system packages</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt update <span style="color:#ff79c6">&amp;&amp;</span> apt upgrade -y
-</code></pre></div><h2 id="install-fail2ban-so-it-blocks-repeated-login-attempts">Install fail2ban so it blocks repeated login attempts</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart ssh.service
+</span></span></code></pre></div><h2 id="update-system-packages">Update system packages</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update <span style="color:#ff79c6">&amp;&amp;</span> apt upgrade -y
+</span></span></code></pre></div><h2 id="install-fail2ban-so-it-blocks-repeated-login-attempts">Install fail2ban so it blocks repeated login attempts</h2>
 <p>First, install fail2ban:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install fail2ban
-</code></pre></div><p>Edit <code>/etc/fail2ban/jail.local</code> and put this inside:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[DEFAULT]
-destemail = your@email.here
-sendername = Fail2Ban
-
-[sshd]
-enabled = true
-port = 22
-
-[sshd-ddos]
-enabled = true
-port = 22
-</code></pre></div><p>Finally restart fail2ban:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart fail2ban
-</code></pre></div><h2 id="install-a-firewall-and-only-allow-ssh-http-and-https-ports">Install a firewall and only allow SSH, HTTP and HTTPS ports</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install fail2ban
+</span></span></code></pre></div><p>Edit <code>/etc/fail2ban/jail.local</code> and put this inside:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>[DEFAULT]
+</span></span><span style="display:flex;"><span>destemail = your@email.here
+</span></span><span style="display:flex;"><span>sendername = Fail2Ban
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[sshd]
+</span></span><span style="display:flex;"><span>enabled = true
+</span></span><span style="display:flex;"><span>port = 22
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[sshd-ddos]
+</span></span><span style="display:flex;"><span>enabled = true
+</span></span><span style="display:flex;"><span>port = 22
+</span></span></code></pre></div><p>Finally restart fail2ban:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart fail2ban
+</span></span></code></pre></div><h2 id="install-a-firewall-and-only-allow-ssh-http-and-https-ports">Install a firewall and only allow SSH, HTTP and HTTPS ports</h2>
 <p>First, install iptables-persistent. During installation it will ask you if you want to keep current rules–decline.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install -y iptables-persistent
-</code></pre></div><p>Edit <code>/etc/iptables/rules.v4</code> and put this inside:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">*filter
-
-#  Allow all loopback (lo0) traffic and drop all traffic to 127/8 that doesn&#39;t use lo0
--A INPUT -i lo -j ACCEPT
--A INPUT ! -i lo -d 127.0.0.0/8 -j REJECT
-
-#  Accept all established inbound connections
--A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-
-#  Allow all outbound traffic - you can modify this to only allow certain traffic
--A OUTPUT -j ACCEPT
-
-#  Allow HTTP and HTTPS connections from anywhere (the normal ports for websites and SSL).
--A INPUT -p tcp --dport 80 -j ACCEPT
--A INPUT -p tcp --dport 443 -j ACCEPT
-
-#  Allow SSH connections
-#  The -dport number should be the same port number you set in sshd_config
--A INPUT -p tcp -m state --state NEW --dport 22 -j ACCEPT
-
-#  Allow ping
--A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
-
-#  Log iptables denied calls
--A INPUT -m limit --limit 5/min -j LOG --log-prefix &#34;iptables denied: &#34; --log-level 7
-
-#  Reject all other inbound - default deny unless explicitly allowed policy
--A INPUT -j REJECT
--A FORWARD -j REJECT
-
-COMMIT
-</code></pre></div><p>With iptables-persistent, that configuration will be loaded at boot time. But since we are not rebooting right now, we need to load it manually for the first time:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">iptables-restore &lt; /etc/iptables/rules.v4
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y iptables-persistent
+</span></span></code></pre></div><p>Edit <code>/etc/iptables/rules.v4</code> and put this inside:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>*filter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow all loopback (lo0) traffic and drop all traffic to 127/8 that doesn&#39;t use lo0
+</span></span><span style="display:flex;"><span>-A INPUT -i lo -j ACCEPT
+</span></span><span style="display:flex;"><span>-A INPUT ! -i lo -d 127.0.0.0/8 -j REJECT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Accept all established inbound connections
+</span></span><span style="display:flex;"><span>-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow all outbound traffic - you can modify this to only allow certain traffic
+</span></span><span style="display:flex;"><span>-A OUTPUT -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow HTTP and HTTPS connections from anywhere (the normal ports for websites and SSL).
+</span></span><span style="display:flex;"><span>-A INPUT -p tcp --dport 80 -j ACCEPT
+</span></span><span style="display:flex;"><span>-A INPUT -p tcp --dport 443 -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow SSH connections
+</span></span><span style="display:flex;"><span>#  The -dport number should be the same port number you set in sshd_config
+</span></span><span style="display:flex;"><span>-A INPUT -p tcp -m state --state NEW --dport 22 -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow ping
+</span></span><span style="display:flex;"><span>-A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Log iptables denied calls
+</span></span><span style="display:flex;"><span>-A INPUT -m limit --limit 5/min -j LOG --log-prefix &#34;iptables denied: &#34; --log-level 7
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Reject all other inbound - default deny unless explicitly allowed policy
+</span></span><span style="display:flex;"><span>-A INPUT -j REJECT
+</span></span><span style="display:flex;"><span>-A FORWARD -j REJECT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>COMMIT
+</span></span></code></pre></div><p>With iptables-persistent, that configuration will be loaded at boot time. But since we are not rebooting right now, we need to load it manually for the first time:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iptables-restore &lt; /etc/iptables/rules.v4
+</span></span></code></pre></div>
 
     <p style="color: #687590;">
       Last updated November 4, 2022 · <a href='https://github.com/tootsuite/documentation/tree/master/content/en/admin/prerequisites.md' style="color: #687590;">Improve this page</a>

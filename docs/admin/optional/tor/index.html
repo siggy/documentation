@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Hidden services - Mastodon documentation</title>
@@ -839,95 +839,95 @@
     <p>Mastodon can be served through Tor as an onion service. This will give you a *.onion address that can only be used while connected to the Tor network.</p>
 <h2 id="install">Installing Tor</h2>
 <p>First Tor’s Debian archive needs to be added to apt.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">deb https://deb.torproject.org/torproject.org stretch main
-deb-src https://deb.torproject.org/torproject.org stretch main
-</code></pre></div><p>Next add the gpg key.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --import
-gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
-</code></pre></div><p>Finally install the required packages.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install tor deb.torproject.org-keyring
-</code></pre></div><h2 id="configure">Configure Tor</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>deb https://deb.torproject.org/torproject.org stretch main
+</span></span><span style="display:flex;"><span>deb-src https://deb.torproject.org/torproject.org stretch main
+</span></span></code></pre></div><p>Next add the gpg key.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --import
+</span></span><span style="display:flex;"><span>gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+</span></span></code></pre></div><p>Finally install the required packages.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install tor deb.torproject.org-keyring
+</span></span></code></pre></div><h2 id="configure">Configure Tor</h2>
 <p>Edit the file at <code>/etc/tor/torrc</code> and add the following configuration.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">HiddenServiceDir /var/lib/tor/hidden_service/
-HiddenServiceVersion 3
-HiddenServicePort 80 127.0.0.1:80
-</code></pre></div><p>Restart tor.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo service tor restart
-</code></pre></div><p>Your tor hostname can now be found at <code>/var/lib/tor/hidden_service/hostname</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>HiddenServiceDir /var/lib/tor/hidden_service/
+</span></span><span style="display:flex;"><span>HiddenServiceVersion 3
+</span></span><span style="display:flex;"><span>HiddenServicePort 80 127.0.0.1:80
+</span></span></code></pre></div><p>Restart tor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service tor restart
+</span></span></code></pre></div><p>Your tor hostname can now be found at <code>/var/lib/tor/hidden_service/hostname</code>.</p>
 <h2 id="nginx">Move your Mastodon configuration</h2>
 <p>We will need to tell Nginx about your Mastodon configuration twice. To keep things <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> we need to move the Mastodon configuration into its own file that can be referenced.</p>
 <p>Create a new file at <code>/etc/nginx/snippets/mastodon.conf</code>. Put all of your Mastodon configuration parameters in this file with the exception of the <code>listen</code>, <code>server_name</code>, <code>include</code> and all of the SSL options. Your new file may look something like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#ff79c6">add_header</span> <span style="color:#f1fa8c">Referrer-Policy</span> <span style="color:#f1fa8c">&#34;same-origin&#34;</span>;
-
-<span style="color:#ff79c6">keepalive_timeout</span>    <span style="color:#bd93f9">70</span>;
-<span style="color:#ff79c6">sendfile</span>             on;
-<span style="color:#ff79c6">client_max_body_size</span> <span style="color:#bd93f9">80m</span>;
-
-<span style="color:#ff79c6">root</span> <span style="color:#f1fa8c">/home/mastodon/live/public</span>;
-
-<span style="color:#6272a4"># …
-</span><span style="color:#6272a4"></span>
-<span style="color:#ff79c6">error_page</span> <span style="color:#bd93f9">500</span> <span style="color:#bd93f9">501</span> <span style="color:#bd93f9">502</span> <span style="color:#bd93f9">503</span> <span style="color:#bd93f9">504</span> <span style="color:#f1fa8c">/500.html</span>;
-
-<span style="color:#ff79c6">access_log</span> <span style="color:#f1fa8c">/var/log/nginx/mastodon_access.log</span>;
-<span style="color:#ff79c6">error_log</span> <span style="color:#f1fa8c">/var/log/nginx/mastodon_error.log</span> <span style="color:#f1fa8c">warn</span>;
-</code></pre></div><p>In place of your old Mastodon configuration add an include directive to this new configuration file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#ff79c6">add_header</span> <span style="color:#f1fa8c">Referrer-Policy</span> <span style="color:#f1fa8c">&#34;same-origin&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">keepalive_timeout</span>    <span style="color:#bd93f9">70</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">sendfile</span>             on;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">client_max_body_size</span> <span style="color:#bd93f9">80m</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">root</span> <span style="color:#f1fa8c">/home/mastodon/live/public</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># …
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">error_page</span> <span style="color:#bd93f9">500</span> <span style="color:#bd93f9">501</span> <span style="color:#bd93f9">502</span> <span style="color:#bd93f9">503</span> <span style="color:#bd93f9">504</span> <span style="color:#f1fa8c">/500.html</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">access_log</span> <span style="color:#f1fa8c">/var/log/nginx/mastodon_access.log</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">error_log</span> <span style="color:#f1fa8c">/var/log/nginx/mastodon_error.log</span> <span style="color:#f1fa8c">warn</span>;
+</span></span></code></pre></div><p>In place of your old Mastodon configuration add an include directive to this new configuration file.</p>
 <p>Your Nginx configuration file will be left looking something like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#ff79c6">server</span> {
-  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">80</span>;
-  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.myhosting.com</span>;
-  <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">301</span> <span style="color:#f1fa8c">https://</span><span style="color:#8be9fd;font-style:italic">$server_name$request_uri</span>;
-}
-
-<span style="color:#ff79c6">map</span> <span style="color:#8be9fd;font-style:italic">$http_upgrade</span> <span style="color:#8be9fd;font-style:italic">$connection_upgrade</span> {
-  <span style="color:#ff79c6">default</span> <span style="color:#f1fa8c">upgrade</span>;
-  <span style="color:#ff79c6">&#39;&#39;</span>      <span style="color:#f1fa8c">close</span>;
-}
-
-<span style="color:#ff79c6">server</span> {
-  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
-  <span style="color:#ff79c6">list</span> <span style="color:#f1fa8c">[::]:443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
-  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.myhosting.com</span>;
-  <span style="color:#ff79c6">include</span> <span style="color:#f1fa8c">/etc/nginx/snippets/mastodon.conf</span>;
-
-  <span style="color:#ff79c6">ssl_certificate</span> <span style="color:#f1fa8c">/etc/letsencrypt/live/mastodon.myhosting.com/fullchain.pem</span>;
-  <span style="color:#ff79c6">ssl_certificate_key</span> <span style="color:#f1fa8c">/etc/letsencrypt/live/mastodon.myhosting.com/privkey.pem</span>;
-}
-</code></pre></div><h2 id="http">Serve Tor over http</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#ff79c6">server</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">80</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.myhosting.com</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">301</span> <span style="color:#f1fa8c">https://</span><span style="color:#8be9fd;font-style:italic">$server_name$request_uri</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">map</span> <span style="color:#8be9fd;font-style:italic">$http_upgrade</span> <span style="color:#8be9fd;font-style:italic">$connection_upgrade</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">default</span> <span style="color:#f1fa8c">upgrade</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#39;&#39;</span>      <span style="color:#f1fa8c">close</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">server</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">list</span> <span style="color:#f1fa8c">[::]:443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.myhosting.com</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">include</span> <span style="color:#f1fa8c">/etc/nginx/snippets/mastodon.conf</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">ssl_certificate</span> <span style="color:#f1fa8c">/etc/letsencrypt/live/mastodon.myhosting.com/fullchain.pem</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">ssl_certificate_key</span> <span style="color:#f1fa8c">/etc/letsencrypt/live/mastodon.myhosting.com/privkey.pem</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="http">Serve Tor over http</h2>
 <p>While it may be tempting to serve your Tor version of Mastodon over https it is not a good idea for most people. See <a href="https://blog.torproject.org/facebook-hidden-services-and-https-certs">this</a> blog post from the Tor Project about why https certificates do not add value. Since you cannot get an SSL cert for an onion domain, you will also be plagued with certificate errors when trying to use your Mastodon instance. A Tor developer has more recently spelled out the reasons why serving a Tor service over https is not beneficial for most use cases <a href="https://matt.traudt.xyz/p/o44SnkW2.html">here</a>.</p>
 <p>The solution is to serve your Mastodon instance over http, but only for Tor. This can be added by prepending an additional configuration to your Nginx configuration.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#ff79c6">server</span> {
-  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">80</span>;
-  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.qKnFwnNH2oH4QhQ7CoRf7HYj8wCwpDwsa8ohJmcPG9JodMZvVA6psKq7qKnFwnNH2oH4QhQ7CoRf7HYj8wCwpDwsa8ohJmcPG9JodMZvVA6psKq7.onion</span>;
-  <span style="color:#ff79c6">include</span> <span style="color:#f1fa8c">/etc/nginx/snippets/mastodon.conf</span>;
-}
-
-<span style="color:#ff79c6">server</span> {
-  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">80</span>;
-  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.myhosting.com</span>;
-  <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">301</span> <span style="color:#f1fa8c">https://</span><span style="color:#8be9fd;font-style:italic">$server_name$request_uri</span>;
-}
-
-<span style="color:#ff79c6">map</span> <span style="color:#8be9fd;font-style:italic">$http_upgrade</span> <span style="color:#8be9fd;font-style:italic">$connection_upgrade</span> {
-  <span style="color:#ff79c6">default</span> <span style="color:#f1fa8c">upgrade</span>;
-  <span style="color:#ff79c6">&#39;&#39;</span>      <span style="color:#f1fa8c">close</span>;
-}
-
-<span style="color:#ff79c6">server</span> {
-  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
-  <span style="color:#ff79c6">list</span> <span style="color:#f1fa8c">[::]:443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
-  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.myhosting.com</span>;
-  <span style="color:#ff79c6">include</span> <span style="color:#f1fa8c">/etc/nginx/snippets/mastodon.conf</span>;
-
-  <span style="color:#ff79c6">ssl_certificate</span> <span style="color:#f1fa8c">/etc/letsencrypt/live/mastodon.myhosting.com/fullchain.pem</span>;
-  <span style="color:#ff79c6">ssl_certificate_key</span> <span style="color:#f1fa8c">/etc/letsencrypt/live/mastodon.myhosting.com/privkey.pem</span>;
-}
-</code></pre></div><p>Replace the long hash provided here with your Tor domain located in the file at <code>/var/lib/tor/hidden_service/hostname</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#ff79c6">server</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">80</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.qKnFwnNH2oH4QhQ7CoRf7HYj8wCwpDwsa8ohJmcPG9JodMZvVA6psKq7qKnFwnNH2oH4QhQ7CoRf7HYj8wCwpDwsa8ohJmcPG9JodMZvVA6psKq7.onion</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">include</span> <span style="color:#f1fa8c">/etc/nginx/snippets/mastodon.conf</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">server</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">80</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.myhosting.com</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">301</span> <span style="color:#f1fa8c">https://</span><span style="color:#8be9fd;font-style:italic">$server_name$request_uri</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">map</span> <span style="color:#8be9fd;font-style:italic">$http_upgrade</span> <span style="color:#8be9fd;font-style:italic">$connection_upgrade</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">default</span> <span style="color:#f1fa8c">upgrade</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#39;&#39;</span>      <span style="color:#f1fa8c">close</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">server</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">listen</span> <span style="color:#bd93f9">443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">list</span> <span style="color:#f1fa8c">[::]:443</span> <span style="color:#f1fa8c">ssl</span> <span style="color:#f1fa8c">http2</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">server_name</span> <span style="color:#f1fa8c">mastodon.myhosting.com</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">include</span> <span style="color:#f1fa8c">/etc/nginx/snippets/mastodon.conf</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">ssl_certificate</span> <span style="color:#f1fa8c">/etc/letsencrypt/live/mastodon.myhosting.com/fullchain.pem</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">ssl_certificate_key</span> <span style="color:#f1fa8c">/etc/letsencrypt/live/mastodon.myhosting.com/privkey.pem</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Replace the long hash provided here with your Tor domain located in the file at <code>/var/lib/tor/hidden_service/hostname</code>.</p>
 <p>Note that the onion hostname has been prefixed with “mastodon.”. Your Tor address acts a wildcard domain. All subdomains will be routed through, and you can configure Nginx to respond to any subdomain you wish. If you do not wish to host any other services on your tor address you can omit the subdomain, or choose a different subdomain.</p>
 <p>Here you can see the payoff of moving your mastodon configurations to a different file. Without this all of your configurations would have to be copied to both places. Any change to your configuration would have to be made both places.</p>
 <p>Restart your web server.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service nginx restart
-</code></pre></div><h2 id="gotchas">Gotchas</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>service nginx restart
+</span></span></code></pre></div><h2 id="gotchas">Gotchas</h2>
 <p>There are a few things you will need to be aware of. Certain redirects will push your users to https. They will have to manually replace the URL with http to continue.</p>
 <p>Various resources, such as images, will still be offered through your regular non-Tor domain. How much of a problem this is will depend greatly on your user’s level of caution.</p>
 

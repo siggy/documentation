@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Obtaining client app access - Mastodon documentation</title>
@@ -836,41 +836,41 @@
   </aside>
   <div class="e-content">
     <h2 id="auth">Authentication and authorization</h2>
-<p>Up until this point, we've been working with publicly available information, but not all information is public. Some information requires permission before viewing it, in order to audit who is requesting that information (and to potentially revoke or deny access).</p>
-<p>This is where <a href="/spec/oauth/">OAuth</a> comes in. OAuth is a mechanism for generating access tokens which can be used to <em>authenticate (verify)</em> that a request is coming from a specific client, and ensure that the requested action is <em>authorized (allowed)</em> by the server's access control policies.</p>
+<p>Up until this point, we&rsquo;ve been working with publicly available information, but not all information is public. Some information requires permission before viewing it, in order to audit who is requesting that information (and to potentially revoke or deny access).</p>
+<p>This is where <a href="/spec/oauth/">OAuth</a> comes in. OAuth is a mechanism for generating access tokens which can be used to <em>authenticate (verify)</em> that a request is coming from a specific client, and ensure that the requested action is <em>authorized (allowed)</em> by the server&rsquo;s access control policies.</p>
 <h2 id="app">Creating our application</h2>
 <p>The first thing we will need to do is to register an application, in order to be able to generate access tokens later. The application can be created like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_name=Test Application&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;redirect_uris=urn:ietf:wg:oauth:2.0:oob&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;scopes=read write follow push&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;website=https://myapp.example&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	https://mastodon.example/api/v1/apps
-</code></pre></div><p>In the above example, we specify the client name and website, which will be shown on statuses if applicable. But more importantly, note the following two parameters:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_name=Test Application&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;redirect_uris=urn:ietf:wg:oauth:2.0:oob&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;scopes=read write follow push&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;website=https://myapp.example&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	https://mastodon.example/api/v1/apps
+</span></span></code></pre></div><p>In the above example, we specify the client name and website, which will be shown on statuses if applicable. But more importantly, note the following two parameters:</p>
 <ul>
 <li><code>redirect_uris</code> has been set to the &ldquo;out of band&rdquo; token generation, which means that any generated tokens will have to be copied and pasted manually. The parameter is called <code>redirect_uris</code> because it is possible to define more than one redirect URI, but when generating the token, we will need to provide a URI that is included within this list.</li>
 <li><code>scopes</code> allow us to define what permissions we can request later. However, the requested scope later can be a subset of these registered scopes. See <a href="/api/oauth-scopes/">OAuth Scopes</a> for more information.</li>
 </ul>
 <p>We should see an Application entity returned, but for now we only care about client_id and client_secret. These values will be used to generate access tokens, so they should be cached for later use. See <a href="/methods/apps/#create-an-application">POST /api/v1/apps</a> for more details on registering applications.</p>
 <h2 id="flow">Example authentication code flow</h2>
-<p>Now that we have an application, let's obtain an access token that will authenticate our requests as that client application. To do so, use <a href="/methods/apps/oauth/#obtain-a-token">POST /oauth/token</a> like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_id=your_client_id_here&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_secret=your_client_secret_here&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;redirect_uri=urn:ietf:wg:oauth:2.0:oob&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;grant_type=client_credentials&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	https://mastodon.example/oauth/token
-</code></pre></div><p>Note the following:</p>
+<p>Now that we have an application, let&rsquo;s obtain an access token that will authenticate our requests as that client application. To do so, use <a href="/methods/apps/oauth/#obtain-a-token">POST /oauth/token</a> like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_id=your_client_id_here&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;client_secret=your_client_secret_here&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;redirect_uri=urn:ietf:wg:oauth:2.0:oob&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-F <span style="color:#f1fa8c">&#39;grant_type=client_credentials&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	https://mastodon.example/oauth/token
+</span></span></code></pre></div><p>Note the following:</p>
 <ul>
 <li><code>client_id</code> and <code>client_secret</code> were provided in the response text when you registered your application.</li>
 <li><code>redirect_uri</code> must be one of the URIs defined when registering the application.</li>
 <li>We are requesting a <code>grant_type</code> of <code>client_credentials</code>, which defaults to giving us the <code>read</code> scope.</li>
 </ul>
-<p>The response of this method is a <a href="/entities/token/">Token</a> entity. We will need the <code>access_token</code> value. Once you have the access token, save it in your local cache. To use it in requests, add the HTTP header <code>Authorization: Bearer ...</code> to any API call that requires OAuth (i.e., one that is not publicly accessible). Let's verify that our obtained credentials are working by calling <a href="/methods/apps/#verify-your-app-works">GET /api/v1/apps/verify_credentials</a>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	-H <span style="color:#f1fa8c">&#39;Authorization: Bearer our_access_token_here&#39;</span> <span style="color:#f1fa8c">\
-</span><span style="color:#f1fa8c"></span>	https://mastodon.example/api/v1/apps/verify_credentials
-</code></pre></div><p>If we've obtained our token and formatted our request correctly, we should see our details returned to us as an <a href="/entities/application/">Application</a> entity.</p>
+<p>The response of this method is a <a href="/entities/token/">Token</a> entity. We will need the <code>access_token</code> value. Once you have the access token, save it in your local cache. To use it in requests, add the HTTP header <code>Authorization: Bearer ...</code> to any API call that requires OAuth (i.e., one that is not publicly accessible). Let&rsquo;s verify that our obtained credentials are working by calling <a href="/methods/apps/#verify-your-app-works">GET /api/v1/apps/verify_credentials</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	-H <span style="color:#f1fa8c">&#39;Authorization: Bearer our_access_token_here&#39;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>	https://mastodon.example/api/v1/apps/verify_credentials
+</span></span></code></pre></div><p>If we&rsquo;ve obtained our token and formatted our request correctly, we should see our details returned to us as an <a href="/entities/application/">Application</a> entity.</p>
 <h2 id="methods">What we can do with authentication</h2>
 <p>With our authenticated client application, we can view relations of an account with <a href="/methods/accounts/#following">GET /api/v1/accounts/:id/following</a> and <a href="/methods/accounts/#followers">GET /api/v1/accounts/:id/followers</a>. Also, some instances may require authentication for methods that would otherwise be public, so if you encountered any authentication errors while playing around with public methods, then those methods should now work.</p>
 

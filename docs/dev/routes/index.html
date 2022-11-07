@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Routes - Mastodon documentation</title>
@@ -843,22 +843,22 @@
 <h2 id="routes">Explanation of routes</h2>
 <p>Mastodon uses Ruby on Rails, which defines its router configuration at config/routes.rb. You may view the <a href="https://guides.rubyonrails.org/routing.html">Ruby on Rails routing guide</a> for more detailed information, but this page will explain the basics of how Mastodon handles routing.</p>
 <h3 id="router">How routes are constructed</h3>
-<p><code>namespace</code> is a prefix for routes mapped to a certain controller directory. <code>resources</code> are mapped to controllers within that namespace directory. <code>scope</code> passes to the <code>module</code>'s controller. For example, consider the following abbreviated code:</p>
+<p><code>namespace</code> is a prefix for routes mapped to a certain controller directory. <code>resources</code> are mapped to controllers within that namespace directory. <code>scope</code> passes to the <code>module</code>&rsquo;s controller. For example, consider the following abbreviated code:</p>
 <figure>
-  <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">namespace <span style="color:#f1fa8c">:api</span> <span style="color:#ff79c6">do</span>
-    namespace <span style="color:#f1fa8c">:v1</span> <span style="color:#ff79c6">do</span>
-        resources <span style="color:#f1fa8c">:statuses</span>, only <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">:create</span>, <span style="color:#f1fa8c">:show</span>, <span style="color:#f1fa8c">:destroy</span><span style="color:#ff79c6">]</span> <span style="color:#ff79c6">do</span>
-            scope <span style="color:#f1fa8c">module</span>: <span style="color:#f1fa8c">:statuses</span> <span style="color:#ff79c6">do</span>
-                resource <span style="color:#f1fa8c">:favourite</span>, <span style="color:#f1fa8c">only</span>: <span style="color:#f1fa8c">:create</span>
-                resource <span style="color:#f1fa8c">:unfavourite</span>, <span style="color:#f1fa8c">to</span>: <span style="color:#f1fa8c">&#39;favourites#destroy&#39;</span>
-                member <span style="color:#ff79c6">do</span>
-                    get <span style="color:#f1fa8c">:context</span>
-                <span style="color:#ff79c6">end</span>
-            <span style="color:#ff79c6">end</span>
-        <span style="color:#ff79c6">end</span>
-    <span style="color:#ff79c6">end</span>
-<span style="color:#ff79c6">end</span>
-</code></pre></div>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>namespace <span style="color:#f1fa8c">:api</span> <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>    namespace <span style="color:#f1fa8c">:v1</span> <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>        resources <span style="color:#f1fa8c">:statuses</span>, only <span style="color:#ff79c6">[</span><span style="color:#f1fa8c">:create</span>, <span style="color:#f1fa8c">:show</span>, <span style="color:#f1fa8c">:destroy</span><span style="color:#ff79c6">]</span> <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>            scope <span style="color:#f1fa8c">module</span>: <span style="color:#f1fa8c">:statuses</span> <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>                resource <span style="color:#f1fa8c">:favourite</span>, <span style="color:#f1fa8c">only</span>: <span style="color:#f1fa8c">:create</span>
+</span></span><span style="display:flex;"><span>                resource <span style="color:#f1fa8c">:unfavourite</span>, <span style="color:#f1fa8c">to</span>: <span style="color:#f1fa8c">&#39;favourites#destroy&#39;</span>
+</span></span><span style="display:flex;"><span>                member <span style="color:#ff79c6">do</span>
+</span></span><span style="display:flex;"><span>                    get <span style="color:#f1fa8c">:context</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">end</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">end</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">end</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">end</span>
+</span></span></code></pre></div>
 
   <figcaption>
     <p>config/routes.rb excerpt</p>

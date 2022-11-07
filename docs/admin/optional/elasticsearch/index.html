@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Full-text search - Mastodon documentation</title>
@@ -837,14 +837,14 @@
     <p>Mastodon supports full-text search when ElasticSearch is available. Mastodon’s full-text search allows logged in users to find results from their own toots, their favourites, and their mentions. It deliberately does not allow searching for arbitrary strings in the entire database.</p>
 <h2 id="install">Installing ElasticSearch</h2>
 <p>ElasticSearch requires a Java runtime. If you don’t have Java already installed, do it now. Assuming you are logged in as <code>root</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install openjdk-17-jre-headless
-</code></pre></div><p>Add the official ElasticSearch repository to apt:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget -O /usr/share/keyrings/elasticsearch.asc https://artifacts.elastic.co/GPG-KEY-elasticsearch
-<span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;deb [signed-by=/usr/share/keyrings/elasticsearch.asc] https://artifacts.elastic.co/packages/7.x/apt stable main&#34;</span> &gt; /etc/apt/sources.list.d/elastic-7.x.list
-</code></pre></div><p>Now you can install ElasticSearch:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt update
-apt install elasticsearch
-</code></pre></div><div class="hint hint-warning">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install openjdk-17-jre-headless
+</span></span></code></pre></div><p>Add the official ElasticSearch repository to apt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget -O /usr/share/keyrings/elasticsearch.asc https://artifacts.elastic.co/GPG-KEY-elasticsearch
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">echo</span> <span style="color:#f1fa8c">&#34;deb [signed-by=/usr/share/keyrings/elasticsearch.asc] https://artifacts.elastic.co/packages/7.x/apt stable main&#34;</span> &gt; /etc/apt/sources.list.d/elastic-7.x.list
+</span></span></code></pre></div><p>Now you can install ElasticSearch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>apt install elasticsearch
+</span></span></code></pre></div><div class="hint hint-warning">
   <div class="hint-icon"><i class="fa fa-exclamation-circle"></i></div>
 
   <strong>Security warning:</strong> By default, ElasticSearch is supposed to bind to localhost only, i.e. be inaccessible from the outside network. You can check which address ElasticSearch binds to by looking at <code>network.host</code> within <code>/etc/elasticsearch/elasticsearch.yml</code>. Consider that anyone who can access ElasticSearch can access and modify any data within it, as there is no authentication layer. So it’s really important that the access is secured. Having a firewall that only exposes the 22, 80 and 443 ports is advisable, as outlined in the <a href="../../prerequisites/#install-a-firewall-and-only-whitelist-ssh-http-and-https-ports">main installation instructions</a>. If you have a multi-host setup, you must know how to secure internal traffic.
@@ -857,96 +857,96 @@ apt install elasticsearch
 </div>
 
 <p>To start ElasticSearch:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl daemon-reload
-systemctl <span style="color:#8be9fd;font-style:italic">enable</span> --now elasticsearch
-</code></pre></div><h2 id="config">Configuring Mastodon</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl daemon-reload
+</span></span><span style="display:flex;"><span>systemctl <span style="color:#8be9fd;font-style:italic">enable</span> --now elasticsearch
+</span></span></code></pre></div><h2 id="config">Configuring Mastodon</h2>
 <p>Edit <code>.env.production</code> to add the following variables:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8be9fd;font-style:italic">ES_ENABLED</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">true</span>
-<span style="color:#8be9fd;font-style:italic">ES_HOST</span><span style="color:#ff79c6">=</span>localhost
-<span style="color:#8be9fd;font-style:italic">ES_PORT</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">9200</span>
-</code></pre></div><p>If you have multiple Mastodon servers on the same machine, and you are planning to use the same ElasticSearch installation for all of them, make sure that all of them have unique <code>REDIS_NAMESPACE</code> in their configurations, to differentiate the indices. If you need to override the prefix of the ElasticSearch indices, you can set <code>ES_PREFIX</code> directly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">ES_ENABLED</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">ES_HOST</span><span style="color:#ff79c6">=</span>localhost
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">ES_PORT</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">9200</span>
+</span></span></code></pre></div><p>If you have multiple Mastodon servers on the same machine, and you are planning to use the same ElasticSearch installation for all of them, make sure that all of them have unique <code>REDIS_NAMESPACE</code> in their configurations, to differentiate the indices. If you need to override the prefix of the ElasticSearch indices, you can set <code>ES_PREFIX</code> directly.</p>
 <p>After saving the new configuration, restart Mastodon processes for it to take effect:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart mastodon-sidekiq
-systemctl reload mastodon-web
-</code></pre></div><p>Now it's time to create the ElasticSearch indices and fill them with data:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">su - mastodon
-<span style="color:#8be9fd;font-style:italic">cd</span> live
-<span style="color:#8be9fd;font-style:italic">RAILS_ENV</span><span style="color:#ff79c6">=</span>production bin/tootctl search deploy
-</code></pre></div><h2 id="search-optimization-for-other-languages">Search optimization for other languages</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart mastodon-sidekiq
+</span></span><span style="display:flex;"><span>systemctl reload mastodon-web
+</span></span></code></pre></div><p>Now it&rsquo;s time to create the ElasticSearch indices and fill them with data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - mastodon
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> live
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">RAILS_ENV</span><span style="color:#ff79c6">=</span>production bin/tootctl search deploy
+</span></span></code></pre></div><h2 id="search-optimization-for-other-languages">Search optimization for other languages</h2>
 <h3 id="chinese-search-optimization">Chinese search optimization</h3>
 <p>The default analyzer of the ElasticSearch is the standard analyzer, which may not be the best especially for Chinese. To improve search experience, you can install a language specific analyzer. Before creating the indices in ElasticSearch, install the following ElasticSearch extensions:</p>
 <ul>
 <li><a href="https://github.com/medcl/elasticsearch-analysis-ik">elasticsearch-analysis-ik</a></li>
 <li><a href="https://github.com/medcl/elasticsearch-analysis-stconvert">elasticsearch-analysis-stconvert</a></li>
 </ul>
-<p>And then modify Mastodon's index definition as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="font-weight:bold">diff --git a/app/chewy/accounts_index.rb b/app/chewy/accounts_index.rb
-</span><span style="font-weight:bold"></span><span style="color:#8b080b">--- a/app/chewy/accounts_index.rb
-</span><span style="color:#8b080b"></span><span style="font-weight:bold">+++ b/app/chewy/accounts_index.rb
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">@@ -4,7 +4,7 @@ class AccountsIndex &lt; Chewy::Index
-</span><span style="font-weight:bold"></span>   settings index: { refresh_interval: &#39;5m&#39; }, analysis: {
-     analyzer: {
-       content: {
-<span style="color:#8b080b">-        tokenizer: &#39;whitespace&#39;,
-</span><span style="color:#8b080b"></span><span style="font-weight:bold">+        tokenizer: &#39;ik_max_word&#39;,
-</span><span style="font-weight:bold"></span>         filter: %w(lowercase asciifolding cjk_width),
-       },
-
-<span style="font-weight:bold">diff --git a/app/chewy/statuses_index.rb b/app/chewy/statuses_index.rb
-</span><span style="font-weight:bold"></span><span style="color:#8b080b">--- a/app/chewy/statuses_index.rb
-</span><span style="color:#8b080b"></span><span style="font-weight:bold">+++ b/app/chewy/statuses_index.rb
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">@@ -16,9 +16,17 @@ class StatusesIndex &lt; Chewy::Index
-</span><span style="font-weight:bold"></span>         language: &#39;possessive_english&#39;,
-       },
-     },
-<span style="font-weight:bold">+    char_filter: {
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+      tsconvert: {
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        type: &#39;stconvert&#39;,
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        keep_both: false,
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        delimiter: &#39;#&#39;,
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        convert_type: &#39;t2s&#39;,
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+      },
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+    },
-</span><span style="font-weight:bold"></span>     analyzer: {
-       content: {
-<span style="color:#8b080b">-        tokenizer: &#39;uax_url_email&#39;,
-</span><span style="color:#8b080b"></span><span style="font-weight:bold">+        tokenizer: &#39;ik_max_word&#39;,
-</span><span style="font-weight:bold"></span>         filter: %w(
-           english_possessive_stemmer
-           lowercase
-<span style="font-weight:bold">@@ -27,6 +35,7 @@ class StatusesIndex &lt; Chewy::Index
-</span><span style="font-weight:bold"></span>           english_stop
-           english_stemmer
-         ),
-<span style="font-weight:bold">+        char_filter: %w(tsconvert),
-</span><span style="font-weight:bold"></span>       },
-     },
-   }
-<span style="font-weight:bold">diff --git a/app/chewy/tags_index.rb b/app/chewy/tags_index.rb
-</span><span style="font-weight:bold"></span><span style="color:#8b080b">--- a/app/chewy/tags_index.rb
-</span><span style="color:#8b080b"></span><span style="font-weight:bold">+++ b/app/chewy/tags_index.rb
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">@@ -2,10 +2,19 @@
-</span><span style="font-weight:bold"></span>
- class TagsIndex &lt; Chewy::Index
-   settings index: { refresh_interval: &#39;15m&#39; }, analysis: {
-<span style="font-weight:bold">+    char_filter: {
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+      tsconvert: {
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        type: &#39;stconvert&#39;,
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        keep_both: false,
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        delimiter: &#39;#&#39;,
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+        convert_type: &#39;t2s&#39;,
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+      },
-</span><span style="font-weight:bold"></span><span style="font-weight:bold">+    },
-</span><span style="font-weight:bold"></span>     analyzer: {
-       content: {
-<span style="color:#8b080b">-        tokenizer: &#39;keyword&#39;,
-</span><span style="color:#8b080b"></span><span style="font-weight:bold">+        tokenizer: &#39;ik_max_word&#39;,
-</span><span style="font-weight:bold"></span>         filter: %w(lowercase asciifolding cjk_width),
-<span style="font-weight:bold">+        char_filter: %w(tsconvert),
-</span><span style="font-weight:bold"></span>       },
-
-       edge_ngram: {
-</code></pre></div>
+<p>And then modify Mastodon&rsquo;s index definition as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="font-weight:bold">diff --git a/app/chewy/accounts_index.rb b/app/chewy/accounts_index.rb
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span><span style="color:#f55">--- a/app/chewy/accounts_index.rb
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/app/chewy/accounts_index.rb
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -4,7 +4,7 @@ class AccountsIndex &lt; Chewy::Index
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>   settings index: { refresh_interval: &#39;5m&#39; }, analysis: {
+</span></span><span style="display:flex;"><span>     analyzer: {
+</span></span><span style="display:flex;"><span>       content: {
+</span></span><span style="display:flex;"><span><span style="color:#f55">-        tokenizer: &#39;whitespace&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+        tokenizer: &#39;ik_max_word&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>         filter: %w(lowercase asciifolding cjk_width),
+</span></span><span style="display:flex;"><span>       },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">diff --git a/app/chewy/statuses_index.rb b/app/chewy/statuses_index.rb
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span><span style="color:#f55">--- a/app/chewy/statuses_index.rb
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/app/chewy/statuses_index.rb
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -16,9 +16,17 @@ class StatusesIndex &lt; Chewy::Index
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>         language: &#39;possessive_english&#39;,
+</span></span><span style="display:flex;"><span>       },
+</span></span><span style="display:flex;"><span>     },
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    char_filter: {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+      tsconvert: {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        type: &#39;stconvert&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        keep_both: false,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        delimiter: &#39;#&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        convert_type: &#39;t2s&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+      },
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    },
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>     analyzer: {
+</span></span><span style="display:flex;"><span>       content: {
+</span></span><span style="display:flex;"><span><span style="color:#f55">-        tokenizer: &#39;uax_url_email&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+        tokenizer: &#39;ik_max_word&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>         filter: %w(
+</span></span><span style="display:flex;"><span>           english_possessive_stemmer
+</span></span><span style="display:flex;"><span>           lowercase
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">@@ -27,6 +35,7 @@ class StatusesIndex &lt; Chewy::Index
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>           english_stop
+</span></span><span style="display:flex;"><span>           english_stemmer
+</span></span><span style="display:flex;"><span>         ),
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        char_filter: %w(tsconvert),
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>       },
+</span></span><span style="display:flex;"><span>     },
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">diff --git a/app/chewy/tags_index.rb b/app/chewy/tags_index.rb
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span><span style="color:#f55">--- a/app/chewy/tags_index.rb
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+++ b/app/chewy/tags_index.rb
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span><span style="font-weight:bold">@@ -2,10 +2,19 @@
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>
+</span></span><span style="display:flex;"><span> class TagsIndex &lt; Chewy::Index
+</span></span><span style="display:flex;"><span>   settings index: { refresh_interval: &#39;15m&#39; }, analysis: {
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    char_filter: {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+      tsconvert: {
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        type: &#39;stconvert&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        keep_both: false,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        delimiter: &#39;#&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        convert_type: &#39;t2s&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+      },
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+    },
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>     analyzer: {
+</span></span><span style="display:flex;"><span>       content: {
+</span></span><span style="display:flex;"><span><span style="color:#f55">-        tokenizer: &#39;keyword&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#f55"></span><span style="color:#50fa7b;font-weight:bold">+        tokenizer: &#39;ik_max_word&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>         filter: %w(lowercase asciifolding cjk_width),
+</span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold">+        char_filter: %w(tsconvert),
+</span></span></span><span style="display:flex;"><span><span style="color:#50fa7b;font-weight:bold"></span>       },
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>       edge_ngram: {
+</span></span></code></pre></div>
 
     <p style="color: #687590;">
       Last updated October 30, 2022 · <a href='https://github.com/tootsuite/documentation/tree/master/content/en/admin/optional/elasticsearch.md' style="color: #687590;">Improve this page</a>

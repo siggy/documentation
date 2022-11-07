@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>streaming - Mastodon documentation</title>
@@ -825,9 +825,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#server-sent-events-http">Server-sent events \(HTTP\)</a></li>
-        <li><a href="#websocket-a-idwebsocketa">WebSocket </a></li>
-        <li><a href="#event-types-a-idevent-typesa">Event types </a></li>
+        <li><a href="#server-sent-events-http">Server-sent events (HTTP)</a></li>
+        <li><a href="#websocket-a-idwebsocketa">WebSocket <!-- raw HTML omitted --><!-- raw HTML omitted --></a></li>
+        <li><a href="#event-types-a-idevent-typesa">Event types <!-- raw HTML omitted --><!-- raw HTML omitted --></a></li>
       </ul>
     </li>
   </ul>
@@ -850,15 +850,15 @@
 <p>Returns all public statuses for a particular hashtag</p>
 <h4 id="get-apiv1streaminghashtaglocaltaghashtag">GET /api/v1/streaming/hashtag/local?tag=:hashtag</h4>
 <p>Returns all local statuses for a particular hashtag</p>
-<h4 id="get-apiv1streaminglistlistlist-id">GET /api/v1/streaming/list?list=:list_id</h4>
+<h4 id="get-apiv1streaminglistlistlist_id">GET /api/v1/streaming/list?list=:list_id</h4>
 <p>Returns statuses for a list</p>
 <h4 id="get-apiv1streamingdirect">GET /api/v1/streaming/direct</h4>
 <p>Returns all direct messages</p>
 <h3 id="stream-contents-a-idstream-contentsa">Stream contents <!-- raw HTML omitted --><!-- raw HTML omitted --></h3>
 <p>The stream will contain events as well as heartbeat comments. Lines that begin with a colon (<code>:</code>) can be ignored by parsers, they are simply there to keep the connection open. Events have this structure:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">event: name
-data: payload
-</code></pre></div><h2 id="websocket-a-idwebsocketa">WebSocket <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>event: name
+</span></span><span style="display:flex;"><span>data: payload
+</span></span></code></pre></div><h2 id="websocket-a-idwebsocketa">WebSocket <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
 <p>For WebSockets, there is only one URL path (<code>/api/v1/streaming</code>). The access token as well as the endpoint you are interested in must be provided with query params, respectively <code>access_token</code> and <code>stream</code>. Query params <code>list</code> and <code>tag</code> are likewise supported for relevant endpoints.</p>
 <p>Possible <code>stream</code> values:</p>
 <ul>
@@ -874,31 +874,31 @@ data: payload
 <table>
 <thead>
 <tr>
-<th align="left">Event</th>
-<th align="left">Description</th>
-<th align="left">What’s in the payload</th>
+<th style="text-align:left">Event</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">What’s in the payload</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>update</code></td>
-<td align="left">A new status has appeared</td>
-<td align="left"><a href="/entities/status/">Status</a></td>
+<td style="text-align:left"><code>update</code></td>
+<td style="text-align:left">A new status has appeared</td>
+<td style="text-align:left"><a href="/entities/status/">Status</a></td>
 </tr>
 <tr>
-<td align="left"><code>notification</code></td>
-<td align="left">A new notification has appeared</td>
-<td align="left"><a href="/entities/notification/">Notification</a></td>
+<td style="text-align:left"><code>notification</code></td>
+<td style="text-align:left">A new notification has appeared</td>
+<td style="text-align:left"><a href="/entities/notification/">Notification</a></td>
 </tr>
 <tr>
-<td align="left"><code>delete</code></td>
-<td align="left">A status has been deleted</td>
-<td align="left">ID of the deleted status</td>
+<td style="text-align:left"><code>delete</code></td>
+<td style="text-align:left">A status has been deleted</td>
+<td style="text-align:left">ID of the deleted status</td>
 </tr>
 <tr>
-<td align="left"><code>filters_changed</code></td>
-<td align="left">Keyword filters have been changed</td>
-<td align="left"></td>
+<td style="text-align:left"><code>filters_changed</code></td>
+<td style="text-align:left">Keyword filters have been changed</td>
+<td style="text-align:left"></td>
 </tr>
 </tbody>
 </table>

@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>endorsements - Mastodon documentation</title>
@@ -941,60 +941,60 @@ Internal parameter. Use HTTP <code>Link</code> header from response for paginati
 <p>Sample call with limit=2. Because endorsement ids are private, you must parse the HTTP Link header to find next and previous pages.
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">Link<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">&lt;</span>https<span style="color:#ff79c6">:</span><span style="color:#6272a4">//mastodon.social/api/v1/endorsements?limit=2&amp;max_id=832844&gt;; rel=&#34;next&#34;, &lt;https://mastodon.social/api/v1/endorsements?limit=2&amp;since_id=952529&gt;; rel=&#34;prev&#34;
-</span><span style="color:#6272a4"></span>
-[
-  {
-    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;952529&#34;</span>,
-    <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;alayna&#34;</span>,
-    <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;alayna@desvox.es&#34;</span>,
-    <span style="color:#f1fa8c">&#34;display_name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Alayna Desirae&#34;</span>,
-    <span style="color:#f1fa8c">&#34;locked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
-    <span style="color:#f1fa8c">&#34;bot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-10-26T23:12:06.570Z&#34;</span>,
-    <span style="color:#f1fa8c">&#34;note&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;experiencing ________ difficulties&lt;br&gt;22y/o INFP in Oklahoma&#34;</span>,
-    <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://desvox.es/users/alayna&#34;</span>,
-    <span style="color:#f1fa8c">&#34;avatar&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/952/529/original/6534122046d050d5.png&#34;</span>,
-    <span style="color:#f1fa8c">&#34;avatar_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/952/529/original/6534122046d050d5.png&#34;</span>,
-    <span style="color:#f1fa8c">&#34;header&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/952/529/original/496f1f817e042ade.png&#34;</span>,
-    <span style="color:#f1fa8c">&#34;header_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/952/529/original/496f1f817e042ade.png&#34;</span>,
-    <span style="color:#f1fa8c">&#34;followers_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
-    <span style="color:#f1fa8c">&#34;following_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
-    <span style="color:#f1fa8c">&#34;statuses_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">955</span>,
-    <span style="color:#f1fa8c">&#34;last_status_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:05:50.682Z&#34;</span>,
-    <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [],
-    <span style="color:#f1fa8c">&#34;fields&#34;</span><span style="color:#ff79c6">:</span> []
-  },
-  {
-    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;832844&#34;</span>,
-    <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;a9&#34;</span>,
-    <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;a9@broadcast.wolfgirl.engineering&#34;</span>,
-    <span style="color:#f1fa8c">&#34;display_name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;vivienne :collar: &#34;</span>,
-    <span style="color:#f1fa8c">&#34;locked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
-    <span style="color:#f1fa8c">&#34;bot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-06-12T18:55:12.053Z&#34;</span>,
-    <span style="color:#f1fa8c">&#34;note&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;borderline nsfw, considered a schedule I drug by nixon&lt;br&gt;waiting for the year of the illumos desktop&#34;</span>,
-    <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://broadcast.wolfgirl.engineering/users/a9&#34;</span>,
-    <span style="color:#f1fa8c">&#34;avatar&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/832/844/original/ae1de0b8fb63d1c6.png&#34;</span>,
-    <span style="color:#f1fa8c">&#34;avatar_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/832/844/original/ae1de0b8fb63d1c6.png&#34;</span>,
-    <span style="color:#f1fa8c">&#34;header&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/832/844/original/5088e4a16e6d8736.png&#34;</span>,
-    <span style="color:#f1fa8c">&#34;header_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/832/844/original/5088e4a16e6d8736.png&#34;</span>,
-    <span style="color:#f1fa8c">&#34;followers_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">43</span>,
-    <span style="color:#f1fa8c">&#34;following_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">67</span>,
-    <span style="color:#f1fa8c">&#34;statuses_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">5906</span>,
-    <span style="color:#f1fa8c">&#34;last_status_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T05:23:47.911Z&#34;</span>,
-    <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [
-      {
-        <span style="color:#f1fa8c">&#34;shortcode&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;collar&#34;</span>,
-        <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/106/920/original/80953b9cd96ec4dc.png&#34;</span>,
-        <span style="color:#f1fa8c">&#34;static_url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/106/920/static/80953b9cd96ec4dc.png&#34;</span>,
-        <span style="color:#f1fa8c">&#34;visible_in_picker&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
-      }
-    ],
-    <span style="color:#f1fa8c">&#34;fields&#34;</span><span style="color:#ff79c6">:</span> []
-  }
-]
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>Link<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">&lt;</span>https<span style="color:#ff79c6">:</span><span style="color:#6272a4">//mastodon.social/api/v1/endorsements?limit=2&amp;max_id=832844&gt;; rel=&#34;next&#34;, &lt;https://mastodon.social/api/v1/endorsements?limit=2&amp;since_id=952529&gt;; rel=&#34;prev&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;952529&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;alayna&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;alayna@desvox.es&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;display_name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Alayna Desirae&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;locked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;bot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-10-26T23:12:06.570Z&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;note&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;experiencing ________ difficulties&lt;br&gt;22y/o INFP in Oklahoma&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://desvox.es/users/alayna&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;avatar&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/952/529/original/6534122046d050d5.png&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;avatar_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/952/529/original/6534122046d050d5.png&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;header&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/952/529/original/496f1f817e042ade.png&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;header_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/952/529/original/496f1f817e042ade.png&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;followers_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;following_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;statuses_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">955</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;last_status_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T07:05:50.682Z&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;fields&#34;</span><span style="color:#ff79c6">:</span> []
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;832844&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;a9&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;a9@broadcast.wolfgirl.engineering&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;display_name&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;vivienne :collar: &#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;locked&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;bot&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;created_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-06-12T18:55:12.053Z&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;note&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;borderline nsfw, considered a schedule I drug by nixon&lt;br&gt;waiting for the year of the illumos desktop&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://broadcast.wolfgirl.engineering/users/a9&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;avatar&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/832/844/original/ae1de0b8fb63d1c6.png&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;avatar_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/avatars/000/832/844/original/ae1de0b8fb63d1c6.png&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;header&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/832/844/original/5088e4a16e6d8736.png&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;header_static&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/accounts/headers/000/832/844/original/5088e4a16e6d8736.png&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;followers_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">43</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;following_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">67</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;statuses_count&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">5906</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;last_status_at&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;2019-11-23T05:23:47.911Z&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;emojis&#34;</span><span style="color:#ff79c6">:</span> [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;shortcode&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;collar&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/106/920/original/80953b9cd96ec4dc.png&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;static_url&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://files.mastodon.social/custom_emojis/images/000/106/920/static/80953b9cd96ec4dc.png&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;visible_in_picker&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;fields&#34;</span><span style="color:#ff79c6">:</span> []
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p></div>
 
 <div class="api-method-response-example">
   <h5>
@@ -1007,10 +1007,10 @@ Internal parameter. Use HTTP <code>Link</code> header from response for paginati
 <p>If Authorization header is not provided correctly
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
-}
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p></div>
 
 </div>
 

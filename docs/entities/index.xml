@@ -5,11 +5,7 @@
     <link>https://documentation.sig.gy/entities/</link>
     <description>Recent content in Entities on Mastodon documentation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://documentation.sig.gy/entities/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://documentation.sig.gy/entities/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Account</title>
       <link>https://documentation.sig.gy/entities/account/</link>
@@ -89,7 +85,7 @@ created_at Description: The time the report was filed.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/announcementreaction/</guid>
-      <description>Example { &amp;#34;name&amp;#34;: &amp;#34;bongoCat&amp;#34;, &amp;#34;count&amp;#34;: 9, &amp;#34;me&amp;#34;: false, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/067/715/original/fdba57dff7576d53.png&amp;#34;, &amp;#34;static_url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/067/715/static/fdba57dff7576d53.png&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;🤔&amp;#34;, &amp;#34;count&amp;#34;: 1, &amp;#34;me&amp;#34;: true } Base attributes name Description: The emoji used for the reaction. Either a unicode emoji, or a custom emoji&#39;s shortcode.
+      <description>Example { &amp;#34;name&amp;#34;: &amp;#34;bongoCat&amp;#34;, &amp;#34;count&amp;#34;: 9, &amp;#34;me&amp;#34;: false, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/067/715/original/fdba57dff7576d53.png&amp;#34;, &amp;#34;static_url&amp;#34;: &amp;#34;https://files.mastodon.social/custom_emojis/images/000/067/715/static/fdba57dff7576d53.png&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;🤔&amp;#34;, &amp;#34;count&amp;#34;: 1, &amp;#34;me&amp;#34;: true } Base attributes name Description: The emoji used for the reaction. Either a unicode emoji, or a custom emoji&amp;rsquo;s shortcode.
 Type: String
 Version history:
 3.1.0 - added
@@ -124,7 +120,7 @@ Client attributes client_id Description: Client ID key, to be used for obtaining
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/attachment/</guid>
-      <description>Example Image { &amp;#34;id&amp;#34;: &amp;#34;22345792&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;image&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/media_attachments/files/022/345/792/original/57859aede991da25.jpeg&amp;#34;, &amp;#34;preview_url&amp;#34;: &amp;#34;https://files.mastodon.social/media_attachments/files/022/345/792/small/57859aede991da25.jpeg&amp;#34;, &amp;#34;remote_url&amp;#34;: null, &amp;#34;text_url&amp;#34;: &amp;#34;https://mastodon.social/media/2N4uvkuUtPVrkZGysms&amp;#34;, &amp;#34;meta&amp;#34;: { &amp;#34;original&amp;#34;: { &amp;#34;width&amp;#34;: 640, &amp;#34;height&amp;#34;: 480, &amp;#34;size&amp;#34;: &amp;#34;640x480&amp;#34;, &amp;#34;aspect&amp;#34;: 1.3333333333333333 }, &amp;#34;small&amp;#34;: { &amp;#34;width&amp;#34;: 461, &amp;#34;height&amp;#34;: 346, &amp;#34;size&amp;#34;: &amp;#34;461x346&amp;#34;, &amp;#34;aspect&amp;#34;: 1.3323699421965318 }, &amp;#34;focus&amp;#34;: { &amp;#34;x&amp;#34;: -0.27, &amp;#34;y&amp;#34;: 0.51 } }, &amp;#34;description&amp;#34;: &amp;#34;test media description&amp;#34;, &amp;#34;blurhash&amp;#34;: &amp;#34;UFBWY:8_0Jxv4mx]t8t64.%M-:IUWGWAt6M}&amp;#34; }  Video { &amp;#34;id&amp;#34;: &amp;#34;22546306&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;video&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/media_attachments/files/022/546/306/original/dab9a597f68b9745.mp4&amp;#34;, &amp;#34;preview_url&amp;#34;: &amp;#34;https://files.mastodon.social/media_attachments/files/022/546/306/small/dab9a597f68b9745.png&amp;#34;, &amp;#34;remote_url&amp;#34;: null, &amp;#34;text_url&amp;#34;: &amp;#34;https://mastodon.social/media/wWd1HJIBmH1MZGDfg50&amp;#34;, &amp;#34;meta&amp;#34;: { &amp;#34;length&amp;#34;: &amp;#34;0:01:28.</description>
+      <description>Example Image { &amp;#34;id&amp;#34;: &amp;#34;22345792&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;image&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/media_attachments/files/022/345/792/original/57859aede991da25.jpeg&amp;#34;, &amp;#34;preview_url&amp;#34;: &amp;#34;https://files.mastodon.social/media_attachments/files/022/345/792/small/57859aede991da25.jpeg&amp;#34;, &amp;#34;remote_url&amp;#34;: null, &amp;#34;text_url&amp;#34;: &amp;#34;https://mastodon.social/media/2N4uvkuUtPVrkZGysms&amp;#34;, &amp;#34;meta&amp;#34;: { &amp;#34;original&amp;#34;: { &amp;#34;width&amp;#34;: 640, &amp;#34;height&amp;#34;: 480, &amp;#34;size&amp;#34;: &amp;#34;640x480&amp;#34;, &amp;#34;aspect&amp;#34;: 1.3333333333333333 }, &amp;#34;small&amp;#34;: { &amp;#34;width&amp;#34;: 461, &amp;#34;height&amp;#34;: 346, &amp;#34;size&amp;#34;: &amp;#34;461x346&amp;#34;, &amp;#34;aspect&amp;#34;: 1.3323699421965318 }, &amp;#34;focus&amp;#34;: { &amp;#34;x&amp;#34;: -0.27, &amp;#34;y&amp;#34;: 0.51 } }, &amp;#34;description&amp;#34;: &amp;#34;test media description&amp;#34;, &amp;#34;blurhash&amp;#34;: &amp;#34;UFBWY:8_0Jxv4mx]t8t64.%M-:IUWGWAt6M}&amp;#34; } Video { &amp;#34;id&amp;#34;: &amp;#34;22546306&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;video&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://files.mastodon.social/media_attachments/files/022/546/306/original/dab9a597f68b9745.mp4&amp;#34;, &amp;#34;preview_url&amp;#34;: &amp;#34;https://files.mastodon.social/media_attachments/files/022/546/306/small/dab9a597f68b9745.png&amp;#34;, &amp;#34;remote_url&amp;#34;: null, &amp;#34;text_url&amp;#34;: &amp;#34;https://mastodon.social/media/wWd1HJIBmH1MZGDfg50&amp;#34;, &amp;#34;meta&amp;#34;: { &amp;#34;length&amp;#34;: &amp;#34;0:01:28.</description>
     </item>
     
     <item>
@@ -133,7 +129,7 @@ Client attributes client_id Description: Client ID key, to be used for obtaining
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/card/</guid>
-      <description>video { &amp;#34;url&amp;#34;: &amp;#34;https://www.youtube.com/watch?v=OMv_EPMED8Y&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;♪ Brand New Friend (Christmas Song!)&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;video&amp;#34;, &amp;#34;author_name&amp;#34;: &amp;#34;YOGSCAST Lewis &amp;amp; Simon&amp;#34;, &amp;#34;author_url&amp;#34;: &amp;#34;https://www.youtube.com/user/BlueXephos&amp;#34;, &amp;#34;provider_name&amp;#34;: &amp;#34;YouTube&amp;#34;, &amp;#34;provider_url&amp;#34;: &amp;#34;https://www.youtube.com/&amp;#34;, &amp;#34;html&amp;#34;: &amp;#34;&amp;lt;iframe width=\&amp;#34;480\&amp;#34; height=\&amp;#34;270\&amp;#34; src=\&amp;#34;https://www.youtube.com/embed/OMv_EPMED8Y?feature=oembed\&amp;#34; frameborder=\&amp;#34;0\&amp;#34; allowfullscreen=\&amp;#34;\&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;#34;, &amp;#34;width&amp;#34;: 480, &amp;#34;height&amp;#34;: 270, &amp;#34;image&amp;#34;: &amp;#34;https://files.mastodon.social/preview_cards/images/014/179/145/original/9cf4b7cf5567b569.jpeg&amp;#34;, &amp;#34;embed_url&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;blurhash&amp;#34;: &amp;#34;UvK0HNkV,:s9xBR%njog0fo2W=WBS5ozofV@&amp;#34; }  photo { &amp;#34;url&amp;#34;: &amp;#34;https://www.flickr.com/photos/tomfenskephotography/49088768431/&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;Oregon&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;photo&amp;#34;, &amp;#34;author_name&amp;#34;: &amp;#34;Tom Fenske Photography&amp;#34;, &amp;#34;author_url&amp;#34;: &amp;#34;https://www.flickr.com/photos/tomfenskephotography/&amp;#34;, &amp;#34;provider_name&amp;#34;: &amp;#34;Flickr&amp;#34;, &amp;#34;provider_url&amp;#34;: &amp;#34;https://www.flickr.com/&amp;#34;, &amp;#34;html&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;width&amp;#34;: 1024, &amp;#34;height&amp;#34;: 427, &amp;#34;image&amp;#34;: &amp;#34;https://files.</description>
+      <description>video { &amp;#34;url&amp;#34;: &amp;#34;https://www.youtube.com/watch?v=OMv_EPMED8Y&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;♪ Brand New Friend (Christmas Song!)&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;video&amp;#34;, &amp;#34;author_name&amp;#34;: &amp;#34;YOGSCAST Lewis &amp;amp; Simon&amp;#34;, &amp;#34;author_url&amp;#34;: &amp;#34;https://www.youtube.com/user/BlueXephos&amp;#34;, &amp;#34;provider_name&amp;#34;: &amp;#34;YouTube&amp;#34;, &amp;#34;provider_url&amp;#34;: &amp;#34;https://www.youtube.com/&amp;#34;, &amp;#34;html&amp;#34;: &amp;#34;&amp;lt;iframe width=\&amp;#34;480\&amp;#34; height=\&amp;#34;270\&amp;#34; src=\&amp;#34;https://www.youtube.com/embed/OMv_EPMED8Y?feature=oembed\&amp;#34; frameborder=\&amp;#34;0\&amp;#34; allowfullscreen=\&amp;#34;\&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;#34;, &amp;#34;width&amp;#34;: 480, &amp;#34;height&amp;#34;: 270, &amp;#34;image&amp;#34;: &amp;#34;https://files.mastodon.social/preview_cards/images/014/179/145/original/9cf4b7cf5567b569.jpeg&amp;#34;, &amp;#34;embed_url&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;blurhash&amp;#34;: &amp;#34;UvK0HNkV,:s9xBR%njog0fo2W=WBS5ozofV@&amp;#34; } photo { &amp;#34;url&amp;#34;: &amp;#34;https://www.flickr.com/photos/tomfenskephotography/49088768431/&amp;#34;, &amp;#34;title&amp;#34;: &amp;#34;Oregon&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;photo&amp;#34;, &amp;#34;author_name&amp;#34;: &amp;#34;Tom Fenske Photography&amp;#34;, &amp;#34;author_url&amp;#34;: &amp;#34;https://www.flickr.com/photos/tomfenskephotography/&amp;#34;, &amp;#34;provider_name&amp;#34;: &amp;#34;Flickr&amp;#34;, &amp;#34;provider_url&amp;#34;: &amp;#34;https://www.flickr.com/&amp;#34;, &amp;#34;html&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;width&amp;#34;: 1024, &amp;#34;height&amp;#34;: 427, &amp;#34;image&amp;#34;: &amp;#34;https://files.</description>
     </item>
     
     <item>
@@ -142,10 +138,11 @@ Client attributes client_id Description: Client ID key, to be used for obtaining
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/context/</guid>
-      <description>Example  { &amp;#34;ancestors&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;103188938570975982&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T19:44:00.124Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: null, ... }, { &amp;#34;id&amp;#34;: &amp;#34;103188971072973252&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T19:52:23.398Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: &amp;#34;103188938570975982&amp;#34;, ... }, { &amp;#34;id&amp;#34;: &amp;#34;103188982235527758&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T19:55:08.208Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: &amp;#34;103188971072973252&amp;#34;, ... ], &amp;#34;descendants&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;103189026958574542&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T20:06:36.011Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: &amp;#34;103189005915505698&amp;#34;, ... } ] }   Truncated response from GET statuses/:id/context
-  Required attributes ancestors Description: Parents in the thread.
+      <description>Example { &amp;#34;ancestors&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;103188938570975982&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T19:44:00.124Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: null, ... }, { &amp;#34;id&amp;#34;: &amp;#34;103188971072973252&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T19:52:23.398Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: &amp;#34;103188938570975982&amp;#34;, ... }, { &amp;#34;id&amp;#34;: &amp;#34;103188982235527758&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T19:55:08.208Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: &amp;#34;103188971072973252&amp;#34;, ... ], &amp;#34;descendants&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;103189026958574542&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T20:06:36.011Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: &amp;#34;103189005915505698&amp;#34;, ... } ] } Truncated response from GET statuses/:id/context
+Required attributes ancestors Description: Parents in the thread.
 Type: Array of Status
-Version history: Added in 0.</description>
+Version history: Added in 0.6.0
+descendants Description: Children in the thread.</description>
     </item>
     
     <item>
@@ -186,7 +183,8 @@ visible_in_picker Description: Whether this Emoji should be visible in the picke
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/error/</guid>
-      <description>Example { &amp;#34;error&amp;#34;: &amp;#34;invalid_grant&amp;#34;, &amp;#34;error_description&amp;#34;: &amp;#34;The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.&amp;#34; }  The most important part of an error response is the HTTP status code. Standard semantics are followed. The body of an error is a JSON object containing more information, if available.  Required attributes error Description: The error message.</description>
+      <description>Example { &amp;#34;error&amp;#34;: &amp;#34;invalid_grant&amp;#34;, &amp;#34;error_description&amp;#34;: &amp;#34;The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.&amp;#34; } The most important part of an error response is the HTTP status code. Standard semantics are followed. The body of an error is a JSON object containing more information, if available. Required attributes error Description: The error message.
+Type: String</description>
     </item>
     
     <item>
@@ -210,7 +208,7 @@ url Description: A link to all statuses by a user that contain this hashtag.</de
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/field/</guid>
-      <description>Example  &amp;#34;fields&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;Website&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;https://trwnh.com&amp;#34;, &amp;#34;verified_at&amp;#34;: &amp;#34;2019-08-29T04:14:55.571+00:00&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Sponsor&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;https://liberapay.com/at&amp;#34;, &amp;#34;verified_at&amp;#34;: &amp;#34;2019-11-15T10:06:15.557+00:00&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Fan of:&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;Punk-rock and post-hardcore (Circa Survive, letlive., La Dispute, THE FEVER 333)Manga (Yu-Gi-Oh!, One Piece, JoJo&amp;#39;s Bizarre Adventure, Death Note, Shaman King)Platformers and RPGs (Banjo-Kazooie, Boktai, Final Fantasy Crystal Chronicles)&amp;#34;, &amp;#34;verified_at&amp;#34;: null }, { &amp;#34;name&amp;#34;: &amp;#34;Main topics:&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;systemic analysis, design patterns, anticapitalism, info/tech freedom, theory and philosophy, and otherwise being a genuine and decent wholesome poster.</description>
+      <description>Example &amp;#34;fields&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;Website&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;https://trwnh.com&amp;#34;, &amp;#34;verified_at&amp;#34;: &amp;#34;2019-08-29T04:14:55.571+00:00&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Sponsor&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;https://liberapay.com/at&amp;#34;, &amp;#34;verified_at&amp;#34;: &amp;#34;2019-11-15T10:06:15.557+00:00&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Fan of:&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;Punk-rock and post-hardcore (Circa Survive, letlive., La Dispute, THE FEVER 333)Manga (Yu-Gi-Oh!, One Piece, JoJo&amp;#39;s Bizarre Adventure, Death Note, Shaman King)Platformers and RPGs (Banjo-Kazooie, Boktai, Final Fantasy Crystal Chronicles)&amp;#34;, &amp;#34;verified_at&amp;#34;: null }, { &amp;#34;name&amp;#34;: &amp;#34;Main topics:&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;systemic analysis, design patterns, anticapitalism, info/tech freedom, theory and philosophy, and otherwise being a genuine and decent wholesome poster.</description>
     </item>
     
     <item>
@@ -253,10 +251,10 @@ Type: String (cast from an integer)</description>
       <description>{ &amp;#34;provider&amp;#34;: &amp;#34;Keybase&amp;#34;, &amp;#34;provider_username&amp;#34;: &amp;#34;gargron&amp;#34;, &amp;#34;updated_at&amp;#34;: &amp;#34;2019-07-21T20:14:39.596Z&amp;#34;, &amp;#34;proof_url&amp;#34;: &amp;#34;https://keybase.io/gargron/sigchain#5cfc20c7018f2beefb42a68836da59a792e55daa4d118498c9b1898de7e845690f&amp;#34;, &amp;#34;profile_url&amp;#34;: &amp;#34;https://keybase.io/gargron&amp;#34; } Attributes provider Description: The name of the identity provider.
 Type: String
 Version history: Added in 2.8.0
-provider_username Description: The account owner&#39;s username on the identity provider&#39;s service.
+provider_username Description: The account owner&amp;rsquo;s username on the identity provider&amp;rsquo;s service.
 Type: String
 Version history: Added in 2.8.0
-profile_url Description: The account owner&#39;s profile URL on the identity provider.
+profile_url Description: The account owner&amp;rsquo;s profile URL on the identity provider.
 Type: String (URL)
 Version history: Added in 2.8.0
 proof_url Description: A link to a statement of identity proof, hosted by the identity provider.</description>
@@ -296,10 +294,10 @@ followed = Show replies to any followed user</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/marker/</guid>
-      <description>Example { &amp;#34;home&amp;#34;: { &amp;#34;last_read_id&amp;#34;: &amp;#34;103194548672408537&amp;#34;, &amp;#34;version&amp;#34;: 462, &amp;#34;updated_at&amp;#34;: &amp;#34;2019-11-24T19:39:39.337Z&amp;#34; }, &amp;#34;notifications&amp;#34;: { &amp;#34;last_read_id&amp;#34;: &amp;#34;35050107&amp;#34;, &amp;#34;version&amp;#34;: 356, &amp;#34;updated_at&amp;#34;: &amp;#34;2019-11-25T13:47:31.333Z&amp;#34; } } Base attributes home Description: Information about the user&#39;s position in the home timeline.
+      <description>Example { &amp;#34;home&amp;#34;: { &amp;#34;last_read_id&amp;#34;: &amp;#34;103194548672408537&amp;#34;, &amp;#34;version&amp;#34;: 462, &amp;#34;updated_at&amp;#34;: &amp;#34;2019-11-24T19:39:39.337Z&amp;#34; }, &amp;#34;notifications&amp;#34;: { &amp;#34;last_read_id&amp;#34;: &amp;#34;35050107&amp;#34;, &amp;#34;version&amp;#34;: 356, &amp;#34;updated_at&amp;#34;: &amp;#34;2019-11-25T13:47:31.333Z&amp;#34; } } Base attributes home Description: Information about the user&amp;rsquo;s position in the home timeline.
 Type: Hash
 Version history: Added in 3.0.0
-notifications Description: Information about the user&#39;s position in their notifications.
+notifications Description: Information about the user&amp;rsquo;s position in their notifications.
 Type: Hash
 Version history: Added in 3.0.0
 Nested attributes last_read_id Description: The ID of the most recently viewed entity.</description>
@@ -311,11 +309,13 @@ Nested attributes last_read_id Description: The ID of the most recently viewed e
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/mention/</guid>
-      <description>Example  { &amp;#34;mentions&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;952529&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;alayna&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://desvox.es/users/alayna&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;alayna@desvox.es&amp;#34; }, { &amp;#34;id&amp;#34;: &amp;#34;14715&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;trwnh&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://mastodon.social/@trwnh&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;trwnh&amp;#34; } ] }   excerpt from GET status:
-  Required attributes id Description: The account id of the mentioned user.
+      <description>Example { &amp;#34;mentions&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;952529&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;alayna&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://desvox.es/users/alayna&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;alayna@desvox.es&amp;#34; }, { &amp;#34;id&amp;#34;: &amp;#34;14715&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;trwnh&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://mastodon.social/@trwnh&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;trwnh&amp;#34; } ] } excerpt from GET status:
+Required attributes id Description: The account id of the mentioned user.
 Type: String (cast from an integer, but not guaranteed to be a number)
 Version history: Added in 0.6.0
-username Description: The username of the mentioned user.</description>
+username Description: The username of the mentioned user.
+Type: String
+Version history: Added in 0.</description>
     </item>
     
     <item>
@@ -324,7 +324,7 @@ username Description: The username of the mentioned user.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/notification/</guid>
-      <description>Example  [ { &amp;#34;id&amp;#34;: &amp;#34;34975861&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;mention&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T07:49:02.064Z&amp;#34;, &amp;#34;account&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;971724&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;zsc&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;zsc&amp;#34;, ... }, &amp;#34;status&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;103186126728896492&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T07:49:01.940Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: &amp;#34;103186038209478945&amp;#34;, &amp;#34;in_reply_to_account_id&amp;#34;: &amp;#34;14715&amp;#34;, ... } }, { &amp;#34;id&amp;#34;: &amp;#34;34975535&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;favourite&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T07:29:18.903Z&amp;#34;, &amp;#34;account&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;297420&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;haskal&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;haskal@cybre.space&amp;#34;, ... }, &amp;#34;status&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;103186046267791694&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T07:28:34.210Z&amp;#34;, ... }, &amp;#34;account&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;14715&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;trwnh&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;trwnh&amp;#34;, ... }, ... } }, .</description>
+      <description>Example [ { &amp;#34;id&amp;#34;: &amp;#34;34975861&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;mention&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T07:49:02.064Z&amp;#34;, &amp;#34;account&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;971724&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;zsc&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;zsc&amp;#34;, ... }, &amp;#34;status&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;103186126728896492&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T07:49:01.940Z&amp;#34;, &amp;#34;in_reply_to_id&amp;#34;: &amp;#34;103186038209478945&amp;#34;, &amp;#34;in_reply_to_account_id&amp;#34;: &amp;#34;14715&amp;#34;, ... } }, { &amp;#34;id&amp;#34;: &amp;#34;34975535&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;favourite&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T07:29:18.903Z&amp;#34;, &amp;#34;account&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;297420&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;haskal&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;haskal@cybre.space&amp;#34;, ... }, &amp;#34;status&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;103186046267791694&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-23T07:28:34.210Z&amp;#34;, ... }, &amp;#34;account&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;14715&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;trwnh&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;trwnh&amp;#34;, ... }, ... } }, .</description>
     </item>
     
     <item>
@@ -395,7 +395,7 @@ requested Description: Do you have a pending follow request for this user?</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/report/</guid>
-      <description> This page is currently under construction.  Example Attributes See also  reports   app/serializers/rest/report_serializer.rb  </description>
+      <description> This page is currently under construction. Example Attributes See also reports app/serializers/rest/report_serializer.rb </description>
     </item>
     
     <item>
@@ -404,7 +404,7 @@ requested Description: Do you have a pending follow request for this user?</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/results/</guid>
-      <description>Example  { &amp;#34;accounts&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;180744&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;catstar&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;catstar@catgram.jp&amp;#34;, &amp;#34;display_name&amp;#34;: &amp;#34;catstar&amp;#34;, ... }, { &amp;#34;id&amp;#34;: &amp;#34;214293&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;catsareweird&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;catsareweird&amp;#34;, &amp;#34;display_name&amp;#34;: &amp;#34;Cats Are Weird&amp;#34;, ... } ], &amp;#34;statuses&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;103085519055545958&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-05T13:23:09.000Z&amp;#34;, ... &amp;#34;content&amp;#34;: &amp;#34;&amp;lt;p&amp;gt;cats&amp;lt;br&amp;gt;cats never change&amp;lt;/p&amp;gt;&amp;#34;, ... }, { &amp;#34;id&amp;#34;: &amp;#34;101068121469614510&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2018-11-14T06:31:48.000Z&amp;#34;, ... &amp;#34;spoiler_text&amp;#34;: &amp;#34;Cats&amp;#34;, ... &amp;#34;content&amp;#34;: &amp;#34;&amp;lt;p&amp;gt;Cats are inherently good at self-care. &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;a href=\&amp;#34;https://mspsocial.net/tags/cats\&amp;#34; class=\&amp;#34;mention hashtag\&amp;#34; rel=\&amp;#34;nofollow noopener noreferrer\&amp;#34; target=\&amp;#34;_blank\&amp;#34;&amp;gt;#&amp;lt;span&amp;gt;cats&amp;lt;/span}&amp;lt;/p&amp;gt;&amp;#34;, ... ], &amp;#34;hashtags&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;cats&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://mastodon.</description>
+      <description>Example { &amp;#34;accounts&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;180744&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;catstar&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;catstar@catgram.jp&amp;#34;, &amp;#34;display_name&amp;#34;: &amp;#34;catstar&amp;#34;, ... }, { &amp;#34;id&amp;#34;: &amp;#34;214293&amp;#34;, &amp;#34;username&amp;#34;: &amp;#34;catsareweird&amp;#34;, &amp;#34;acct&amp;#34;: &amp;#34;catsareweird&amp;#34;, &amp;#34;display_name&amp;#34;: &amp;#34;Cats Are Weird&amp;#34;, ... } ], &amp;#34;statuses&amp;#34;: [ { &amp;#34;id&amp;#34;: &amp;#34;103085519055545958&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-05T13:23:09.000Z&amp;#34;, ... &amp;#34;content&amp;#34;: &amp;#34;&amp;lt;p&amp;gt;cats&amp;lt;br&amp;gt;cats never change&amp;lt;/p&amp;gt;&amp;#34;, ... }, { &amp;#34;id&amp;#34;: &amp;#34;101068121469614510&amp;#34;, &amp;#34;created_at&amp;#34;: &amp;#34;2018-11-14T06:31:48.000Z&amp;#34;, ... &amp;#34;spoiler_text&amp;#34;: &amp;#34;Cats&amp;#34;, ... &amp;#34;content&amp;#34;: &amp;#34;&amp;lt;p&amp;gt;Cats are inherently good at self-care. &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;a href=\&amp;#34;https://mspsocial.net/tags/cats\&amp;#34; class=\&amp;#34;mention hashtag\&amp;#34; rel=\&amp;#34;nofollow noopener noreferrer\&amp;#34; target=\&amp;#34;_blank\&amp;#34;&amp;gt;#&amp;lt;span&amp;gt;cats&amp;lt;/span}&amp;lt;/p&amp;gt;&amp;#34;, ... ], &amp;#34;hashtags&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;cats&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;https://mastodon.</description>
     </item>
     
     <item>
@@ -413,9 +413,9 @@ requested Description: Do you have a pending follow request for this user?</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/scheduledstatus/</guid>
-      <description>This page is currently under construction.  Example { &amp;#34;id&amp;#34;: &amp;#34;3221&amp;#34;, &amp;#34;scheduled_at&amp;#34;: &amp;#34;2019-12-05T12:33:01.000Z&amp;#34;, &amp;#34;params&amp;#34;: { &amp;#34;text&amp;#34;: &amp;#34;test content&amp;#34;, &amp;#34;media_ids&amp;#34;: null, &amp;#34;sensitive&amp;#34;: null, &amp;#34;spoiler_text&amp;#34;: null, &amp;#34;visibility&amp;#34;: null, &amp;#34;scheduled_at&amp;#34;: null, &amp;#34;poll&amp;#34;: null, &amp;#34;idempotency&amp;#34;: null, &amp;#34;in_reply_to_id&amp;#34;: null, &amp;#34;application_id&amp;#34;: 596551 }, &amp;#34;media_attachments&amp;#34;: [] } Required attributes id Description: ID of the scheduled status in the database.
+      <description>This page is currently under construction. Example { &amp;#34;id&amp;#34;: &amp;#34;3221&amp;#34;, &amp;#34;scheduled_at&amp;#34;: &amp;#34;2019-12-05T12:33:01.000Z&amp;#34;, &amp;#34;params&amp;#34;: { &amp;#34;text&amp;#34;: &amp;#34;test content&amp;#34;, &amp;#34;media_ids&amp;#34;: null, &amp;#34;sensitive&amp;#34;: null, &amp;#34;spoiler_text&amp;#34;: null, &amp;#34;visibility&amp;#34;: null, &amp;#34;scheduled_at&amp;#34;: null, &amp;#34;poll&amp;#34;: null, &amp;#34;idempotency&amp;#34;: null, &amp;#34;in_reply_to_id&amp;#34;: null, &amp;#34;application_id&amp;#34;: 596551 }, &amp;#34;media_attachments&amp;#34;: [] } Required attributes id Description: ID of the scheduled status in the database.
 Type: String (cast from an integer but not guaranteed to be a number)
-Version history: Added in 2.</description>
+Version history: Added in 2.7.0</description>
     </item>
     
     <item>
@@ -424,7 +424,7 @@ Version history: Added in 2.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://documentation.sig.gy/entities/source/</guid>
-      <description>Example  &amp;#34;source&amp;#34;: { &amp;#34;privacy&amp;#34;: &amp;#34;public&amp;#34;, &amp;#34;sensitive&amp;#34;: false, &amp;#34;language&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;note&amp;#34;: &amp;#34;i have approximate knowledge of many things. perpetual student. (nb/ace/they)\r\n\r\nxmpp/email: a@trwnh.com\r\nhttps://trwnh.com\r\nhelp me live: https://liberapay.com/at or https://paypal.me/trwnh\r\n\r\n- my triggers are moths and glitter\r\n- i have all notifs except mentions turned off, so please interact if you wanna be friends! i literally will not notice otherwise\r\n- dm me if i did something wrong, so i can improve\r\n- purest person on fedi, do not lewd in my presence\r\n- #1 ami cole fan account\r\n\r\n:fatyoshi:&amp;#34;, &amp;#34;fields&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;Website&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;https://trwnh.</description>
+      <description>Example &amp;#34;source&amp;#34;: { &amp;#34;privacy&amp;#34;: &amp;#34;public&amp;#34;, &amp;#34;sensitive&amp;#34;: false, &amp;#34;language&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;note&amp;#34;: &amp;#34;i have approximate knowledge of many things. perpetual student. (nb/ace/they)\r\n\r\nxmpp/email: a@trwnh.com\r\nhttps://trwnh.com\r\nhelp me live: https://liberapay.com/at or https://paypal.me/trwnh\r\n\r\n- my triggers are moths and glitter\r\n- i have all notifs except mentions turned off, so please interact if you wanna be friends! i literally will not notice otherwise\r\n- dm me if i did something wrong, so i can improve\r\n- purest person on fedi, do not lewd in my presence\r\n- #1 ami cole fan account\r\n\r\n:fatyoshi:&amp;#34;, &amp;#34;fields&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;Website&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;https://trwnh.</description>
     </item>
     
     <item>

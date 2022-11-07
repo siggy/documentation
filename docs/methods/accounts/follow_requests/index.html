@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>follow_requests - Mastodon documentation</title>
@@ -908,17 +908,17 @@ Maximum number of results to return. Defaults to 40. Paginate using the HTTP Lin
 <p>Accounts that are requesting a follow
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">Link<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">&lt;</span>https<span style="color:#ff79c6">:</span><span style="color:#6272a4">//mastodon.social/api/v1/follow_requests?max_id=23716836&gt;; rel=&#34;next&#34;, &lt;https://mastodon.social/api/v1/follow_requests?min_id=23716978&gt;; rel=&#34;prev&#34;
-</span><span style="color:#6272a4"></span>
-[
-  {
-    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;8889777&#34;</span>,
-    <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;example&#34;</span>,
-    <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;example@social.example&#34;</span>,
-    ...
-  }
-]
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>Link<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">&lt;</span>https<span style="color:#ff79c6">:</span><span style="color:#6272a4">//mastodon.social/api/v1/follow_requests?max_id=23716836&gt;; rel=&#34;next&#34;, &lt;https://mastodon.social/api/v1/follow_requests?min_id=23716978&gt;; rel=&#34;prev&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span>[
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;8889777&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;username&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;example&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;acct&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;example@social.example&#34;</span>,
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>]
+</span></span></code></pre></div><p></div>
 
 <div class="api-method-response-example">
   <h5>
@@ -931,10 +931,10 @@ Maximum number of results to return. Defaults to 40. Paginate using the HTTP Lin
 <p>Invalid or missing Authorization header
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
-}
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p></div>
 
 </div>
 
@@ -1027,20 +1027,20 @@ Bearer &lt;user token&gt;
 <p>Your Relationship with this account should be updated so that you are <code>followed_by</code> this account.
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;8889777&#34;</span>,
-  <span style="color:#f1fa8c">&#34;following&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;showing_reblogs&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;followed_by&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
-  <span style="color:#f1fa8c">&#34;blocking&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;blocked_by&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;muting&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;muting_notifications&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;requested&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;domain_blocking&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;endorsed&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
-}
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;8889777&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;following&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;showing_reblogs&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;followed_by&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;blocking&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;blocked_by&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;muting&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;muting_notifications&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;requested&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;domain_blocking&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;endorsed&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p></div>
 
 <div class="api-method-response-example">
   <h5>
@@ -1053,10 +1053,10 @@ Bearer &lt;user token&gt;
 <p>Invalid or missing Authorization header
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
-}
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p></div>
 
 <div class="api-method-response-example">
   <h5>
@@ -1069,10 +1069,10 @@ Bearer &lt;user token&gt;
 <p>No pending follow request from that user ID
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Record not found&#34;</span>
-}
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Record not found&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p></div>
 
 </div>
 
@@ -1165,20 +1165,20 @@ Bearer &lt;user token&gt;
 <p>Your Relationship with this Account should be unchanged.
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;8889777&#34;</span>,
-  <span style="color:#f1fa8c">&#34;following&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;showing_reblogs&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;followed_by&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;blocking&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;blocked_by&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;muting&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;muting_notifications&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;requested&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;domain_blocking&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
-  <span style="color:#f1fa8c">&#34;endorsed&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
-}
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;id&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;8889777&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;following&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;showing_reblogs&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;followed_by&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;blocking&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;blocked_by&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;muting&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;muting_notifications&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;requested&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;domain_blocking&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;endorsed&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p></div>
 
 <div class="api-method-response-example">
   <h5>
@@ -1191,10 +1191,10 @@ Bearer &lt;user token&gt;
 <p>Invalid or missing Authorization header
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
-}
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;The access token is invalid&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p></div>
 
 <div class="api-method-response-example">
   <h5>
@@ -1207,10 +1207,10 @@ Bearer &lt;user token&gt;
 <p>No pending follow request for that user ID
 </div>
 </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
-  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Record not found&#34;</span>
-}
-</code></pre></div><p></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;error&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Record not found&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p></div>
 
 </div>
 

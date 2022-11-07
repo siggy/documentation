@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Bearcaps - Mastodon documentation</title>
@@ -835,10 +835,10 @@
   <div class="e-content">
     <h2 id="intro">What are bearcaps?</h2>
 <p>In certain cases, resources may not be publically available and may require a token to successfully fetch them. This is typically done by using an HTTP <code>Authorization</code> header containing a <code>Bearer</code> token, like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://example.com/foo
-Authorization: Bearer &lt;token&gt;
-</code></pre></div><p>Bearcaps allow for a way to link to a resource with the token included, like so:</p>
-<pre><code>bear:?t=&lt;token&gt;&amp;u=https://example.com/foo'
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span>GET https://example.com/foo
+</span></span><span style="display:flex;"><span>Authorization: Bearer &lt;token&gt;
+</span></span></code></pre></div><p>Bearcaps allow for a way to link to a resource with the token included, like so:</p>
+<pre tabindex="0"><code>bear:?t=&lt;token&gt;&amp;u=https://example.com/foo&#39;
 </code></pre><p>To translate a bearcap to an HTTP request, simply make a request to the <code>u</code> parameter and attach the <code>t</code> parameter as a <code>Bearer</code> token in the <code>Authorization</code> header.</p>
 <h2 id="usage">How are bearcaps used in Mastodon?</h2>
 <p>As of v3.3.0, Mastodon supports dereferencing bearcaps in a received Activity. Bearcap are not used for sending any Activity yet.</p>

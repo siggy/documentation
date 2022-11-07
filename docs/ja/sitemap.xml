@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://documentation.sig.gy/ja/categories/</loc>
     <xhtml:link
@@ -24,9 +23,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/</loc>
     <lastmod>2022-10-23T23:57:54+02:00</lastmod>
     <xhtml:link
@@ -49,9 +46,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -73,9 +68,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/</loc>
     <lastmod>2021-03-25T16:54:43+09:00</lastmod>
     <xhtml:link
@@ -98,34 +91,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/user/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/ja/user/contacts/</loc>
-    <lastmod>2020-09-28T11:56:31+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/user/contacts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/user/contacts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://documentation.sig.gy/pl/user/contacts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://documentation.sig.gy/ja/user/contacts/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/moving/</loc>
     <lastmod>2020-09-28T11:56:31+09:00</lastmod>
     <xhtml:link
@@ -148,9 +114,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/user/moving/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/signup/</loc>
     <lastmod>2020-09-28T11:56:31+09:00</lastmod>
     <xhtml:link
@@ -173,9 +137,30 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/user/signup/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://documentation.sig.gy/ja/user/contacts/</loc>
+    <lastmod>2020-09-28T11:56:31+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/user/contacts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/user/contacts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://documentation.sig.gy/pl/user/contacts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://documentation.sig.gy/ja/user/contacts/"
+                />
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/posting/</loc>
     <lastmod>2020-09-28T11:56:31+09:00</lastmod>
     <xhtml:link
@@ -198,9 +183,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/user/posting/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/network/</loc>
     <lastmod>2020-09-28T11:56:31+09:00</lastmod>
     <xhtml:link
@@ -223,9 +206,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/user/network/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/profile/</loc>
     <lastmod>2020-09-28T11:56:31+09:00</lastmod>
     <xhtml:link
@@ -248,9 +229,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/user/profile/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/external/</loc>
     <lastmod>2020-09-28T11:56:31+09:00</lastmod>
     <xhtml:link
@@ -273,9 +252,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/user/external/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/preferences/</loc>
     <lastmod>2020-09-28T11:56:31+09:00</lastmod>
     <xhtml:link
@@ -298,9 +275,30 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/user/preferences/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://documentation.sig.gy/ja/user/moderating/</loc>
+    <lastmod>2020-09-28T11:56:31+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/user/moderating/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/user/moderating/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://documentation.sig.gy/pl/user/moderating/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://documentation.sig.gy/ja/user/moderating/"
+                />
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/run-your-own/</loc>
     <lastmod>2021-03-25T16:54:43+09:00</lastmod>
     <xhtml:link
@@ -323,9 +321,7 @@
                 hreflang="ja"
                 href="https://documentation.sig.gy/ja/user/run-your-own/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/ja/user/discoverability/</loc>
     <lastmod>2020-09-28T11:56:31+09:00</lastmod>
     <xhtml:link
@@ -349,30 +345,4 @@
                 href="https://documentation.sig.gy/ja/user/discoverability/"
                 />
   </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/ja/user/moderating/</loc>
-    <lastmod>2020-09-28T11:56:31+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/user/moderating/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/user/moderating/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://documentation.sig.gy/pl/user/moderating/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://documentation.sig.gy/ja/user/moderating/"
-                />
-  </url>
-  
 </urlset>

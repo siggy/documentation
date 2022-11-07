@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>Rate limits - Mastodon documentation</title>
@@ -828,22 +828,22 @@
 <table>
 <thead>
 <tr>
-<th align="left">Header</th>
-<th align="left">Description</th>
+<th style="text-align:left">Header</th>
+<th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>X-RateLimit-Limit</code></td>
-<td align="left">Number of requests permitted per time period</td>
+<td style="text-align:left"><code>X-RateLimit-Limit</code></td>
+<td style="text-align:left">Number of requests permitted per time period</td>
 </tr>
 <tr>
-<td align="left"><code>X-RateLimit-Remaining</code></td>
-<td align="left">Number of requests you can still make</td>
+<td style="text-align:left"><code>X-RateLimit-Remaining</code></td>
+<td style="text-align:left">Number of requests you can still make</td>
 </tr>
 <tr>
-<td align="left"><code>X-RateLimit-Reset</code></td>
-<td align="left">Timestamp when your rate limit will reset</td>
+<td style="text-align:left"><code>X-RateLimit-Reset</code></td>
+<td style="text-align:left">Timestamp when your rate limit will reset</td>
 </tr>
 </tbody>
 </table>
@@ -857,55 +857,55 @@
 <table>
 <thead>
 <tr>
-<th align="left">Endpoint</th>
-<th align="left">Bucket</th>
-<th align="left">Time period</th>
-<th align="left">Limit</th>
-<th align="left">Limit type</th>
+<th style="text-align:left">Endpoint</th>
+<th style="text-align:left">Bucket</th>
+<th style="text-align:left">Time period</th>
+<th style="text-align:left">Limit</th>
+<th style="text-align:left">Limit type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>* /api/*</code></td>
-<td align="left">Account access</td>
-<td align="left">5 minutes</td>
-<td align="left">300</td>
-<td align="left">Account</td>
+<td style="text-align:left"><code>* /api/*</code></td>
+<td style="text-align:left">Account access</td>
+<td style="text-align:left">5 minutes</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">Account</td>
 </tr>
 <tr>
-<td align="left"><code>* /api/*</code></td>
-<td align="left">IP access</td>
-<td align="left">5 minutes</td>
-<td align="left">300</td>
-<td align="left">IP</td>
+<td style="text-align:left"><code>* /api/*</code></td>
+<td style="text-align:left">IP access</td>
+<td style="text-align:left">5 minutes</td>
+<td style="text-align:left">300</td>
+<td style="text-align:left">IP</td>
 </tr>
 <tr>
-<td align="left"><code>POST /api/v1/accounts</code></td>
-<td align="left">App sign-up</td>
-<td align="left">30 minutes</td>
-<td align="left">5</td>
-<td align="left">IP</td>
+<td style="text-align:left"><code>POST /api/v1/accounts</code></td>
+<td style="text-align:left">App sign-up</td>
+<td style="text-align:left">30 minutes</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">IP</td>
 </tr>
 <tr>
-<td align="left"><code>POST /api/v1/media</code></td>
-<td align="left">Uploading</td>
-<td align="left">30 minutes</td>
-<td align="left">30</td>
-<td align="left">Account</td>
+<td style="text-align:left"><code>POST /api/v1/media</code></td>
+<td style="text-align:left">Uploading</td>
+<td style="text-align:left">30 minutes</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">Account</td>
 </tr>
 <tr>
-<td align="left"><code>DELETE /api/v1/statuses/:id</code></td>
-<td align="left">Deletion</td>
-<td align="left">30 minutes</td>
-<td align="left">30</td>
-<td align="left">Account</td>
+<td style="text-align:left"><code>DELETE /api/v1/statuses/:id</code></td>
+<td style="text-align:left">Deletion</td>
+<td style="text-align:left">30 minutes</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">Account</td>
 </tr>
 <tr>
-<td align="left"><code>POST /api/v1/statuses/:id/unreblog</code></td>
-<td align="left">Deletion</td>
-<td align="left">30 minutes</td>
-<td align="left">30</td>
-<td align="left">Account</td>
+<td style="text-align:left"><code>POST /api/v1/statuses/:id/unreblog</code></td>
+<td style="text-align:left">Deletion</td>
+<td style="text-align:left">30 minutes</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">Account</td>
 </tr>
 </tbody>
 </table>

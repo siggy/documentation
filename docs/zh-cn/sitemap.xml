@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://documentation.sig.gy/zh-cn/admin/</loc>
     <lastmod>2022-11-05T22:59:41+00:00</lastmod>
@@ -15,9 +14,7 @@
                 hreflang="zh-cn"
                 href="https://documentation.sig.gy/zh-cn/admin/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/zh-cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -39,9 +36,7 @@
                 hreflang="zh-cn"
                 href="https://documentation.sig.gy/zh-cn/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/zh-cn/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -63,9 +58,7 @@
                 hreflang="zh-cn"
                 href="https://documentation.sig.gy/zh-cn/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/zh-cn/user/</loc>
     <lastmod>2021-03-25T16:54:43+09:00</lastmod>
     <xhtml:link
@@ -88,229 +81,33 @@
                 hreflang="zh-cn"
                 href="https://documentation.sig.gy/zh-cn/user/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/</loc>
-    <lastmod>2022-10-23T23:57:54+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://documentation.sig.gy/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://documentation.sig.gy/pl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/install/</loc>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/optional/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://documentation.sig.gy/admin/install/"
+                href="https://documentation.sig.gy/admin/optional/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/install/"
+                href="https://documentation.sig.gy/zh-cn/admin/optional/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/scaling/</loc>
-    <lastmod>2021-05-05T20:16:45+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/admin/scaling/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/scaling/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/user/network/</loc>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/backups/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://documentation.sig.gy/user/network/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://documentation.sig.gy/ja/user/network/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://documentation.sig.gy/pl/user/network/"
+                href="https://documentation.sig.gy/admin/backups/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/user/network/"
+                href="https://documentation.sig.gy/zh-cn/admin/backups/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/tootctl/</loc>
-    <lastmod>2021-10-26T21:12:16+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/admin/tootctl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/tootctl/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/optional/elasticsearch/</loc>
-    <lastmod>2021-12-12T00:06:18+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/admin/optional/elasticsearch/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/optional/elasticsearch/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/prerequisites/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/admin/prerequisites/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/prerequisites/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/user/signup/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/user/signup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://documentation.sig.gy/ja/user/signup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://documentation.sig.gy/pl/user/signup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/user/signup/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/optional/tor/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/admin/optional/tor/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/optional/tor/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/upgrading/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/admin/upgrading/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/upgrading/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/optional/sso/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/admin/optional/sso/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/optional/sso/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/user/posting/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/user/posting/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://documentation.sig.gy/ja/user/posting/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://documentation.sig.gy/pl/user/posting/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/user/posting/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/zh-cn/user/moderating/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
@@ -333,79 +130,79 @@
                 hreflang="zh-cn"
                 href="https://documentation.sig.gy/zh-cn/user/moderating/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/backups/</loc>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/user/signup/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://documentation.sig.gy/admin/backups/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/backups/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/optional/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/admin/optional/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/optional/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/user/discoverability/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/user/discoverability/"
+                href="https://documentation.sig.gy/user/signup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://documentation.sig.gy/ja/user/discoverability/"
+                href="https://documentation.sig.gy/ja/user/signup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="https://documentation.sig.gy/pl/user/discoverability/"
+                href="https://documentation.sig.gy/pl/user/signup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/user/discoverability/"
+                href="https://documentation.sig.gy/zh-cn/user/signup/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/troubleshooting/</loc>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/install/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://documentation.sig.gy/admin/troubleshooting/"
+                href="https://documentation.sig.gy/admin/install/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/troubleshooting/"
+                href="https://documentation.sig.gy/zh-cn/admin/install/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/optional/sso/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/admin/optional/sso/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/admin/optional/sso/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/user/posting/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/user/posting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://documentation.sig.gy/ja/user/posting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://documentation.sig.gy/pl/user/posting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/user/posting/"
+                />
+  </url><url>
     <loc>https://documentation.sig.gy/zh-cn/user/contacts/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
@@ -428,99 +225,46 @@
                 hreflang="zh-cn"
                 href="https://documentation.sig.gy/zh-cn/user/contacts/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/user/external/</loc>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/troubleshooting/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://documentation.sig.gy/user/external/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://documentation.sig.gy/ja/user/external/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://documentation.sig.gy/pl/user/external/"
+                href="https://documentation.sig.gy/admin/troubleshooting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/user/external/"
+                href="https://documentation.sig.gy/zh-cn/admin/troubleshooting/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/user/profile/</loc>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/optional/tor/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://documentation.sig.gy/user/profile/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://documentation.sig.gy/ja/user/profile/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://documentation.sig.gy/pl/user/profile/"
+                href="https://documentation.sig.gy/admin/optional/tor/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/user/profile/"
+                href="https://documentation.sig.gy/zh-cn/admin/optional/tor/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/config/</loc>
-    <lastmod>2020-09-23T10:37:10-07:00</lastmod>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/setup/</loc>
+    <lastmod>2022-11-05T22:59:41+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://documentation.sig.gy/admin/config/"
+                href="https://documentation.sig.gy/admin/setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/config/"
+                href="https://documentation.sig.gy/zh-cn/admin/setup/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/user/preferences/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://documentation.sig.gy/user/preferences/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://documentation.sig.gy/ja/user/preferences/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://documentation.sig.gy/pl/user/preferences/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/user/preferences/"
-                />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/zh-cn/admin/migrating/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
@@ -533,9 +277,7 @@
                 hreflang="zh-cn"
                 href="https://documentation.sig.gy/zh-cn/admin/migrating/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://documentation.sig.gy/zh-cn/user/moving/</loc>
     <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
@@ -558,24 +300,187 @@
                 hreflang="zh-cn"
                 href="https://documentation.sig.gy/zh-cn/user/moving/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/moderation/</loc>
-    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/optional/elasticsearch/</loc>
+    <lastmod>2021-12-12T00:06:18+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://documentation.sig.gy/admin/moderation/"
+                href="https://documentation.sig.gy/admin/optional/elasticsearch/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/moderation/"
+                href="https://documentation.sig.gy/zh-cn/admin/optional/elasticsearch/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/user/profile/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/user/profile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://documentation.sig.gy/ja/user/profile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://documentation.sig.gy/pl/user/profile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/user/profile/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/config/</loc>
+    <lastmod>2020-09-23T10:37:10-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/admin/config/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/admin/config/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/user/preferences/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/user/preferences/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://documentation.sig.gy/ja/user/preferences/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://documentation.sig.gy/pl/user/preferences/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/user/preferences/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/scaling/</loc>
+    <lastmod>2021-05-05T20:16:45+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/admin/scaling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/admin/scaling/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/</loc>
+    <lastmod>2022-10-23T23:57:54+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://documentation.sig.gy/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://documentation.sig.gy/pl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/upgrading/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/admin/upgrading/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/admin/upgrading/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/tootctl/</loc>
+    <lastmod>2021-10-26T21:12:16+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/admin/tootctl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/admin/tootctl/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/user/network/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/user/network/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://documentation.sig.gy/ja/user/network/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://documentation.sig.gy/pl/user/network/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/user/network/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/user/discoverability/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/user/discoverability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://documentation.sig.gy/ja/user/discoverability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://documentation.sig.gy/pl/user/discoverability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/user/discoverability/"
+                />
+  </url><url>
     <loc>https://documentation.sig.gy/zh-cn/user/run-your-own/</loc>
     <lastmod>2021-03-25T16:54:43+09:00</lastmod>
     <xhtml:link
@@ -598,21 +503,54 @@
                 hreflang="zh-cn"
                 href="https://documentation.sig.gy/zh-cn/user/run-your-own/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://documentation.sig.gy/zh-cn/admin/setup/</loc>
-    <lastmod>2022-11-05T22:59:41+00:00</lastmod>
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/moderation/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://documentation.sig.gy/admin/setup/"
+                href="https://documentation.sig.gy/admin/moderation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://documentation.sig.gy/zh-cn/admin/setup/"
+                href="https://documentation.sig.gy/zh-cn/admin/moderation/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/user/external/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/user/external/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://documentation.sig.gy/ja/user/external/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://documentation.sig.gy/pl/user/external/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/user/external/"
+                />
+  </url><url>
+    <loc>https://documentation.sig.gy/zh-cn/admin/prerequisites/</loc>
+    <lastmod>2020-05-21T02:54:12+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://documentation.sig.gy/admin/prerequisites/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://documentation.sig.gy/zh-cn/admin/prerequisites/"
                 />
   </url>
-  
 </urlset>

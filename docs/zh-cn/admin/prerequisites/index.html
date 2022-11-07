@@ -10,10 +10,10 @@
 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
 
-<link rel='stylesheet' href='https://documentation.sig.gy/style.min.7e0da58aeb22158e014a1cfd6380315680c7e74911da517d5304d94559cf0f32.css'>
+<link rel='stylesheet' href='https://documentation.sig.gy/style.min.cecbfb877aac6e34ddc570567aec4b24462631741adce40ae5ab27c8087c8318.css'>
 
 
-<script src='https://documentation.sig.gy/main.min.db37c27117ff8400e5e30549f6806d2bc825668b596d81316c6148417f59bc72.js' async></script>
+<script src='https://documentation.sig.gy/main.min.0b774fda2366fc06803dd619b7467da11181c73a4ef394b7610a2eb2a3cb7b5d.js' async></script>
 
 
   <title>准备你的机器 - Mastodon documentation</title>
@@ -283,10 +283,10 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#ssh">禁止密码登录SSH（仅允许密钥登录）</a></li>
-        <li><a href="#heading">更新系统</a></li>
-        <li><a href="#-fail2ban-">安装 fail2ban 以阻止重复登录尝试</a></li>
-        <li><a href="#sshhttphttps">安装防火墙并只暴露SSH、HTTP、HTTPS端口</a></li>
+        <li><a href="#禁止密码登录ssh仅允许密钥登录">禁止密码登录SSH（仅允许密钥登录）</a></li>
+        <li><a href="#更新系统">更新系统</a></li>
+        <li><a href="#安装-fail2ban-以阻止重复登录尝试">安装 fail2ban 以阻止重复登录尝试</a></li>
+        <li><a href="#安装防火墙并只暴露sshhttphttps端口">安装防火墙并只暴露SSH、HTTP、HTTPS端口</a></li>
       </ul>
     </li>
   </ul>
@@ -294,64 +294,64 @@
   </aside>
   <div class="e-content">
     <p>如果你正在设置一台全新的机器，推荐你首要完成安全设置。以下内容假定你运行 <strong>Ubuntu 18.04</strong>：</p>
-<h2 id="ssh">禁止密码登录SSH（仅允许密钥登录）</h2>
+<h2 id="禁止密码登录ssh仅允许密钥登录">禁止密码登录SSH（仅允许密钥登录）</h2>
 <p>首先，请确保你实际上是通过密钥而不是通过密码登录到服务器的，否则这将使你无法登录。许多托管服务提供商支持上传公钥，并自动为新机器设置基于密钥的root登录。</p>
 <p>编辑 <code>/etc/ssh/sshd_config</code> 并找到 <code>PasswordAuthentication</code>。确保它已被去除注释并被设为 <code>no</code>。如果你做了任何改动，请重启 sshd。</p>
-<h2 id="heading">更新系统</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt update <span style="color:#ff79c6">&amp;&amp;</span> apt upgrade -y
-</code></pre></div><h2 id="-fail2ban-">安装 fail2ban 以阻止重复登录尝试</h2>
+<h2 id="更新系统">更新系统</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update <span style="color:#ff79c6">&amp;&amp;</span> apt upgrade -y
+</span></span></code></pre></div><h2 id="安装-fail2ban-以阻止重复登录尝试">安装 fail2ban 以阻止重复登录尝试</h2>
 <p>编辑 <code>/etc/fail2ban/jail.local</code> 并添加以下内容：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[DEFAULT]
-destemail = your@email.here
-sendername = Fail2Ban
-
-[sshd]
-enabled = true
-port = 22
-
-[sshd-ddos]
-enabled = true
-port = 22
-</code></pre></div><p>最后重启fail2ban：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl restart fail2ban
-</code></pre></div><h2 id="sshhttphttps">安装防火墙并只暴露SSH、HTTP、HTTPS端口</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>[DEFAULT]
+</span></span><span style="display:flex;"><span>destemail = your@email.here
+</span></span><span style="display:flex;"><span>sendername = Fail2Ban
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[sshd]
+</span></span><span style="display:flex;"><span>enabled = true
+</span></span><span style="display:flex;"><span>port = 22
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[sshd-ddos]
+</span></span><span style="display:flex;"><span>enabled = true
+</span></span><span style="display:flex;"><span>port = 22
+</span></span></code></pre></div><p>最后重启fail2ban：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart fail2ban
+</span></span></code></pre></div><h2 id="安装防火墙并只暴露sshhttphttps端口">安装防火墙并只暴露SSH、HTTP、HTTPS端口</h2>
 <p>首先，安装 iptables-persistent。在安装期间，它将询问你是否保留现有规则。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install -y iptables-persistent
-</code></pre></div><p>编辑 <code>/etc/iptables/rules.v4</code> 并添加如下内容：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">*filter
-
-#  Allow all loopback (lo0) traffic and drop all traffic to 127/8 that doesn&#39;t use lo0
--A INPUT -i lo -j ACCEPT
--A INPUT ! -i lo -d 127.0.0.0/8 -j REJECT
-
-#  Accept all established inbound connections
--A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-
-#  Allow all outbound traffic - you can modify this to only allow certain traffic
--A OUTPUT -j ACCEPT
-
-#  Allow HTTP and HTTPS connections from anywhere (the normal ports for websites and SSL).
--A INPUT -p tcp --dport 80 -j ACCEPT
--A INPUT -p tcp --dport 443 -j ACCEPT
-
-#  Allow SSH connections
-#  The -dport number should be the same port number you set in sshd_config
--A INPUT -p tcp -m state --state NEW --dport 22 -j ACCEPT
-
-#  Allow ping
--A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
-
-#  Log iptables denied calls
--A INPUT -m limit --limit 5/min -j LOG --log-prefix &#34;iptables denied: &#34; --log-level 7
-
-#  Reject all other inbound - default deny unless explicitly allowed policy
--A INPUT -j REJECT
--A FORWARD -j REJECT
-
-COMMIT
-</code></pre></div><p>iptables-persistent 将在机器启动时自动加载配置。但是由于我们现在不会立刻重启，我们需要第一次手动加载它：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">iptables-restore &lt; /etc/iptables/rules.v4
-</code></pre></div><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y iptables-persistent
+</span></span></code></pre></div><p>编辑 <code>/etc/iptables/rules.v4</code> 并添加如下内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>*filter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow all loopback (lo0) traffic and drop all traffic to 127/8 that doesn&#39;t use lo0
+</span></span><span style="display:flex;"><span>-A INPUT -i lo -j ACCEPT
+</span></span><span style="display:flex;"><span>-A INPUT ! -i lo -d 127.0.0.0/8 -j REJECT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Accept all established inbound connections
+</span></span><span style="display:flex;"><span>-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow all outbound traffic - you can modify this to only allow certain traffic
+</span></span><span style="display:flex;"><span>-A OUTPUT -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow HTTP and HTTPS connections from anywhere (the normal ports for websites and SSL).
+</span></span><span style="display:flex;"><span>-A INPUT -p tcp --dport 80 -j ACCEPT
+</span></span><span style="display:flex;"><span>-A INPUT -p tcp --dport 443 -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow SSH connections
+</span></span><span style="display:flex;"><span>#  The -dport number should be the same port number you set in sshd_config
+</span></span><span style="display:flex;"><span>-A INPUT -p tcp -m state --state NEW --dport 22 -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Allow ping
+</span></span><span style="display:flex;"><span>-A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Log iptables denied calls
+</span></span><span style="display:flex;"><span>-A INPUT -m limit --limit 5/min -j LOG --log-prefix &#34;iptables denied: &#34; --log-level 7
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  Reject all other inbound - default deny unless explicitly allowed policy
+</span></span><span style="display:flex;"><span>-A INPUT -j REJECT
+</span></span><span style="display:flex;"><span>-A FORWARD -j REJECT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>COMMIT
+</span></span></code></pre></div><p>iptables-persistent 将在机器启动时自动加载配置。但是由于我们现在不会立刻重启，我们需要第一次手动加载它：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iptables-restore &lt; /etc/iptables/rules.v4
+</span></span></code></pre></div><figure>
     <p>
         <strong>翻译状态：</strong>
         本文是英文页面 <a href="/admin/prerequisites/">Preparing your machine</a> 的翻译，最后翻译时间：2020-05-04，点击<a href="https://github.com/tootsuite/documentation/compare/ad1ef20f171c9f61439f32168987b0b4f9abd74b...master">这里</a>可以查看翻译后页面的改动。
